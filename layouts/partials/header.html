@@ -1,0 +1,27 @@
+<header>
+    <a class="logo" href="{{ .Site.BaseURL }}{{ .Site.Language }}">
+        DB
+    </a>
+    <hr>
+    <h1>Nav</h1>
+    <nav>
+        <ul>
+            {{ range.Site.Menus.main }}
+            <li>
+                <a href="{{ .URL | relLangURL }}">{{ .Name }}</a> |
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+    <hr>
+    <h1>Translations</h1>
+    {{if .IsTranslated}}
+    <nav>
+        {{range .Translations}}
+        <a href="{{.Permalink}}">
+            {{.Site.Language.LanguageName}}
+        </a>
+        {{end}}
+    </nav>
+    {{end}}
+</header>
