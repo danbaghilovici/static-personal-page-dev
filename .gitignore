@@ -253,3 +253,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,webstorm,webstorm+all,webstorm+iml,hugo
+# ignore the public folder and the scss
+public
+static/css/style.scss
+static/css/style.css.map
