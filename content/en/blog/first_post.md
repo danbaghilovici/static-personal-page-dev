@@ -1,5 +1,5 @@
 {
-"slug": "first-post"
+"slug": "this-is-the-first-post"
 }
 
-This is the first post of this blog
+This is the first post of this blog {{< param "slug" >}}

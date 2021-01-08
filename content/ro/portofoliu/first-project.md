@@ -1,0 +1,5 @@
+{
+
+}
+
+First project, {{.Name}}

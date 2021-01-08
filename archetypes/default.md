@@ -1,8 +1,8 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
-description: "aaa"
-slug: test
----
+{
+"title": "{{ replace .Name "-" " " | title }}",
+"date": "{{ .Date }}",
+"draft": true,
+"slug": "{{ replace .Name "-" " " }}",
+"translationKey" : "{{ replace .Name "-" " " }}"
+}
 

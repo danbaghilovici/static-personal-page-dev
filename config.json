@@ -28,7 +28,7 @@
             "weight": 2
           },
           {
-            "url": "/logs",
+            "url": "/developer-logs",
             "name": "Logs",
             "weight": 3
           }
@@ -43,7 +43,7 @@
       "menu": {
         "main": [
           {
-            "url": "/portofolio",
+            "url": "/portofoliu",
             "name": "Portofolio",
             "weight": 0
           },
@@ -58,7 +58,7 @@
             "weight": 2
           },
           {
-            "url": "/jurnale-dev",
+            "url": "/jurnale-dezvoltator",
             "name": "Jurnalele Dezvoltatorului",
             "weight": 3
           }
@@ -88,16 +88,12 @@
             "weight": 2
           },
           {
-            "url": "/logs",
+            "url": "/registros-desarollador",
             "name": "Logs",
             "weight": 3
           }
         ]
       }
     }
-  },
-  "permalinks": {
-    "blog": "/blog/:slug",
-    "about": "/:slug"
   }
 }
