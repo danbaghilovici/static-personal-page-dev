@@ -1,5 +1,6 @@
 <head>
     <title>Test title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+    {{ $styles:= resources.Get "scss/styles.scss" | resources.ToCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
 </head>

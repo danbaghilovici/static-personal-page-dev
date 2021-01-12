@@ -1,0 +1,30 @@
+@import "battery";
+@import "navigation";
+//@import "mqueries";
+//@import "skeleton";
+
+//body {
+//  box-sizing: border-box;
+//  margin: 0;
+//  padding: 0;
+//}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  //background: #f0f8ff;
+}
+
+#content {
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding: 1vw;
+}
+

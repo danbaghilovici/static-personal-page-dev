@@ -1,0 +1,15 @@
+{{if .IsTranslated}}
+<nav id="translations">
+    <ul>
+        {{range .Translations}}
+        <li style="float:right">
+            <a href="{{.Permalink}}">
+                {{.Site.Language.LanguageName}}&nbsp;|&nbsp;
+            </a>
+        </li>
+
+        {{end}}
+    </ul>
+
+</nav>
+{{end}}

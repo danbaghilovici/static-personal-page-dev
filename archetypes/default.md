@@ -3,6 +3,7 @@
 "date": "{{ .Date }}",
 "draft": true,
 "slug": "{{ replace .Name "-" " " }}",
-"translationKey" : "{{ replace .Name "-" " " }}"
+"translationKey" : "{{ replace .Name "-" " " }}",
+
 }
 

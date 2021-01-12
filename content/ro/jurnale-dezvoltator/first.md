@@ -1,6 +1,8 @@
 {
-"Title": "aaaa",
-"translationKey": "devlog0"
+"Title": "aatasdwadaa",
+"translationKey": "devlog0",
+"slug":"aaaa",
+"pageSize":"{{ os.Stat .File.Path }}"
 }
 
-Jurnal de dezvoltator #0
+Jurnal de dezvoltator #0 {{< param "pageSize" >}}
