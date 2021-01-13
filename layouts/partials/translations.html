@@ -1,14 +1,22 @@
 {{if .IsTranslated}}
-<nav id="translations">
+<nav id="translations" style="float: right">
     <ul>
-        {{range .Translations}}
+
+
+        {{range $i,$item:=.Translations}}
         <li style="float:right">
-            <a href="{{.Permalink}}">
-                {{.Site.Language.LanguageName}}&nbsp;|&nbsp;
+            <a href="{{$item.Permalink}}">
+                {{.Site.Language.LanguageName}}&nbsp;
+                {{if ne $i 0}}|&nbsp;{{end}}
             </a>
         </li>
 
         {{end}}
+        <li style="float:right">
+            <a style="color:green">
+                &rarr;&nbsp;{{.Site.Language.LanguageName}}&nbsp;|&nbsp;
+            </a>
+        </li>
     </ul>
 
 </nav>

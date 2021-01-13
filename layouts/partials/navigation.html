@@ -1,11 +1,13 @@
 <nav id="navigation">
     <ul>
-        {{ range.Site.Menus.main }}
+        {{ range $i,$item:=.Site.Menus.main }}
         <li>
-            <a href="{{ .URL | relLangURL }}" class="">{{ .Name }}</a>&nbsp;|&nbsp;
-            <p>{{.URL}}</p>
-            <p>{{$.Dir}}</p>
+            <a href="{{ $item.URL | relLangURL }}" class="{{if eq $item.URL (substr (print "/" $.File.Dir) 0 -1)}} active {{end}}">
+                {{ $item.Name }}
+            </a>&nbsp;
+            {{if lt $i (sub (len $.Site.Menus.main) 1)}}|&nbsp;{{end}}
         </li>
         {{ end }}
     </ul>
+
 </nav>
