@@ -9,6 +9,7 @@
       "contentDir": "content/en",
       "languageName": "English",
       "languageCode": "en-US",
+      "languageFlagImgPath": "",
       "weight": 0,
       "menu": {
         "main": [
@@ -37,14 +38,15 @@
     },
     "ro": {
       "contentDir": "content/ro",
-      "languageName": "Romana",
+      "languageName": "Română",
       "languageCode": "ro-RO",
+      "languageFlagImgPath": "",
       "weight": 1,
       "menu": {
         "main": [
           {
             "url": "/portofoliu",
-            "name": "Portofolio",
+            "name": "Portofoliu",
             "weight": 0
           },
           {
@@ -67,8 +69,9 @@
     },
     "es": {
       "contentDir": "content/es",
-      "languageName": "Espana",
+      "languageName": "Español",
       "languageCode": "es-ES",
+      "languageFlagImgPath": "",
       "weight": 2,
       "menu": {
         "main": [
@@ -79,7 +82,7 @@
           },
           {
             "url": "/acerca",
-            "name": "Acerca",
+            "name": "Acerca de",
             "weight": 1
           },
           {

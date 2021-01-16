@@ -1,11 +1,13 @@
 <nav id="navigation">
     <ul>
+        {{ $symbols:=slice "&#129300;" "&#9997;" "&#128211;" "&#128194;"}}
         {{ range $i,$item:=.Site.Menus.main }}
         <li>
-            <a href="{{ $item.URL | relLangURL }}" class="{{if eq $item.URL (substr (print "/" $.File.Dir) 0 -1)}} active {{end}}">
-                {{ $item.Name }}
-            </a>&nbsp;
-            {{if lt $i (sub (len $.Site.Menus.main) 1)}}|&nbsp;{{end}}
+            <a href="{{ $item.URL | relLangURL }}" class="{{if eq $item.URL (substr (print "/" $.File.Dir) 0 -1)}}
+            active {{end}}">
+            {{safeHTML (index $symbols $i)}}&nbsp;{{ $item.Name }}
+            </a>
+            {{if lt $i (sub (len $.Site.Menus.main) 1)}}&nbsp;|&nbsp;{{end}}
         </li>
         {{ end }}
     </ul>
