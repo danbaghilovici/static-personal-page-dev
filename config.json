@@ -12,6 +12,9 @@
       "languageCode": "en-US",
       "languageFlagImgPath": "",
       "weight": 0,
+      "params": {
+        "mainSections": ["portfolio","about","blog","developer-logs"]
+      },
       "menu": {
         "main": [
           {
