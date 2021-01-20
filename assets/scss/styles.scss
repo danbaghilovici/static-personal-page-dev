@@ -1,5 +1,6 @@
 @import "battery";
 @import "navigation";
+@import "translations";
 
 * {
   box-sizing: border-box;
@@ -13,10 +14,21 @@ body {
 }
 
 #content {
-  min-height: 100vh;
+  //min-height: 100vh;
 }
 
 .wrapper {
   padding: 1rem 1vw 1vw 1vw;
 }
 
+//h1 {
+//  font-size: 3.125rem;
+//}
+//
+//h2 {
+//  font-size: 1.875rem;
+//}
+//
+//h3 {
+//  font-size: 1rem;
+//}

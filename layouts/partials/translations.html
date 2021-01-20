@@ -1,25 +1,29 @@
 {{if .IsTranslated}}
-<nav id="translations" style="float: right;">
+<nav id="translations" >
     <ul>
-
-
         {{range $i,$item:=.Translations}}
-        <li style="float:right">
+        <li >
             <a href="{{$item.Permalink}}">
                 {{if ne ($item.Param "languageFlagImgPath") ""}}
                 <span>
                 <img alt="Flag spain" style="width: 0.75rem;height: 0.75rem" src="{{$item.Param " languageFlagImgPath"}}" >
             </span>
                 {{end}}
-                {{.Site.Language.LanguageName}}
+                <h4 style="display: inline">{{.Site.Language.LanguageName}}</h4>
+
                 {{if ne $i 0}}|&nbsp;{{end}}
             </a>
         </li>
 
         {{end}}
-        <li style="float:right">
-            <a style="color:green">
-                &rarr;&nbsp;{{.Site.Language.LanguageName}}&nbsp;|&nbsp;
+        <li >
+            <a class="current">
+                <h4>
+                    <b>
+                        &rarr;&nbsp;{{.Site.Language.LanguageName}}&nbsp;|&nbsp;
+                    </b>
+                </h4>
+
             </a>
         </li>
     </ul>

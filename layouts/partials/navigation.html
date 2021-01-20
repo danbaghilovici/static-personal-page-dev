@@ -5,7 +5,13 @@
         <li>
             <a href="{{ $item.URL | relLangURL }}" class="{{if eq $item.URL (substr (print "/" $.File.Dir) 0 -1)}}
             active {{end}}">
-            {{safeHTML (index $symbols $i)}}&nbsp;{{ $item.Name }}
+            <h3 style="display: inline">
+                {{safeHTML (index $symbols $i)}}&nbsp;{{ $item.Name }}
+            </h3>
+            <p style="display: inline">
+                {{safeHTML (index $symbols $i)}}&nbsp;{{ $item.Name }}
+            </p>
+
             </a>
             {{if lt $i (sub (len $.Site.Menus.main) 1)}}&nbsp;|&nbsp;{{end}}
         </li>
