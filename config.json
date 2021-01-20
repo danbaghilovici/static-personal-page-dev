@@ -1,6 +1,7 @@
 {
   "baseURL": "https://laughing-clarke-323010.netlify.app",
   "languageCode": "en-us",
+  "theme": "hugo-solar-theme",
   "title": "My New Hugo Site",
   "DefaultContentLanguage": "en",
   "defaultContentLanguageInSubdir": true,
@@ -103,5 +104,8 @@
     "changefreq": "weekly",
     "priority": 0.5
   },
-  "canonifyURLs": true
+  "canonifyURLs": true,
+  "params": {
+
+  }
 }
