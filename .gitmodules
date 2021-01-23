@@ -1,6 +1,3 @@
 [submodule "themes/hugo-solar-theme"]
 	path = themes/hugo-solar-theme
 	url = https://github.com/dntzbgh/hugo-solar-theme.git
-[submodule "themes/hugo-devblog-premium-theme"]
-	path = themes/hugo-devblog-premium-theme
-	url = https://github.com/dntzbgh/hugo-devblog-premium-theme.git
