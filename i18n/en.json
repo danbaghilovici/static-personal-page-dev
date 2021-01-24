@@ -1,0 +1,27 @@
+{
+  "siteName": {
+    "other": "{{.Site.Params.ownerfirstname}}'s Personal Website"
+  },
+  "jobTitle": {
+    "other":"software developer"
+  },
+  "sidenavShortDescription": {
+    "other": "hi, my name is {{.Site.Params.ownerfirstname}} and I'm a software developer."
+  },
+  "aboutShortDescription": {
+    "other": "aaaa"
+  },
+  "viewText": {
+    "other": "view"
+  },
+  "portfolioText": {
+    "other": "portfolio"
+  },
+  "resumeText": {
+    "other": "resume"
+  },
+  "whatIDoText": {
+    "other": "What I do"
+  }
+}
+

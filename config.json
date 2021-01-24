@@ -1,5 +1,5 @@
 {
-  "baseURL": "https://laughing-clarke-323010.netlify.app",
+  "baseURL": "https://www.danbaghilovici.xyz",
   "languageCode": "en-us",
   "theme": "hugo-devblog-premium-theme",
   "title": "My New Hugo Site",
@@ -12,30 +12,31 @@
       "languageCode": "en-US",
       "languageFlagImgPath": "",
       "weight": 0,
-      "params": {
-        "mainSections": []
-      },
       "menu": {
         "main": [
           {
             "url": "/portfolio",
             "name": "Portfolio",
-            "weight": 0
+            "weight": 0,
+            "pre": "&#128187;"
           },
           {
             "url": "/",
-            "name": "About",
-            "weight": 1
+            "name": "Aboutaaa",
+            "weight": 1,
+            "pre": "&#129300;"
           },
           {
             "url": "/blog",
             "name": "Blog",
-            "weight": 2
+            "weight": 2,
+            "pre": "&#9997;"
           },
           {
             "url": "/developer-logs",
             "name": "Logs",
-            "weight": 3
+            "weight": 3,
+            "pre": "&#128209;"
           }
         ]
       }
@@ -51,22 +52,26 @@
           {
             "url": "/portofoliu",
             "name": "Portofoliu",
-            "weight": 0
+            "weight": 0,
+            "pre": "&#128187;"
           },
           {
             "url": "/",
             "name": "Despre",
-            "weight": 1
+            "weight": 1,
+            "pre": "&#129300;"
           },
           {
             "url": "/blog",
             "name": "Blog",
-            "weight": 2
+            "weight": 2,
+            "pre": "&#9997;"
           },
           {
             "url": "/jurnale-dezvoltator",
             "name": "Jurnalele Dezvoltatorului",
-            "weight": 3
+            "weight": 3,
+            "pre": "&#128209;"
           }
         ]
       }
@@ -82,22 +87,26 @@
           {
             "url": "/portofolio",
             "name": "Portofolio",
-            "weight": 0
+            "weight": 0,
+            "pre": "&#128187;"
           },
           {
             "url": "/",
             "name": "Acerca de",
-            "weight": 1
+            "weight": 1,
+            "pre": "&#129300;"
           },
           {
             "url": "/blog",
             "name": "Blog",
-            "weight": 2
+            "weight": 2,
+            "pre": "&#9997;"
           },
           {
             "url": "/registros-desarollador",
             "name": "Logs",
-            "weight": 3
+            "weight": 3,
+            "pre": "&#128209;"
           }
         ]
       }
@@ -109,6 +118,7 @@
   },
   "canonifyURLs": true,
   "params": {
-
+    "ownerFirstName": "Dan",
+    "ownerLastName": "Baghilovici"
   }
 }
