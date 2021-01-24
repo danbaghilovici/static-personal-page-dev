@@ -1,7 +1,7 @@
 {
   "baseURL": "https://laughing-clarke-323010.netlify.app",
   "languageCode": "en-us",
-  "theme": "hugo-solar-theme",
+  "theme": "hugo-devblog-premium-theme",
   "title": "My New Hugo Site",
   "DefaultContentLanguage": "en",
   "defaultContentLanguageInSubdir": true,
@@ -13,7 +13,7 @@
       "languageFlagImgPath": "",
       "weight": 0,
       "params": {
-        "mainSections": ["portfolio","about","blog","developer-logs"]
+        "mainSections": []
       },
       "menu": {
         "main": [
@@ -23,7 +23,7 @@
             "weight": 0
           },
           {
-            "url": "/about",
+            "url": "/",
             "name": "About",
             "weight": 1
           },
@@ -54,7 +54,7 @@
             "weight": 0
           },
           {
-            "url": "/despre",
+            "url": "/",
             "name": "Despre",
             "weight": 1
           },
@@ -85,7 +85,7 @@
             "weight": 0
           },
           {
-            "url": "/acerca",
+            "url": "/",
             "name": "Acerca de",
             "weight": 1
           },
