@@ -1,6 +1,27 @@
 {
+  "siteName": {
+    "other": "{{.Site.Params.ownerfirstname}}'s Personal Website"
+  },
   "jobTitle": {
-    "other":"Dezvoltator Software"
+    "other":"dezvoltator software"
+  },
+  "sidenavShortDescription": {
+    "other": "Salut &#128075;, numele meu este <b><span style=\"font-size:20px;\">{{.Site.Params.ownerfirstname}}</span></b> si sunt un Dezvoltator Software. </br>Bine ai venit pe pagina mea web!"
+  },
+  "homeAboutShortDescription": {
+    "other": "Sunt un dezvoltator software specializat in crearea aplicatiilor web si hybride prin iteratii rapide si scurte pentru a putea obtine un MVP cu minimul de resurse disponibile."
+  },
+  "viewText": {
+    "other": "Vezi"
+  },
+  "portfolioText": {
+    "other": "portofolio"
+  },
+  "resumeText": {
+    "other": "CV"
+  },
+  "whatIDoText": {
+    "other": "Cu ce ma ocup"
   }
 }
 
