@@ -9,7 +9,16 @@
     "other": "Hi &#128075;, my name is <b><span style=\"font-size:20px;\">{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer. </br>Welcome to my website!"
   },
   "homeAboutShortDescription": {
-    "other": "I'm a software developer specialized in "
+    "other": "I'm a Software Developer that loves building scalable quality software and experimenting with different new (and old) technologies."
+  },
+  "homeAboutCheckMyBlog": {
+    "other": "I sometimes write on my <a href=\"blog\">blog</a> about topics that I find interesting, usually technical matters or just a solution to a problem that I encountered in my daily programming routine"
+  },
+  "homeAboutHowMayIHelp": {
+    "other": "Want to know how I may help with your future project?"
+  },
+  "homeAboutCheckMyLinks": {
+    "other": "Check out my projects <a href=\"\">portfolio</a and online resume."
   },
   "viewText": {
     "other": "view"
