@@ -1,6 +1,18 @@
 {
+  "siteNavAboutText": {
+    "other": "acerca de"
+  },
+  "siteNavPortfolioText": {
+    "other": "portofolio"
+  },
+  "siteNavBlogText": {
+    "other": "blog"
+  },
+  "sidenavContactText": {
+    "other": "ponte en contacto conmigo"
+  },
   "jobTitle": {
-    "other": "Desarollador Software"
+    "other": "desarollador software"
   }
 }
 

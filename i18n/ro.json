@@ -2,6 +2,18 @@
   "siteName": {
     "other": "{{.Site.Params.ownerfirstname}}'s Personal Website"
   },
+  "siteNavAboutText": {
+    "other": "despre"
+  },
+  "siteNavPortfolioText": {
+    "other": "portofoliu"
+  },
+  "siteNavBlogText": {
+    "other": "blog"
+  },
+  "sidenavContactText": {
+    "other": "ia legatura cu mine"
+  },
   "jobTitle": {
     "other":"dezvoltator software"
   },

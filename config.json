@@ -16,15 +16,21 @@
         "main": [
           {
             "url": "/",
-            "name": "About",
+            "name": "siteNavAboutText",
             "weight": 1,
             "pre": "fa-user"
           },
           {
             "url": "/blog",
-            "name": "Blog",
+            "name": "siteNavBlogText",
             "weight": 2,
             "pre": "fa-blog"
+          },
+          {
+            "url": "/portfolio",
+            "name": "siteNavPortfolioText",
+            "weight": 3,
+            "pre": "fa-laptop"
           }
         ]
       }
@@ -39,15 +45,21 @@
         "main": [
           {
             "url": "/",
-            "name": "Despre",
+            "name": "siteNavAboutText",
             "weight": 1,
             "pre": "fa-user"
           },
           {
             "url": "/blog",
-            "name": "Blog",
+            "name": "siteNavBlogText",
             "weight": 2,
             "pre": "fa-blog"
+          },
+          {
+            "url": "/portofoliu",
+            "name": "siteNavPortfolioText",
+            "weight": 3,
+            "pre": "fa-laptop"
           }
         ]
       }
@@ -62,15 +74,21 @@
         "main": [
           {
             "url": "/",
-            "name": "Acerca de",
+            "name": "siteNavAboutText",
             "weight": 1,
             "pre": "fa-user"
           },
           {
             "url": "/blog",
-            "name": "Blog",
+            "name": "siteNavBlogText",
             "weight": 2,
             "pre": "fa-blog"
+          },
+          {
+            "url": "/portofolio",
+            "name": "siteNavPortfolioText",
+            "weight": 3,
+            "pre": "fa-laptop"
           }
         ]
       }
@@ -82,6 +100,8 @@
   },
   "canonifyURLs": true,
   "params": {
+    "useDarkMode":true,
+    "siteNavIconsClassesInOrder": ["fa-user","fa-blog","fa-laptop"],
     "ownerFirstName": "Dan",
     "ownerLastName": "Baghilovici",
     "ownerSocialLinks": [
@@ -99,6 +119,37 @@
         "class": "fa-github-alt",
         "tooltip": "",
         "link": "https://github.com/dntzbgh"
+      }
+    ],
+    "ownerSkillsSet": [
+      {
+        "title": "Javascript",
+        "description": "ownerSkillsJavascript",
+        "iconClass":"fa-js-square",
+        "libs": [
+          {
+            "title": "Angular",
+            "description": "ownerSkillsAngular",
+            "iconClass":"fa-angular"
+          },
+          {
+            "title": "Node.js",
+            "description": "ownerSkillNode",
+            "iconClass":"fa-node-js"
+          }
+        ]
+      },
+      {
+        "title": "Python",
+        "description": "ownerSkillsPython",
+        "iconClass":"fa-python",
+        "libs": [
+          {
+            "title": "Django",
+            "description": "ownerSkillsDjango",
+            "iconClass":"fa-python"
+          }
+        ]
       }
     ]
   }

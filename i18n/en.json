@@ -2,8 +2,20 @@
   "siteName": {
     "other": "{{.Site.Params.ownerfirstname}}'s Personal Website"
   },
+  "siteNavAboutText": {
+    "other": "about"
+  },
+  "siteNavPortfolioText": {
+    "other": "portfolio"
+  },
+  "siteNavBlogText": {
+    "other": "blog"
+  },
   "jobTitle": {
     "other":"software developer"
+  },
+  "sidenavContactText": {
+    "other": "Contact me"
   },
   "sidenavShortDescription": {
     "other": "Hi &#128075;, my name is <b><span style=\"font-size:20px;\">{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer. </br>Welcome to my website!"
@@ -12,13 +24,13 @@
     "other": "I'm a Software Developer that loves building scalable quality software and experimenting with different new (and old) technologies."
   },
   "homeAboutCheckMyBlog": {
-    "other": "I sometimes write on my <a href=\"blog\">blog</a> about topics that I find interesting, usually technical matters or just a solution to a problem that I encountered in my daily programming routine"
+    "other": "I sometimes write on my <a href=\"{{.blogLink}}\">blog</a> about topics that I find interesting, usually technical matters or just a solution to a problem that I encountered in my daily programming routine"
   },
   "homeAboutHowMayIHelp": {
     "other": "Want to know how I may help with your future project?"
   },
   "homeAboutCheckMyLinks": {
-    "other": "Check out my projects <a href=\"\">portfolio</a and online resume."
+    "other": "Check out my project <a href=\"{{.portfolioLink}}\">portfolio</a> and <a href=\"{{.resumeLink}}\">online resume</a>."
   },
   "viewText": {
     "other": "view"
@@ -29,8 +41,17 @@
   "resumeText": {
     "other": "resume"
   },
-  "whatIDoText": {
+  "homeWhatHeaderText": {
     "other": "What I do"
+  },
+  "homeWhatDescriptionIntroText": {
+    "other": "I have more than 10 years' experience building software for clients all over the world."
+  },
+  "homeWhatDescriptionIntroMainSkillsText": {
+    "other": "Below is a quick overview of my main technical skill sets and technologies I use."
+  },
+  "homeWhatDescriptionCheckText": {
+    "other": "Want to find out more about my experience? Check out my <a href=\"{{.resumeLink}}\">online resume</a> and <a href=\"{{.portfolioLink}}\">project portfolio</a>."
   }
 }
 
