@@ -24,13 +24,13 @@
     "other": "I'm a Software Developer that loves building scalable quality software and experimenting with different new (and old) technologies."
   },
   "homeAboutCheckMyBlog": {
-    "other": "I sometimes write on my <a href=\"{{.blogLink}}\">blog</a> about topics that I find interesting, usually technical matters or just a solution to a problem that I encountered in my daily programming routine"
+    "other": "I sometimes write on my <a class=\"theme-link\" href=\"{{.blogLink}}\">blog</a> about topics that I find interesting, usually technical matters or just a solution to a problem that I encountered in my daily programming routine"
   },
   "homeAboutHowMayIHelp": {
     "other": "Want to know how I may help with your future project?"
   },
   "homeAboutCheckMyLinks": {
-    "other": "Check out my project <a href=\"{{.portfolioLink}}\">portfolio</a> and <a href=\"{{.resumeLink}}\">online resume</a>."
+    "other": "Check out my project <a class=\"theme-link\" href=\"{{.portfolioLink}}\">portfolio</a> and <a class=\"theme-link\" href=\"{{.resumeLink}}\">online resume</a>."
   },
   "viewText": {
     "other": "view"
@@ -51,7 +51,40 @@
     "other": "Below is a quick overview of my main technical skill sets and technologies I use."
   },
   "homeWhatDescriptionCheckText": {
-    "other": "Want to find out more about my experience? Check out my <a href=\"{{.resumeLink}}\">online resume</a> and <a href=\"{{.portfolioLink}}\">project portfolio</a>."
+    "other": "Want to find out more about my experience? Check out my <a class=\"theme-link\" href=\"{{.resumeLink}}\">online resume</a> and <a class=\"theme-link\" href=\"{{.portfolioLink}}\">project portfolio</a>."
+  },
+  "resumeCareerSummaryText": {
+    "other": "Career summary here"
+  },
+  "resumeWorkSectionHeaderText": {
+    "other": "work experience"
+  },
+  "resumeWorkSectionProjectsText": {
+    "other": "projects"
+  },
+  "resumeWorkSectionSkillsText": {
+    "other": "skills"
+  },
+  "resumeWorkSectionEducationText": {
+    "other": "education"
+  },
+  "resumeWorkSectionLanguagesText": {
+    "other": "languages"
+  },
+  "resumeWorkSectionInterestsText": {
+    "other": "interests"
+  },
+  "resumeJobTitleVlinde": {
+    "other": "software developer"
+  },
+  "resumeJobDescriptionVlinde": {
+    "other": "A simple description"
+  },
+  "resumeJobBulletVlinde1": {
+    "other": "Some texct here"
+  },
+  "resumeJobBulletVlinde2": {
+    "other": "Another bullet"
   }
 }
 

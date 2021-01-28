@@ -104,6 +104,10 @@
     "siteNavIconsClassesInOrder": ["fa-user","fa-blog","fa-laptop"],
     "ownerFirstName": "Dan",
     "ownerLastName": "Baghilovici",
+    "ownerEmail": ["contact@danbaghilovici.xyz","dan.baghilovici@gmail.com"],
+    "ownerPhone": ["+40 770 662 188"],
+    "ownerLocation": "Romania",
+    "ownerWebsite": "www.danbaghilovici.xyz",
     "ownerSocialLinks": [
       {
         "class": "fa-twitter",
@@ -150,6 +154,34 @@
             "iconClass":"fa-python"
           }
         ]
+      }
+    ],
+    "ownerWorkExperience": [
+      {"jobTitle": "resumeJobTitleVlinde",
+      "company": {
+        "name": "Vlinde Transylvania",
+        "website": "www.vlinde.de",
+        "icon": ""
+      },
+        "period": {"from": "2019","to": "jobPeriodPresent"},
+        "description": "resumeJobDescriptionVlinde",
+        "list": [
+          "resumeJobBulletVlinde1","resumeJobBulletVlinde2"
+        ]
+      }
+    ],
+    "ownerProjects": [
+      {
+        "name": "Project name",
+        "motto": "resumeProjectMotto0",
+        "description": "resumeProjectDescription0",
+        "link": "",
+        "open": true
+      }
+    ],
+    "ownerEducation": [
+      {
+        "period": ""
       }
     ]
   }
