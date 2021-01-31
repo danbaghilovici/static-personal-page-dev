@@ -1,7 +1,7 @@
 ---
 title: Top 3 javascript frameworks
 date: 2021-01-29T15:43:25+02:00
-draft: true
+draft: false
 slug: top-3-javascript-frameworks
 translationKey: top-3-javascript-frameworks
 headerImage:
