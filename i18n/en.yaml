@@ -17,7 +17,7 @@ sidenavContactText:
 jobTitle: 
   other: software developer
 sidenavShortDescription:
-  other: Hi &#128075;, my name is <b><span style=\font-size:20px;\>{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer. </br>Welcome to my website!
+  other: Hi &#128075;, my name is <b><span style="font-size:20px";\>{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer 👨‍💻. </br>Welcome to my website!
 # /SIDENAV
 # HOME PAGE
 # HOME ABOUT
@@ -28,13 +28,15 @@ homeAboutCheckMyBlog:
 homeAboutHowMayIHelp:
   other: Want to know how I may help with your future project?
 homeAboutCheckMyLinks:
-  other: Check out my project <a class=theme-link href="{{.portfolioLink}}">portfolio</a> and <a class=theme-link href="{{.resumeLink}}">online resume</a>.
+  other: Check out my project <a class="theme-link" href="{{.portfolioLink}}">portfolio</a> and <a class=theme-link href="{{.resumeLink}}">online resume</a>.
 viewText:
   other: view
 portfolioText:
   other: portfolio
 resumeText:
   other: resume
+blogListText:
+  other: blog list
 #
 homeWhatHeaderText:
   other: What I do
@@ -42,8 +44,12 @@ homeWhatDescriptionIntroText:
   other: I have more than 10 years' experience building software for clients all over the world.
 homeWhatDescriptionIntroMainSkillsText:
   other: Below is a quick overview of my main technical skill sets and technologies I use.
-homeWhatDescriptionCheckText:
-  other: Want to find out more about my experience? Check out my <a class=\theme-link\ href=\.resumeLink\>online resume</a> and <a class=\theme-link\ href=\.portfolioLink\>project portfolio</a>.
+homeWhatDescriptionCheckLinksText:
+  other: Want to find out more about my experience? Check out my <a class="theme-link" href="{{.resumeLink}}">online resume</a> and <a class="theme-link" href="{{.portfolioLink}}">project portfolio</a>.
+homeLatestBlogsHeaderText:
+  other: latest blog posts
+homeFeaturedProjectsHeaderText:
+  other: featured projects
 # RESUME
 resumeCareerSummaryText:
   other: Career summary here
@@ -68,3 +74,4 @@ resumeJobBulletVlinde1:
 resumeJobBulletVlinde2:
   other: Another bullet
 # /RESUME
+
