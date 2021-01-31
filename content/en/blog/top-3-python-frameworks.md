@@ -1,12 +1,12 @@
 ---
-title: Top 3 javascript frameworks
-date: 2021-01-29T15:43:25+02:00
+title: Top 3 python frameworks
+date: 2021-01-24T15:43:25+02:00
 draft: true
-slug: top-3-javascript-frameworks
-translationKey: top-3-javascript-frameworks
+slug: top-3-python-frameworks
+translationKey: top-3-python-frameworks
 headerImage:
     alt: A top header'
-    source: https://source.unsplash.com/random
+    source: https://source.unsplash.com/random/700x300
     caption: Whatever goes in here, can also insert a link
     thumb: https://source.unsplash.com/random/300x300
 ---
