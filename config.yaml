@@ -119,6 +119,9 @@ params:
         - title: Node.js
           description: ownerSkillNode
           iconClass: fa-node-js
+        - title: Ionic
+          description: ownerSkillIonic
+          iconClass: fa-node-js
     - title: Python
       description: ownerSkillsPython
       iconClass: fa-python
@@ -126,6 +129,29 @@ params:
         - title: Django
           description: ownerSkillsDjango
           iconClass: fa-python
+        - title: Flask
+          description: ownerSkillsDjango
+          iconClass: fa-python
+    - title: Databases
+      description: ownerSkillsPython
+      iconClass: fa-database
+      libs:
+        - title: MongoDB
+          description: ownerSkillsDjango
+          iconClass: fa-sass
+        - title: MySQL
+          description: ownerSkillsDjango
+          iconClass: fa-bootstrap
+    - title: CSS
+      description: ownerSkillsPython
+      iconClass: fa-css3-alt
+      libs:
+        - title: Sass
+          description: ownerSkillsDjango
+          iconClass: fa-sass
+        - title: Bootstrap
+          description: ownerSkillsDjango
+          iconClass: fa-bootstrap
   ownerWorkExperience:
     - jobTitle: resumeJobTitleVlinde
       company:

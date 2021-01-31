@@ -13,7 +13,7 @@ siteNavPortfolioText:
 siteNavBlogText:
   other: blog
 sidenavContactText:
-  other: Contact me
+  other: contact me
 jobTitle: 
   other: software developer
 sidenavShortDescription:
@@ -22,30 +22,30 @@ sidenavShortDescription:
 # HOME PAGE
 # HOME ABOUT
 homeAboutShortDescription:
-  other: I'm a Software Developer that loves building scalable quality software and experimenting with different new (and old) technologies.
+  other: I'm a Software Developer that loves building high quality products. Besides contributing to Open Source projects in any way I can, I also like to learn new technolgies and tools that I consider to be a good fit for my skill set.
 homeAboutCheckMyBlog:
-  other: I sometimes write on my <a class="theme-link" href="{{.blogLink}}">blog</a> about topics that I find interesting usually technical matters or just a solution to a problem that I encountered in my daily programming routine
+  other: I write on my <a class="link-on-bg" href="{{.blogLink}}">blog</a> about topics that I find interesting usually technical matters or just a solution to a problem that I encountered in my programming routine
 homeAboutHowMayIHelp:
   other: Want to know how I may help with your future project?
 homeAboutCheckMyLinks:
-  other: Check out my project <a class="theme-link" href="{{.portfolioLink}}">portfolio</a> and <a class=theme-link href="{{.resumeLink}}">online resume</a>.
+  other: Check out my project <a class="link-on-bg" href="{{.portfolioLink}}">portfolio</a> and <a class="link-on-bg" href="{{.resumeLink}}">online resume</a>.
 viewText:
   other: view
 portfolioText:
   other: portfolio
 resumeText:
   other: resume
-blogListText:
-  other: blog list
+blogPostsText:
+  other: blog posts
 #
 homeWhatHeaderText:
   other: What I do
 homeWhatDescriptionIntroText:
-  other: I have more than 10 years' experience building software for clients all over the world.
+  other: Having an undestanding of multiple technologies always helped me better choose the right tools I will need for a project.
 homeWhatDescriptionIntroMainSkillsText:
   other: Below is a quick overview of my main technical skill sets and technologies I use.
 homeWhatDescriptionCheckLinksText:
-  other: Want to find out more about my experience? Check out my <a class="theme-link" href="{{.resumeLink}}">online resume</a> and <a class="theme-link" href="{{.portfolioLink}}">project portfolio</a>.
+  other: Want to find out more about my experience? Check out my <a class="link-on-bg" href="{{.resumeLink}}">online resume</a> and <a class="link-on-bg" href="{{.portfolioLink}}">project portfolio</a>.
 homeLatestBlogsHeaderText:
   other: latest blog posts
 homeFeaturedProjectsHeaderText:
