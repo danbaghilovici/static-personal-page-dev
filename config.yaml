@@ -71,19 +71,6 @@ sitemap:
   priority: 0.5
 canonifyURLs: true
 params:
-  monthNames:
-    1: "janvier"
-    2: "février"
-    3: "mars"
-    4: "avril"
-    5: "mai"
-    6: "juin"
-    7: "juillet"
-    8: "août"
-    9: "septembre"
-    10: "octobre"
-    11: "novembre"
-    12: "décembre"
   useDarkMode: true
   siteNavIconsClassesInOrder:
     - fa-user
@@ -111,47 +98,82 @@ params:
   ownerSkillsSet:
     - title: Javascript
       description: ownerSkillsJavascript
-      iconClass: fa-js-square
+      iconClass: /imgs/brands/js.svg
       libs:
+        - title: Typescript
+          description: aa
+          iconClass: /imgs/brands/typescript.svg
         - title: Angular
           description: ownerSkillsAngular
-          iconClass: fa-angular
-        - title: Node.js
-          description: ownerSkillNode
-          iconClass: fa-node-js
+          iconClass: /imgs/brands/angular.svg
         - title: Ionic
           description: ownerSkillIonic
-          iconClass: fa-node-js
+          iconClass: /imgs/brands/ionic.svg
+        - title: Node.js
+          description: ownerSkillNode
+          iconClass: /imgs/brands/nodejs.svg
+        - title: Express.js
+          description: ownerSkillNode
+          iconClass: /imgs/brands/expressjs.svg
+        - title: NestJS
+          description: ownerSkillIonic
+          iconClass: /imgs/brands/nestjs.svg
+
     - title: Python
       description: ownerSkillsPython
-      iconClass: fa-python
+      iconClass: /imgs/brands/python.svg
       libs:
         - title: Django
           description: ownerSkillsDjango
-          iconClass: fa-python
+          iconClass: /imgs/brands/django.svg
         - title: Flask
           description: ownerSkillsDjango
-          iconClass: fa-python
+          iconClass: /imgs/brands/flask.svg
+        - title: Numpy
+          description: ownerSkillsDjango
+          iconClass: /imgs/brands/numpy.svg
     - title: Databases
       description: ownerSkillsPython
-      iconClass: fa-database
+      iconClass: /imgs/brands/database.svg
       libs:
         - title: MongoDB
           description: ownerSkillsDjango
-          iconClass: fa-sass
+          iconClass: /imgs/brands/mongodb.svg
         - title: MySQL
           description: ownerSkillsDjango
-          iconClass: fa-bootstrap
-    - title: CSS
+          iconClass: /imgs/brands/postqresql.svg
+        - title: Firebase
+          description: ownerSkillsDjango
+          iconClass: /imgs/brands/firebase.svg
+    - title: Markup
       description: ownerSkillsPython
-      iconClass: fa-css3-alt
+      iconClass: /imgs/brands/document.svg
       libs:
+        - title: HTML
+          description: ownerSkillsDjango
+          iconClass: /imgs/brands/html.svg
+        - title: Markdown
+          description: ownerSkillsDjango
+          iconClass: /imgs/brands/markdown.svg
+        - title: CSS
+          description: ownerSkillsDjango
+          iconClass: /imgs/brands/css3.svg
         - title: Sass
           description: ownerSkillsDjango
-          iconClass: fa-sass
+          iconClass: /imgs/brands/sass.svg
         - title: Bootstrap
           description: ownerSkillsDjango
-          iconClass: fa-bootstrap
+          iconClass: /imgs/brands/bootstrap.svg
+    - title: Others
+      description: ownerSkillsPython
+      iconClass: /imgs/brands/random.svg
+      libs:
+        - title: Git
+          description: ownerSkillsDjango
+          iconClass: /imgs/brands/git.svg
+        - title: Selenium
+          description: ownerSkillsDjango
+          iconClass: /imgs/brands/selenium.svg
   ownerWorkExperience:
     - jobTitle: resumeJobTitleVlinde
       company:
