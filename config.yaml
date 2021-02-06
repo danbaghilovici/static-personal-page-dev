@@ -15,17 +15,26 @@ languages:
     menu:
       main:
         - url: "/"
-          name: siteNavAboutText
+          name: sidenavAboutTranslation
           weight: 1
           pre: fa-user
         - url: "/blog"
-          name: siteNavBlogText
+          name: sidenavBlogTranslation
           weight: 2
           pre: fa-blog
+        - url: "/resume"
+          name: sidenavResumeTranslation
+          weight: 3
+          pre: fa-blog
 #        - url: "/portfolio"
-#          name: siteNavPortfolioText
-#          weight: 3
+#          name: sidenavPortfolioTranslation
+#          weight: 4
 #          pre: fa-laptop
+      contact:
+        - url: "/contact"
+          name: sidenavContactTranslation
+          weight: 5
+          pre: fa-paper-plane
   ro:
     contentDir: content/ro
     languageName: Română
@@ -82,7 +91,7 @@ params:
     - contact@danbaghilovici.xyz
     - dan.baghilovici@gmail.com
   ownerPhone:
-    - "+40 770 662 188"
+    - ""
   ownerLocation: Romania
   ownerWebsite: www.danbaghilovici.xyz
   ownerSocialLinks:

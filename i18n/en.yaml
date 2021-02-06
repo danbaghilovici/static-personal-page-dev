@@ -1,54 +1,56 @@
 #GLOBAL
 # BLOG ENTRIES
-readMoreOfBlogEntryText:
+readMoreTranslation:
   other: read more
-publishedOnBlogEntryText:
+publishedOnTranslation:
   other: published on
 # /BLOG ENTRIES
 # SIDENAV
-siteNavAboutText:
+sidenavAboutTranslation:
   other: about
-siteNavPortfolioText:
-  other: portfolio
-siteNavBlogText:
+sidenavPortfolioTranslation:
+  other: Projects
+sidenavBlogTranslation:
   other: blog
-sidenavContactText:
+sidenavResumeTranslation:
+  other: resume
+sidenavContactTranslation:
   other: contact me
-jobTitle: 
-  other: software developer
-sidenavShortDescription:
+sidenavShortDescriptionTranslation:
   other: Hi &#128075;, my name is <b><span style="font-size:20px";\>{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer 👨‍💻. </br>Welcome to my website!
+jobTitleTranslation:
+  other: software developer
 # /SIDENAV
 # HOME PAGE
 # HOME ABOUT
-homeAboutShortDescription:
+homeAboutShortDescriptionTranslation:
   other: I'm a Software Developer that loves building high quality products. Besides contributing to Open Source projects in any way I can, I also like to learn new technolgies and tools that I consider to be a good fit for my skill set.
-homeAboutCheckMyBlog:
+homeAboutCheckMyBlogTextTranslation:
   other: I write on my <a class="link-on-bg" href="{{.blogLink}}">blog</a> about topics that I find interesting usually technical matters or just a solution to a problem that I encountered in my programming routine
-homeAboutHowMayIHelp:
+homeAboutHowMayIHelpTextTranslation:
   other: Want to know how I may help with your future project?
-homeAboutCheckMyLinks:
+homeAboutCheckMyLinksTextTranslation:
   other: Check out my project <a class="link-on-bg" href="{{.portfolioLink}}">portfolio</a> and <a class="link-on-bg" href="{{.resumeLink}}">online resume</a>.
-viewText:
+viewTextTranslation:
   other: view
-portfolioText:
+portfolioTextTranslation:
   other: portfolio
-resumeText:
+resumeTextTranslation:
   other: resume
-blogPostsText:
+blogPostsTextTranslation:
   other: blog posts
 #
-homeWhatHeaderText:
+homeWhatHeaderTextTranslation:
   other: What I do
-homeWhatDescriptionIntroText:
+homeWhatDescriptionIntroTextTranslation:
   other: Having an undestanding of multiple technologies always helped me better choose the right tools I will need for a project.
-homeWhatDescriptionIntroMainSkillsText:
+homeWhatDescriptionIntroMainSkillsTextTranslation:
   other: Below is a quick overview of my main technical skill sets and technologies I use.
-homeWhatDescriptionCheckLinksText:
+homeWhatDescriptionCheckLinksTextTranslation:
   other: Want to find out more about my experience? Check out my <a class="link-on-bg" href="{{.resumeLink}}">online resume</a> and <a class="link-on-bg" href="{{.portfolioLink}}">project portfolio</a>.
-homeLatestBlogsHeaderText:
+homeLatestBlogsHeaderTextTranslation:
   other: latest blog posts
-homeFeaturedProjectsHeaderText:
+homeFeaturedProjectsHeaderTextTranslation:
   other: featured projects
 # RESUME
 resumeCareerSummaryText:
@@ -74,4 +76,28 @@ resumeJobBulletVlinde1:
 resumeJobBulletVlinde2:
   other: Another bullet
 # /RESUME
+# CONTACT
+contactPageHeaderTextTranslation:
+  other: contact
+contactPageSubheaderTextTranslation:
+  other: interested in hiring me for your project or just want to say hi?
+contactPageSubheaderMailToTextTranslation:
+  other: You can fill in the contact form below or send me an email to <a class="link-on-bg" href="mailto:{{.emailToShow}}">{{.emailToShow}}</a>
+contactPageSocialTextTranslation:
+  other: want to get connected?
+contactPageFollowTextTranslation:
+  other: follow me on the social channels below.
+contactFormTitleTextTranslation:
+  other: get in touch
+contactFormNameFieldTextTranslation:
+  other: name
+contactFormEmailFieldTextTranslation:
+  other: email
+contactFormMessageFieldTextTranslation:
+  other: your message
+contactFormSendButtonTextTranslation:
+  other: send now
+
+
+
 
