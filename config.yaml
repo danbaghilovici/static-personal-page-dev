@@ -1,7 +1,7 @@
 ---
 baseURL: https://www.danbaghilovici.xyz
 languageCode: en-us
-theme: bootstraped
+theme: hugo-personal-theme
 title: Dan's Site
 DefaultContentLanguage: en
 defaultContentLanguageInSubdir: true
