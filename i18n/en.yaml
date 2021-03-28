@@ -68,6 +68,14 @@ homeLatestBlogsHeaderTextTranslation:
   other: latest blog posts
 homeFeaturedProjectsHeaderTextTranslation:
   other: featured projects
+# HOME PORTFOLIO
+homePortfolioMiniHeaderTextTranslation:
+  other: projects
+homePortfolioHeaderTextTranslation:
+  other: i recently worked on
+# HOME BLOG
+homeBlogMiniHeader:
+  other: blog
 # RESUME
 resumeCareerSummaryText:
   other: Career summary here
