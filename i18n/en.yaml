@@ -1,4 +1,8 @@
 #GLOBAL
+spainCountryTextTranslation:
+  other: Spain
+jobPeriodPresentTextTranslation:
+  other: Present
 # BLOG ENTRIES
 readMoreTranslation:
   other: read more
@@ -15,7 +19,7 @@ sidenavBlogTranslation:
 sidenavResumeTranslation:
   other: resume
 sidenavContactTranslation:
-  other: contact me
+  other: contact
 sidenavShortDescriptionTranslation:
   other: Hi &#128075;, my name is <b><span style="font-size:20px";\>{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer 👨‍💻. </br>Welcome to my website!
 jobTitleTranslation:
@@ -23,14 +27,22 @@ jobTitleTranslation:
 # /SIDENAV
 # HOME PAGE
 # HOME ABOUT
+homeAboutHelloHeading:
+  other: hello
+homeAboutImStart:
+  other: I'm
+homeAboutLetsTalkButton:
+  other: let's talk
+homeAboutExplorePortfolioButton:
+  other: explore my portfolio
 homeAboutShortDescriptionTranslation:
-  other: I'm a Software Developer that loves building high quality products. Besides contributing to Open Source projects in any way I can, I also like to learn new technolgies and tools that I consider to be a good fit for my skill set.
+  other: A Software Developer that loves building high quality software.
 homeAboutCheckMyBlogTextTranslation:
-  other: I write on my <a class="link-on-bg" href="{{.blogLink}}">blog</a> about topics that I find interesting usually technical matters or just a solution to a problem that I encountered in my programming routine
+  other: I write about it and more on my <a href="{{ .blogLink }}"> blog</a>.
+homeAboutContributingTranslation:
+  other: Besides contributing to Open Source projects, I also help people bring their <a href="{{ .portfolioLink }}"> software projects </a> to the market.
 homeAboutHowMayIHelpTextTranslation:
   other: Want to know how I may help with your future project?
-homeAboutCheckMyLinksTextTranslation:
-  other: Check out my project <a class="link-on-bg" href="{{.portfolioLink}}">portfolio</a> and <a class="link-on-bg" href="{{.resumeLink}}">online resume</a>.
 viewTextTranslation:
   other: view
 portfolioTextTranslation:
@@ -39,9 +51,13 @@ resumeTextTranslation:
   other: resume
 blogPostsTextTranslation:
   other: blog posts
-#
+homeAboutProfilePictureAltText:
+  other: A picture with me
+# HOME WHAT
+homeWhatMiniHeaderTextTranslation:
+  other: what
 homeWhatHeaderTextTranslation:
-  other: What I do
+  other: i do
 homeWhatDescriptionIntroTextTranslation:
   other: Having an undestanding of multiple technologies always helped me better choose the right tools I will need for a project.
 homeWhatDescriptionIntroMainSkillsTextTranslation:
@@ -75,6 +91,30 @@ resumeJobBulletVlinde1:
   other: Some texct here
 resumeJobBulletVlinde2:
   other: Another bullet
+# INTERESTS
+resumeInterestMathematicsTextTranslation:
+  other: mathematics
+resumeInterestFinancesTextTranslation:
+  other: finances
+resumeInterestFitnessTextTranslation:
+  other: fitness
+resumeInterest3dmodelingTextTranslation:
+  other: 3D modeling
+# LANGUAGES
+resumeLangEnglishTranslation:
+  other: English
+resumeLangRomanianTranslation:
+  other: Romanian
+resumeLangSpanishTranslation:
+  other: Spanish
+resumeLangNativeTranslation:
+  other: native
+
+# EDUCATION
+resumeEducationUniTitleTranslation:
+  other: Degree in Computational Mathematics
+resumeEducationBachTitleTranslation:
+  other: Bachelor of Science
 # /RESUME
 # CONTACT
 contactPageHeaderTextTranslation:

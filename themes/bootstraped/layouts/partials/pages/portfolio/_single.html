@@ -1,0 +1,75 @@
+<section class="cta-section theme-bg-light py-5">
+    <div class="container single-col-max-width">
+        <h2 class="heading text-center">Case Study: {{.Params.title}}</h2>
+        {{with .Params.projectIntro}}
+        <div class="project-intro text-center">
+            <p class="mb-0 lead">{{.}}</p>
+        </div>
+        {{end}}
+
+    </div>
+</section>
+<section class="project px-3 py-5 p-md-5">
+    <div class="container">
+        {{if eq .Params.showClientCard true}}
+        <div class="project-meta media flex-column flex-md-row p-4 theme-bg-light">
+            <img class="project-thumb mb-3 mb-md-0 mr-md-5 rounded d-none d-md-inline-block"
+                 src="assets/images/project/project-3.jpg" alt="">
+            <div class="media-body">
+                <div class="client-info">
+                    <h3 class="client-name font-weight-bold mb-4">{{.Params.clientInfo.companyName}}</h3>
+                    <ul class="client-meta list-unstyled">
+                        <li class="mb-2"><i class="fas fa-industry fa-fw mr-2"></i><strong>Industry:</strong>
+                            {{.Params.clientInfo.companyIndustry}}
+                        </li>
+                        <li class="mb-2"><i class="fas fa-users fa-fw mr-2"></i><strong>Size:</strong>
+                            {{.Params.clientInfo.companySize}}
+                        </li>
+                        <li class="mb-2"><strong><i class="fas fa-link fa-fw mr-2"></i>Website:</strong> <a
+                                class="theme-link" href="#">{{.Params.clientInfo.companyWebsite}}</a></li>
+
+                    </ul>
+                    <div class="client-bio mb-4">{{.Params.clientInfo.companyDescription}}</div>
+                    {{with .Params.clientInfo.projectRequirements}}
+                    <h4 class="subheading mb-3">Project Requirements</h4>
+                    <ul class="mb-0">
+                        {{range .Params.clientInfo.projectRequirements}}
+                        <li>aaa</li>
+                        {{end}}
+                    </ul>
+                    {{end}}
+                </div>
+            </div><!--//media-body-->
+        </div><!--//project-meta-->
+        {{end}}
+        <div class="project-sections py-5">
+
+            {{.Content}}
+
+            {{with .Params.showClientTestimonial}}
+            <div class="project-section mb-5">
+                <h3 class="project-section-title mb-3">Client Testimonial</h3>
+            </div><!--//project-section-->
+
+            <div class="client-quote">
+                <div class="quote-holder">
+                    <blockquote class="quote-content">
+                        Simon is a brilliant software engineer! Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.
+                    </blockquote>
+                    <i class="fas fa-quote-left"></i>
+                </div><!--//quote-holder-->
+                <div class="source-holder">
+                    <div class="source-profile">
+                        <img src="assets/images/clients/profile-4.png" alt="image"/>
+                    </div>
+                    <div class="meta">
+                        <div class="name">James Lee</div>
+                        <div class="info">Product Manager, Amazon</div>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</section>

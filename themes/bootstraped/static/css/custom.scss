@@ -1,0 +1,73 @@
+@import "variables";
+//@import "bootswatch";
+
+*{
+  @extend .font-light;
+}
+//p{
+//  font-size: 1.25rem;
+//}
+#content{
+  min-height: 100vh;
+
+}
+#main-wrapper{
+  hr{
+    margin:0;
+  }
+}
+
+//a.social-link{
+//  display: inline-block;
+//  vertical-align: top;
+//  height: 100%;
+//
+//
+//  &:hover {
+//    //color: darken($theme-color-primary, 10%);
+//    //background-color: rgba(256, 256, 256, 0.8);
+//  }
+//}
+
+.font-boldest{
+  font-weight: 900;
+}
+.font-bolder{
+  font-weight: 800;
+}
+.font-bold{
+  font-weight: 500;
+}
+.font-regular{
+  font-weight: 400;
+}
+.font-light{
+  font-weight: 300;
+}
+article.blog-item{
+
+}
+
+.profile-picture{
+  border-radius: 50%;
+  max-height: max(150px,30vw);
+}
+
+.tools-list{
+  img{
+    width: 1.25rem;
+    height: auto;
+    //font-size: 1rem;
+  }
+  .list-group-item{
+
+    p{
+      display: inline;
+    }
+    img{
+      //width: 256px;
+      //height: auto;
+    }
+  }
+
+}
