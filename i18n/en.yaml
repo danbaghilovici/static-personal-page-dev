@@ -130,7 +130,7 @@ contactPageHeaderTextTranslation:
 contactPageSubheaderTextTranslation:
   other: interested in hiring me for your project or just want to say hi?
 contactPageSubheaderMailToTextTranslation:
-  other: You can fill in the contact form below or send me an email to <a class="link-on-bg" href="mailto:{{.emailToShow}}">{{.emailToShow}}</a>
+  other: You can fill in the contact form below or send me an email to <br> <a class="mt-3 btn btn-outline-warning font-bolder" href="mailto:{{.emailToShow}}">{{.emailToShow}}</a>
 contactPageSocialTextTranslation:
   other: want to get connected?
 contactPageFollowTextTranslation:
