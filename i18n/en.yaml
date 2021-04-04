@@ -77,8 +77,12 @@ homePortfolioHeaderTextTranslation:
 homeBlogMiniHeader:
   other: blog
 # RESUME
+resumeHeaderTextTranslation:
+  other: online resume
+resumeDownloadPDFButtonTextTranslation:
+  other: download pdf version
 resumeCareerSummaryText:
-  other: Career summary here
+  other: I'm a passionate software developer that makes the use of best programming practices a priority. Knowing the technologies at a deeper level allows me to optimize for the best performance available, be either on the front end, back end or on areas in between. Having worked in the field made me discover the value that brings shipping a product on time and with consistent updates, this way the satisfaction of the clients is always met. I'm always interested in learning new technologies and discover new areas of software in this industry.
 resumeWorkSectionHeaderText:
   other: work experience
 resumeWorkSectionProjectsText:
@@ -94,11 +98,13 @@ resumeWorkSectionInterestsText:
 resumeJobTitleVlinde:
   other: software developer
 resumeJobDescriptionVlinde:
-  other: A simple description
+  other: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis pharetra ex, quis tincidunt justo imperdiet id. Praesent pellentesque lacus sit amet interdum congue.
 resumeJobBulletVlinde1:
-  other: Some texct here
+  other: Morbi et ipsum venenatis neque pulvinar mattis nec sed turpis
 resumeJobBulletVlinde2:
-  other: Another bullet
+  other: Praesent nibh ex, semper id lectus quis, venenatis lobortis eros.
+resumeProject0Description:
+  other: Nam tristique, risus et pulvinar aliquam, diam erat fermentum turpis, quis vestibulum purus risus a orci. Nunc tincidunt sapien ut ligula hendrerit, ac bibendum metus vestibulum. Mauris aliquam diam tempor, pharetra justo non, fermentum est. Etiam consequat mi eu molestie pulvinar. In molestie vitae ante et euismod. Quisque vehicula risus id varius sollicitudin.
 # INTERESTS
 resumeInterestMathematicsTextTranslation:
   other: mathematics
