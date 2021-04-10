@@ -1,4 +1,8 @@
 #GLOBAL
+spainCountryTextTranslation:
+  other: Spain
+jobPeriodPresentTextTranslation:
+  other: Present
 # BLOG ENTRIES
 readMoreTranslation:
   other: read more
@@ -15,7 +19,7 @@ sidenavBlogTranslation:
 sidenavResumeTranslation:
   other: resume
 sidenavContactTranslation:
-  other: contact me
+  other: contact
 sidenavShortDescriptionTranslation:
   other: Hi &#128075;, my name is <b><span style="font-size:20px";\>{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer 👨‍💻. </br>Welcome to my website!
 jobTitleTranslation:
@@ -23,14 +27,22 @@ jobTitleTranslation:
 # /SIDENAV
 # HOME PAGE
 # HOME ABOUT
+homeAboutHelloHeading:
+  other: hello
+homeAboutImStart:
+  other: I'm
+homeAboutLetsTalkButton:
+  other: let's talk
+homeAboutExplorePortfolioButton:
+  other: explore my portfolio
 homeAboutShortDescriptionTranslation:
-  other: I'm a Software Developer that loves building high quality products. Besides contributing to Open Source projects in any way I can, I also like to learn new technolgies and tools that I consider to be a good fit for my skill set.
+  other: A Software Developer that loves building high quality software.
 homeAboutCheckMyBlogTextTranslation:
-  other: I write on my <a class="link-on-bg" href="{{.blogLink}}">blog</a> about topics that I find interesting usually technical matters or just a solution to a problem that I encountered in my programming routine
+  other: I write about it and more on my <a href="{{ .blogLink }}"> blog</a>.
+homeAboutContributingTranslation:
+  other: Besides contributing to Open Source projects, I also help people bring their <a href="{{ .portfolioLink }}"> software projects </a> to the market.
 homeAboutHowMayIHelpTextTranslation:
   other: Want to know how I may help with your future project?
-homeAboutCheckMyLinksTextTranslation:
-  other: Check out my project <a class="link-on-bg" href="{{.portfolioLink}}">portfolio</a> and <a class="link-on-bg" href="{{.resumeLink}}">online resume</a>.
 viewTextTranslation:
   other: view
 portfolioTextTranslation:
@@ -39,9 +51,13 @@ resumeTextTranslation:
   other: resume
 blogPostsTextTranslation:
   other: blog posts
-#
+homeAboutProfilePictureAltText:
+  other: A picture with me
+# HOME WHAT
+homeWhatMiniHeaderTextTranslation:
+  other: what
 homeWhatHeaderTextTranslation:
-  other: What I do
+  other: i do
 homeWhatDescriptionIntroTextTranslation:
   other: Having an undestanding of multiple technologies always helped me better choose the right tools I will need for a project.
 homeWhatDescriptionIntroMainSkillsTextTranslation:
@@ -52,9 +68,21 @@ homeLatestBlogsHeaderTextTranslation:
   other: latest blog posts
 homeFeaturedProjectsHeaderTextTranslation:
   other: featured projects
+# HOME PORTFOLIO
+homePortfolioMiniHeaderTextTranslation:
+  other: projects
+homePortfolioHeaderTextTranslation:
+  other: i recently worked on
+# HOME BLOG
+homeBlogMiniHeader:
+  other: blog
 # RESUME
+resumeHeaderTextTranslation:
+  other: online resume
+resumeDownloadPDFButtonTextTranslation:
+  other: download pdf version
 resumeCareerSummaryText:
-  other: Career summary here
+  other: I'm a passionate software developer that makes the use of best programming practices a priority. Knowing the technologies at a deeper level allows me to optimize for the best performance available, be either on the front end, back end or on areas in between. Having worked in the field made me discover the value that brings shipping a product on time and with consistent updates, this way the satisfaction of the clients is always met. I'm always interested in learning new technologies and discover new areas of software in this industry.
 resumeWorkSectionHeaderText:
   other: work experience
 resumeWorkSectionProjectsText:
@@ -70,11 +98,37 @@ resumeWorkSectionInterestsText:
 resumeJobTitleVlinde:
   other: software developer
 resumeJobDescriptionVlinde:
-  other: A simple description
+  other: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis pharetra ex, quis tincidunt justo imperdiet id. Praesent pellentesque lacus sit amet interdum congue.
 resumeJobBulletVlinde1:
-  other: Some texct here
+  other: Morbi et ipsum venenatis neque pulvinar mattis nec sed turpis
 resumeJobBulletVlinde2:
-  other: Another bullet
+  other: Praesent nibh ex, semper id lectus quis, venenatis lobortis eros.
+resumeProject0Description:
+  other: Nam tristique, risus et pulvinar aliquam, diam erat fermentum turpis, quis vestibulum purus risus a orci. Nunc tincidunt sapien ut ligula hendrerit, ac bibendum metus vestibulum. Mauris aliquam diam tempor, pharetra justo non, fermentum est. Etiam consequat mi eu molestie pulvinar. In molestie vitae ante et euismod. Quisque vehicula risus id varius sollicitudin.
+# INTERESTS
+resumeInterestMathematicsTextTranslation:
+  other: mathematics
+resumeInterestFinancesTextTranslation:
+  other: finances
+resumeInterestFitnessTextTranslation:
+  other: fitness
+resumeInterest3dmodelingTextTranslation:
+  other: 3D modeling
+# LANGUAGES
+resumeLangEnglishTranslation:
+  other: English
+resumeLangRomanianTranslation:
+  other: Romanian
+resumeLangSpanishTranslation:
+  other: Spanish
+resumeLangNativeTranslation:
+  other: native
+
+# EDUCATION
+resumeEducationUniTitleTranslation:
+  other: Degree in Computational Mathematics
+resumeEducationBachTitleTranslation:
+  other: Bachelor of Science
 # /RESUME
 # CONTACT
 contactPageHeaderTextTranslation:
@@ -82,7 +136,7 @@ contactPageHeaderTextTranslation:
 contactPageSubheaderTextTranslation:
   other: interested in hiring me for your project or just want to say hi?
 contactPageSubheaderMailToTextTranslation:
-  other: You can fill in the contact form below or send me an email to <a class="link-on-bg" href="mailto:{{.emailToShow}}">{{.emailToShow}}</a>
+  other: You can fill in the contact form below or send me an email to <br> <a class="mt-3 btn btn-outline-warning font-bolder" href="mailto:{{.emailToShow}}">{{.emailToShow}}</a>
 contactPageSocialTextTranslation:
   other: want to get connected?
 contactPageFollowTextTranslation:
