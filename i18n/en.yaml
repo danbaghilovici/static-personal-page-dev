@@ -3,27 +3,37 @@ spainCountryTextTranslation:
   other: Spain
 jobPeriodPresentTextTranslation:
   other: Present
+socialLinkGithubTooltipTranslation:
+  other: See my repositories on GitHub
+socialLinkLinkedinTooltipTranslation:
+  other: Connect with Linkedin
+socialLinkTwitterTooltipTranslation:
+  other: Follow me on Twitter
 # BLOG ENTRIES
 readMoreTranslation:
   other: read more
 publishedOnTranslation:
   other: published on
 # /BLOG ENTRIES
-# SIDENAV
-sidenavAboutTranslation:
+# HEADER
+pageAboutTranslation:
   other: about
-sidenavPortfolioTranslation:
+pagePortfolioTranslation:
   other: Projects
-sidenavBlogTranslation:
+pageBlogTranslation:
   other: blog
-sidenavResumeTranslation:
+pageResumeTranslation:
   other: resume
-sidenavContactTranslation:
+pageContactTranslation:
   other: contact
+morePagesTranslation:
+  other: more
 sidenavShortDescriptionTranslation:
   other: Hi &#128075;, my name is <b><span style="font-size:20px";\>{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer 👨‍💻. </br>Welcome to my website!
 jobTitleTranslation:
   other: software developer
+avatarAltTranslation:
+  other: Profile picture
 # /SIDENAV
 # HOME PAGE
 # HOME ABOUT
