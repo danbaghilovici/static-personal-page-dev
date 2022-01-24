@@ -1,0 +1,28 @@
+# HEADER
+pageAboutTranslation:
+  other: despre
+pagePortfolioTranslation:
+  other: proiecte
+pageBlogTranslation:
+  other: blog
+pageResumeTranslation:
+  other: CV
+pageContactTranslation:
+  other: contact
+morePagesTranslation:
+  other: mai multe
+# CONTACT
+contactPageHeaderTextTranslation:
+  other: contact
+contactPageSubheaderTextTranslation:
+  other: Ai nevoie de ajutor pentru proiectul tău sau vrei doar să ma saluți?
+contactPageSubheaderMailToTextTranslation:
+  other: Completează formularul sau pur și simplu trimite-mi un e-mail la
+contactFormNameFieldTextTranslation:
+  other: nume
+contactFormEmailFieldTextTranslation:
+  other: email
+contactFormMessageFieldTextTranslation:
+  other: mesajul tau
+contactFormSendButtonTextTranslation:
+  other: trimite

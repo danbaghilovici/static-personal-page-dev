@@ -28,12 +28,6 @@ pageContactTranslation:
   other: contact
 morePagesTranslation:
   other: more
-sidenavShortDescriptionTranslation:
-  other: Hi &#128075;, my name is <b><span style="font-size:20px";\>{{.Site.Params.ownerfirstname}}</span></b> and I'm a Software Developer 👨‍💻. </br>Welcome to my website!
-jobTitleTranslation:
-  other: software developer
-avatarAltTranslation:
-  other: Profile picture
 # /SIDENAV
 # HOME PAGE
 # HOME ABOUT
@@ -48,9 +42,9 @@ homeAboutExplorePortfolioButton:
 homeAboutShortDescriptionTranslation:
   other: A Software Developer that loves building high quality software.
 homeAboutCheckMyBlogTextTranslation:
-  other: I write about it and more on my <a href="{{ .blogLink }}"> blog</a>.
+  other: I write about it and more on my <a class="text-primary" href="{{ .blogLink }}"> blog</a>.
 homeAboutContributingTranslation:
-  other: Besides contributing to Open Source projects, I also help people bring their <a href="{{ .portfolioLink }}"> software projects </a> to the market.
+  other: Besides contributing to Open Source projects, I also help people bring their <a class="text-primary" href="{{ .portfolioLink }}"> software projects </a> to the market.
 homeAboutHowMayIHelpTextTranslation:
   other: Want to know how I may help with your future project?
 viewTextTranslation:
@@ -82,7 +76,7 @@ homeFeaturedProjectsHeaderTextTranslation:
 homePortfolioMiniHeaderTextTranslation:
   other: projects
 homePortfolioHeaderTextTranslation:
-  other: i recently worked on
+  other: Recently working on
 # HOME BLOG
 homeBlogMiniHeader:
   other: blog
@@ -144,15 +138,9 @@ resumeEducationBachTitleTranslation:
 contactPageHeaderTextTranslation:
   other: contact
 contactPageSubheaderTextTranslation:
-  other: interested in hiring me for your project or just want to say hi?
+  other: Need help for your project or just want to say hi?
 contactPageSubheaderMailToTextTranslation:
-  other: You can fill in the contact form below or send me an email to <br> <a class="mt-3 btn btn-outline-warning font-bolder" href="mailto:{{.emailToShow}}">{{.emailToShow}}</a>
-contactPageSocialTextTranslation:
-  other: want to get connected?
-contactPageFollowTextTranslation:
-  other: follow me on the social channels below.
-contactFormTitleTextTranslation:
-  other: get in touch
+  other: Fill the form or just send me an email at
 contactFormNameFieldTextTranslation:
   other: name
 contactFormEmailFieldTextTranslation:
@@ -160,7 +148,7 @@ contactFormEmailFieldTextTranslation:
 contactFormMessageFieldTextTranslation:
   other: your message
 contactFormSendButtonTextTranslation:
-  other: send now
+  other: send
 
 
 
