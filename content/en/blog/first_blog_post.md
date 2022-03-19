@@ -1,9 +1,20 @@
 ---
 title: First blog title
 slug: first-blog-post-en
-description: O descriere
+description: Phasellus luctus urna id purus bibendum, ut tempor odio pulvinar. Aenean venenatis nisi justo, at vestibulum nisl lacinia vitae. Etiam at urna urna.
 keywords: [ceva, 2]
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
+gitSourceCode: https://www.github.com
+tags:
+- Development
+- Java
+- Vert.x
+- Firebase
+references:
+- Firebase performances improvements : https://en.wikipedia.org/wiki/Group_(mathematics)
+- RxJava compatibility issues: https://en.wikipedia.org/wiki/Book_of_Kells
+- Sorting algorithms performance table: https://en.wikipedia.org/wiki/Bacteria 
+draft: false
 ---
 
 # Building Reactive Microservice Systems
@@ -40,8 +51,12 @@ Sed maximus est pharetra magna bibendum tempus non id lacus. Pellentesque conseq
 {{< line_break >}}
 
 > In laoreet lacus velit, a sodales dolor mollis nec. Phasellus quis mauris a nunc rutrum dignissim a non leo. Vivamus vel ultrices turpis, quis posuere eros. Aliquam vehicula ipsum velit, et iaculis dui dictum a. Fusce pharetra luctus libero eu bibendum. Morbi non libero lacus. Mauris accumsan feugiat nunc vel dignissim. Nam nibh ex, tincidunt et varius in, hendrerit vitae est. Mauris consequat felis turpis, id dignissim ipsum suscipit eu. In hac habitasse platea dictumst. Sed accumsan eget tellus sit amet ultricies.
+— Benjamin Franklin
+
+{{< line_break >}}
 
 Donec feugiat in sapien ac volutpat. Vivamus fermentum justo lorem, vel molestie libero vestibulum vitae. Donec venenatis nulla metus, nec fermentum diam pretium convallis. Nullam viverra viverra suscipit. Ut euismod id ex vitae imperdiet. Curabitur eu nisl arcu. Praesent hendrerit sollicitudin est ac interdum. Nam et leo cursus, dignissim elit in, scelerisque lectus.
+
 
 Nunc a faucibus erat. Fusce in arcu in leo malesuada maximus ut et justo. Phasellus tortor metus, posuere at consequat sed, tincidunt vitae ex. Nam est nibh, porttitor eu venenatis id, malesuada a enim. Cras ultricies nibh est, eget suscipit erat ornare quis. Vivamus condimentum id enim sit amet scelerisque. Quisque vehicula faucibus justo ut venenatis. Praesent sollicitudin a dolor in facilisis. Donec sed sollicitudin libero. Sed commodo varius eros quis cursus. Ut malesuada hendrerit viverra.
 
@@ -73,33 +88,33 @@ ServiceDiscovery discovery = ServiceDiscovery.create(vertx);
 // As we know we want to use an HTTP microservice, we can
 // retrieve a WebClient already configured for the service
 HttpEndpoint
- .rxGetWebClient(discovery,
- // This method is a filter to select the service
- rec -> rec.getName().endsWith("hello")
- )
- .flatMap(client ->
- // We have retrieved the WebClient, use it to call
- // the service
- client.get("/").as(BodyCodec.string()).rxSend())
-    .subscribe(response -> System.out.println(response.body()));
+    .rxGetWebClient(discovery,
+     // This method is a filter to select the service
+     rec -> rec.getName().endsWith("hello")
+     )
+     .flatMap(client ->
+     // We have retrieved the WebClient, use it to call
+     // the service
+     client.get("/").as(BodyCodec.string()).rxSend())
+        .subscribe(response -> System.out.println(response.body()));
 
 // We create the service discovery object
 ServiceDiscovery discovery = ServiceDiscovery.create(vertx);
 vertx.createHttpServer()
-.requestHandler(req -> req.response().end("hello"))
-.rxListen(8083)
-.flatMap(
-// Once the HTTP server is started (we are ready to serve)
-// we publish the service.
-server -> {
-// We create a record describing the service and its
-// location (for HTTP endpoint)
-Record record = HttpEndpoint.createRecord(
-"hello", // the name of the service
-"localhost", // the host
-server.actualPort(), // the port
-"/" // the root of the endpoint
-);
+    .requestHandler(req -> req.response().end("hello"))
+    .rxListen(8083)
+    .flatMap(
+    // Once the HTTP server is started (we are ready to serve)
+    // we publish the service.
+    server -> {
+    // We create a record describing the service and its
+    // location (for HTTP endpoint)
+    Record record = HttpEndpoint.createRecord(
+    "hello", // the name of the service
+    "localhost", // the host
+    server.actualPort(), // the port
+    "/" // the root of the endpoint
+    );
 // We publish the service
 return discovery.rxPublish(record);
 }
