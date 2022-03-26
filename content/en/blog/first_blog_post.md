@@ -11,6 +11,7 @@ tags:
 - Vert.x
 - Firebase
 references:
+- Source code (GitHub) : https://github.com/dntzbgh/supreme-doodle
 - Firebase performances improvements : https://en.wikipedia.org/wiki/Group_(mathematics)
 - RxJava compatibility issues: https://en.wikipedia.org/wiki/Book_of_Kells
 - Sorting algorithms performance table: https://en.wikipedia.org/wiki/Bacteria 
