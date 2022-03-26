@@ -1,91 +1,99 @@
 ---
-baseURL: https://www.danbaghilovici.xyz
+baseUrl: example.com
 languageCode: en-us
 theme: hugo-personal-theme
-title: Dan's Site
+description: ceva
 DefaultContentLanguage: en
 defaultContentLanguageInSubdir: true
+relativeURLs: true
 languages:
   en:
+    title: Dan's Site in En
+    description: Homepage description in En
     contentDir: content/en
     languageName: English
     languageCode: en-US
-    languageFlagImgPath: ''
     weight: 0
     menu:
       main:
         - url: "/"
-          name: sidenavAboutTranslation
+          name: pageAboutTranslation
           weight: 1
-          pre: fa-user
-        - url: "/portfolio"
-          name: sidenavPortfolioTranslation
-          weight: 3
-          pre: fa-laptop
-      more:
-        - url: "/blog"
-          name: sidenavBlogTranslation
+          params:
+            svg: <path d='M16.6123,2.2138a1.01,1.01,0,0,0-1.2427,0L1,13.4194l1.2427,1.5717L4,13.6209V26a2.0041,2.0041,0,0,0,2,2H26a2.0037,2.0037,0,0,0,2-2V13.63L29.7573,15,31,13.4282ZM18,26H14V18h4Zm2,0V18a2.0023,2.0023,0,0,0-2-2H14a2.002,2.002,0,0,0-2,2v8H6V12.0615l10-7.79,10,7.8005V26Z' transform='translate(0 0)'/>
+        - indentifier: portfolio
+          url: portfolio-en/
+          name: pagePortfolioTranslation
           weight: 2
-          pre: fa-blog
-        - url: "/resume"
-          name: sidenavResumeTranslation
-          weight: 4
-          pre: fa-blog
+          params:
+            svg: <path d='M28,10H22V6a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2v4H4a2,2,0,0,0-2,2V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V12A2,2,0,0,0,28,10ZM12,6h8v4H12ZM4,26V12H28V26Z'/>
+        - url: "/blog-en"
+          name: pageBlogTranslation
+          weight: 3
+          params:
+            svg: <rect x="4" y="24" width="10" height="2"/><rect x="4" y="18" width="10" height="2"/><path d="M26,14H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H26a2,2,0,0,1,2,2v6A2,2,0,0,1,26,14ZM6,6v6H26V6Z" transform="translate(0 0)"/><path d="M26,28H20a2,2,0,0,1-2-2V20a2,2,0,0,1,2-2h6a2,2,0,0,1,2,2v6A2,2,0,0,1,26,28Zm-6-8v6h6V20Z" transform="translate(0 0)"/>
       contact:
-        - url: "/contact"
-          name: sidenavContactTranslation
+        - url: "/contact/"
+          name: pageContactTranslation
           weight: 5
-          pre: fa-paper-plane
+          params:
+            svg: <path d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L7,16,4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Zm-20.9,10L8.76,17H18V15H8.76L6.55,6.89,24.76,16Z'/>
   ro:
     contentDir: content/ro
     languageName: Română
     languageCode: ro-RO
-    languageFlagImgPath: ''
     weight: 1
     menu:
       main:
         - url: "/"
-          name: siteNavAboutText
+          name: pageAboutTranslation
           weight: 1
-          pre: fa-user
+        - url: "/portfolio"
+          name: pagePortfolioTranslation
+          weight: 3
+      more:
         - url: "/blog"
-          name: siteNavBlogText
+          name: pageBlogTranslation
           weight: 2
-          pre: fa-blog
-#        - url: "/portofoliu"
-#          name: siteNavPortfolioText
-#          weight: 3
-#          pre: fa-laptop
+        - url: "/resume"
+          name: pageResumeTranslation
+          weight: 4
+      contact:
+        - url: "/contact"
+          name: pageContactTranslation
+          weight: 5
   es:
     contentDir: content/es
     languageName: Español
     languageCode: es-ES
-    languageFlagImgPath: ''
     weight: 2
     menu:
       main:
         - url: "/"
-          name: siteNavAboutText
+          name: pageAboutTranslation
           weight: 1
-          pre: fa-user
+        - url: "/portofolio"
+          name: pagePortfolioTranslation
+          weight: 3
+      more:
         - url: "/blog"
-          name: siteNavBlogText
+          name: pageBlogTranslation
           weight: 2
-          pre: fa-blog
-#        - url: "/portofolio"
-#          name: siteNavPortfolioText
-#          weight: 3
-#          pre: fa-laptop
+        - url: "/cv"
+          name: pageResumeTranslation
+          weight: 4
+      contact:
+        - url: "/contact"
+          name: pageContactTranslation
+          weight: 5
+
 sitemap:
   changefreq: weekly
   priority: 0.5
 canonifyURLs: true
+uglyurls: false
 params:
   useDarkMode: true
-  siteNavIconsClassesInOrder:
-    - fa-user
-    - fa-blog
-    - fa-laptop
   ownerFirstName: Dan
   ownerLastName: Baghilovici
   ownerEmail:
@@ -97,16 +105,36 @@ params:
   ownerLocation: Romania
   ownerWebsite: www.danbaghilovici.xyz
   ownerSocialLinks:
-    - class: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg>
-      tooltip: ''
+    - tooltip: socialLinkTwitterTooltipTranslation
+      name: twitter
+      path: <path d="M11.92,24.94A12.76,12.76,0,0,0,24.76,12.1c0-.2,0-.39,0-.59A9.4,9.4,0,0,0,27,9.18a9.31,9.31,0,0,1-2.59.71,4.56,4.56,0,0,0,2-2.5,8.89,8.89,0,0,1-2.86,1.1,4.52,4.52,0,0,0-7.7,4.11,12.79,12.79,0,0,1-9.3-4.71,4.51,4.51,0,0,0,1.4,6,4.47,4.47,0,0,1-2-.56v.05A4.53,4.53,0,0,0,9.5,17.83a4.53,4.53,0,0,1-2,.08A4.51,4.51,0,0,0,11.68,21,9.05,9.05,0,0,1,6.07,23,9.77,9.77,0,0,1,5,22.91a12.77,12.77,0,0,0,6.92,2" transform="translate(0)"/>
       link: https://twitter.com/dntzbgh
-    - class: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-      tooltip: ''
+    - tooltip: socialLinkLinkedinTooltipTranslation
+      name: linkedin
+      path: <path d="M26.2,4H5.8C4.8,4,4,4.8,4,5.7v20.5c0,0.9,0.8,1.7,1.8,1.7h20.4c1,0,1.8-0.8,1.8-1.7V5.7C28,4.8,27.2,4,26.2,4z M11.1,24.4H7.6V13h3.5V24.4z M9.4,11.4c-1.1,0-2.1-0.9-2.1-2.1c0-1.2,0.9-2.1,2.1-2.1c1.1,0,2.1,0.9,2.1,2.1S10.5,11.4,9.4,11.4z M24.5,24.3H21v-5.6c0-1.3,0-3.1-1.9-3.1c-1.9,0-2.1,1.5-2.1,2.9v5.7h-3.5V13h3.3v1.5h0.1c0.5-0.9,1.7-1.9,3.4-1.9c3.6,0,4.3,2.4,4.3,5.5V24.3z"/>
       link: https://linkedin.com/in/dan-baghilovici-a137251b8
-    - class: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-      tooltip: ''
+    - tooltip: socialLinkGithubTooltipTranslation
+      name: github
+      path: <path d="M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z" />
       link: https://github.com/dntzbgh
+    - tooltip: socialLinkEmailTooltipTranslation
+      name: Email
+      path: <path d="M28,6H4A2,2,0,0,0,2,8V24a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V8A2,2,0,0,0,28,6ZM25.8,8,16,14.78,6.2,8ZM4,24V8.91l11.43,7.91a1,1,0,0,0,1.14,0L28,8.91V24Z" transform="translate(0)"/>
+      link: dan.baghilovici@gmail.com
   ownerSkillsSet:
+    - title: Java
+      description: ''
+      iconClass: ''
+      weight: 1
+      libs:
+        - title: SpringBoot
+          description: a
+          iconClass: 'a'
+          weight: 1
+        - title: Vert.x
+          description: s
+          iconClass: 's'
+          weight: 2
     - title: Javascript
       description: ownerSkillsJavascript
       iconClass: /imgs/brands/js.svg
@@ -171,7 +199,7 @@ params:
           description: ownerSkillsDjango
           iconClass: /imgs/brands/firebase.svg
           weight: 1
-    - title: Markup
+    - title: Markup & Stylesheet
       description: ownerSkillsPython
       iconClass: /imgs/brands/document.svg
       weight: 4
@@ -251,3 +279,28 @@ params:
       info:
     - language: resumeLangSpanishTranslation
       info:
+markup:
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 3
+  blackFriday:
+    angledQuotes: false
+    extensions: [
+        "laxHtmlBlocks", # laxer block handling... let's see what this does?
+        "hardLineBreak", # newlines result in line breaks
+    ]
+    extensionsMask: null
+    footnoteAnchorPrefix: ""
+    footnoteReturnLinkContents: ""
+    fractions: true
+    hrefTargetBlank: false
+    latexDashes: true
+    nofollowLinks: false
+    noreferrerLinks: false
+    plainIDAnchors: true
+    skipHTML: false
+    smartDashes: true
+    smartypants: true
+    smartypantsQuotesNBSP: false
+    taskLists: true
