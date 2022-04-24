@@ -257,3 +257,5 @@ $RECYCLE.BIN/
 public
 static/css/style.scss
 static/css/style.css.map
+.DS_Store
+themes/.DS_Store
