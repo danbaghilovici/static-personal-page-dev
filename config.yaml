@@ -1,7 +1,7 @@
 ---
-baseUrl: /
+baseUrl: www.example.com
 languageCode: en-us
-theme: hugo-personal-theme
+theme: carbonv11-theme1
 description: ceva
 DefaultContentLanguage: en
 defaultContentLanguageInSubdir: true
