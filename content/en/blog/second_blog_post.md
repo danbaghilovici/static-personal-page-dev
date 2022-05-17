@@ -1,7 +1,7 @@
 ---
-title: Vestibulum et quam commodo, gravida lacus ullamcorper, dictum dolor.
+title: Your Git Commit History Should Read Like a History Book. Here’s How.
 slug: second-blog-post-en
-description: Quisque a turpis vel nunc vestibulum tincidunt. Nulla consequat odio eros, a fermentum lorem volutpat ut. Morbi bibendum mollis vestibulum.
+description: Stop wasting time trying to decipher what a commit did.
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
 draft: false
 ---

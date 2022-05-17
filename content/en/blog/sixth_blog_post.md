@@ -1,7 +1,7 @@
 ---
-title: Somethign
+title: BFF Backend for Frontend
 slug: sixth-blog-post-en
-description: O descriere
+description: Let's say you want to build an e-commerce project that can scale to meet all the needs across different clients. One of the solutions that will come to your mind will be micro services. You have micro services for Payments, Users, Reviews, etc.., and exposed APIs to be used by the frontend.
 keywords: [ceva, 2]
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
 gitSourceCode: https://www.github.com

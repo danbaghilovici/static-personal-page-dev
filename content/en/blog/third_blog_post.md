@@ -1,7 +1,7 @@
 ---
-title: Et quam commodo, gravida lacus ullamcorper, dictum dolor.
+title: Stop wasting time trying to decipher what a commit did.
 slug: third-blog-post-en
-description: Quisque a turpis vel nunc vestibulum tincidunt. Nulla consequat odio eros, a fermentum lorem volutpat ut. Morbi bibendum mollis vestibulum.
+description: There is so much to learn, let’s narrow it down to only six
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
 draft: false
 ---
