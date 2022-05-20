@@ -2,7 +2,7 @@
 title: Vestibulum et quam commodo, gravida lacus ullamcorper, dictum dolor.
 slug: first-post-en
 description: Quisque a turpis vel nunc vestibulum tincidunt. Nulla consequat odio eros, a fermentum lorem volutpat ut.
-media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
+media: https://source.unsplash.com/random/900×700/?fruit
 keywords: [ceva, 2]
 ---
 
