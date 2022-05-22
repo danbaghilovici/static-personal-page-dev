@@ -1,5 +1,5 @@
 ---
-title: Your Git Commit History Should Read Like a History Book. Here’s How.
+title: Your Git Commit History Should Read Like a History Book. 
 slug: second-blog-post-en
 description: Stop wasting time trying to decipher what a commit did.
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
