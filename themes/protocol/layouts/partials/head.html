@@ -1,0 +1,36 @@
+<head>
+
+    <link href="{{ .Site.BaseURL | absLangURL}}css/protocol.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL | absLangURL}}css/protocol-components.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL | absLangURL}}css/custom.css" rel="stylesheet">
+
+    <script src="{{ .Site.BaseURL | absLangURL}}js/protocol-base.js"></script>
+    <script src="{{ .Site.BaseURL | absLangURL}}js/protocol-utils.js"></script>
+    <script src="{{ .Site.BaseURL | absLangURL}}js/protocol-supports.js"></script>
+    <script src="{{ .Site.BaseURL | absLangURL}}js/protocol-menu.js"></script>
+    <script src="{{ .Site.BaseURL | absLangURL}}js/protocol-lang-switcher.js"></script>
+    <script src="{{ .Site.BaseURL | absLangURL}}js/protocol-details.js"></script>
+    <script src="{{ .Site.BaseURL | absLangURL}}js/protocol-footer.js"></script>
+    <script src="{{ .Site.BaseURL | absLangURL}}js/protocol-navigation.js"></script>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer>
+        window.onload = function (){
+            // console.log("loaded");
+            Mzp.Navigation.init()
+            Mzp.Menu.init();
+            Mzp.LangSwitcher.init(function(previousLanguage,
+                                           newLanguage) {
+                console.log('Previous language: ',
+                    previousLanguage);
+                console.log('New language: ', newLanguage);
+            })
+
+        }
+
+
+    </script>
+
+</head>

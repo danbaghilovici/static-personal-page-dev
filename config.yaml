@@ -1,11 +1,12 @@
 ---
-baseUrl: /
+baseUrl: localhost:1313
 languageCode: en-us
-theme: hugo-personal-theme
+theme: protocol
 description: ceva
 DefaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 relativeURLs: true
+#assetDir: static
 languages:
   en:
     title: Dan's Site in En
