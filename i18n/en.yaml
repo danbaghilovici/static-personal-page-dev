@@ -44,7 +44,7 @@ homeAboutShortDescriptionTranslation:
 homeAboutCheckMyBlogTextTranslation:
   other: I write about it and more on my <a class="text-primary" href="{{ .blogLink }}"> blog</a>.
 homeAboutContributingTranslation:
-  other: Besides contributing to Open Source projects, I also help people bring their <a class="text-primary" href="{{ .portfolioLink }}"> software projects </a> to the market.
+  other: Besides contributing to Open Source blog, I also help people bring their <a class="text-primary" href="{{ .portfolioLink }}"> software blog </a> to the market.
 homeAboutHowMayIHelpTextTranslation:
   other: Want to know how I may help with your future project?
 viewTextTranslation:
@@ -71,10 +71,10 @@ homeWhatDescriptionCheckLinksTextTranslation:
 homeLatestBlogsHeaderTextTranslation:
   other: latest blog posts
 homeFeaturedProjectsHeaderTextTranslation:
-  other: featured projects
+  other: featured blog
 # HOME PORTFOLIO
 homePortfolioMiniHeaderTextTranslation:
-  other: projects
+  other: blog
 homePortfolioHeaderTextTranslation:
   other: Recently working on
 # HOME BLOG
@@ -90,7 +90,7 @@ resumeCareerSummaryText:
 resumeWorkSectionHeaderText:
   other: work experience
 resumeWorkSectionProjectsText:
-  other: projects
+  other: blog
 resumeWorkSectionSkillsText:
   other: skills
 resumeWorkSectionEducationText:

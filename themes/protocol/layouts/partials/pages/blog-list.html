@@ -1,0 +1,52 @@
+{{ $allBlogs:= where .ctx.Site.Pages "Section" "blog"   }}
+{{ $blogPosts:=(where $allBlogs ".IsPage" true).Reverse}}
+{{ $listPage:=(first 1 (where $allBlogs ".IsNode" true)) }}
+{{ $paginator:= .ctx.Paginate $blogPosts 16}}
+{{.onHome}}
+{{$blogPosts}}
+{{where .ctx.Site.Pages "Type" "blog"}}
+{{if .onHome}}
+    {{if gt (len $blogPosts) 0}}
+        <section >
+            <div >
+                {{range first 5 $blogPosts}}
+                <div >
+                    <h1>hello</h1>
+                    {{.Params.Description}}
+                </div>
+                {{end}}
+                {{if gt (len $blogPosts) 5}}
+                {{range $listPage}}
+                <div >
+
+                </div>
+                {{end}}
+                {{end}}
+            </div>
+            </section>
+    {{end}}
+{{else}}
+<div class=" mzp-l-card-third">
+    {{if gt (len $blogPosts) 0}}
+        {{range $paginator.Pages}}
+            <div class="mzp-c-card  mzp-has-aspect-1-1 mzp-has-video">
+                <a class="mzp-c-card-block-link" href="{{.Permalink}}">
+                    <div class="mzp-c-card-media-wrapper ">
+                        <img class="mzp-c-card-image" src="{{.Params.Media}}" alt="">
+                    </div>
+                    <div class="mzp-c-card-content ">
+                        <h2 class="mzp-c-card-title">{{.Params.Title}}</h2>
+                        <p class="mzp-c-card-desc">{{.Params.Description}}</p>
+                        <p class="mzp-c-card-cta">
+                            <span class="mzp-c-card-cta-text">Read more</span>
+                            <img src="/img/icons/arrow-right.svg" width="18" alt="">
+
+                        </p>
+
+                    </div>
+                </a>
+            </div>
+        {{end}}
+    {{end}}
+</div>
+{{end}}

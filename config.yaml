@@ -7,6 +7,11 @@ DefaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 relativeURLs: true
 #assetDir: static
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+canonifyURLs: true
+uglyurls: false
 languages:
   en:
     title: Dan's Site in En
@@ -15,52 +20,22 @@ languages:
     languageName: English
     languageCode: en-US
     weight: 0
+    permalinks:
+      blog: /blog-en/:slug
     menu:
       main:
-        - url: "/"
+        - url: /
           name: pageAboutTranslation
           weight: 1
-          params:
-            svg: <path d='M16.6123,2.2138a1.01,1.01,0,0,0-1.2427,0L1,13.4194l1.2427,1.5717L4,13.6209V26a2.0041,2.0041,0,0,0,2,2H26a2.0037,2.0037,0,0,0,2-2V13.63L29.7573,15,31,13.4282ZM18,26H14V18h4Zm2,0V18a2.0023,2.0023,0,0,0-2-2H14a2.002,2.002,0,0,0-2,2v8H6V12.0615l10-7.79,10,7.8005V26Z' transform='translate(0 0)'/>
         - indentifier: portfolio
           url: portfolio-en/
           name: pagePortfolioTranslation
           weight: 2
-          params:
-            svg: <path d='M28,10H22V6a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2v4H4a2,2,0,0,0-2,2V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V12A2,2,0,0,0,28,10ZM12,6h8v4H12ZM4,26V12H28V26Z'/>
-        - url: "/blog-en"
+        - url: /blog-en
           name: pageBlogTranslation
           weight: 3
-          params:
-            svg: <rect x="4" y="24" width="10" height="2"/><rect x="4" y="18" width="10" height="2"/><path d="M26,14H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H26a2,2,0,0,1,2,2v6A2,2,0,0,1,26,14ZM6,6v6H26V6Z" transform="translate(0 0)"/><path d="M26,28H20a2,2,0,0,1-2-2V20a2,2,0,0,1,2-2h6a2,2,0,0,1,2,2v6A2,2,0,0,1,26,28Zm-6-8v6h6V20Z" transform="translate(0 0)"/>
       contact:
         - url: "/contact/"
-          name: pageContactTranslation
-          weight: 5
-          params:
-            svg: <path d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L7,16,4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Zm-20.9,10L8.76,17H18V15H8.76L6.55,6.89,24.76,16Z'/>
-  ro:
-    contentDir: content/ro
-    languageName: Română
-    languageCode: ro-RO
-    weight: 1
-    menu:
-      main:
-        - url: "/"
-          name: pageAboutTranslation
-          weight: 1
-        - url: "/portfolio"
-          name: pagePortfolioTranslation
-          weight: 3
-      more:
-        - url: "/blog"
-          name: pageBlogTranslation
-          weight: 2
-        - url: "/resume"
-          name: pageResumeTranslation
-          weight: 4
-      contact:
-        - url: "/contact"
           name: pageContactTranslation
           weight: 5
   es:
@@ -68,31 +43,24 @@ languages:
     languageName: Español
     languageCode: es-ES
     weight: 2
+    permalinks:
+      blog: /blog-es/:slug
     menu:
       main:
-        - url: "/"
+        - url: /
           name: pageAboutTranslation
           weight: 1
-        - url: "/portofolio"
+        - indentifier: portfolio
+          url: portfolio-en/
           name: pagePortfolioTranslation
-          weight: 3
-      more:
-        - url: "/blog"
-          name: pageBlogTranslation
           weight: 2
-        - url: "/cv"
-          name: pageResumeTranslation
-          weight: 4
+        - url: /blog-es
+          name: pageBlogTranslation
+          weight: 3
       contact:
         - url: "/contact"
           name: pageContactTranslation
           weight: 5
-
-sitemap:
-  changefreq: weekly
-  priority: 0.5
-canonifyURLs: true
-uglyurls: false
 params:
   useDarkMode: true
   ownerFirstName: Dan
