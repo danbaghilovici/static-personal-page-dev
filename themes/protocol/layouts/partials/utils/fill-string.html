@@ -1,0 +1,6 @@
+{{if ge (len .string) .limit}}
+    {{.string | truncate .limit}}
+{{else}}
+    {{print .string }}
+    {{print (strings.Repeat (sub .limit (len .string)) "&nbsp; ") | safeHTML}}
+{{end}}

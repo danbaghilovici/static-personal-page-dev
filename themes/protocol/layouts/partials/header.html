@@ -5,23 +5,19 @@
                 Menu
             </button>
 
-            <div class="mzp-c-navigation-logo" >
-                <a href="https://www.mozilla.org/">Mozilla</a>
-            </div>
-
             <div class="mzp-c-navigation-items" id="navigation-demos">
                 <div class="mzp-c-navigation-menu">
                     <nav class="mzp-c-menu mzp-is-basic">
                         <ul class="mzp-c-menu-category-list">
                             {{ range $i,$item:=.Site.Menus.main }}
-                            <li class="mzp-c-menu-category">
-                                <a class="mzp-c-menu-title" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
-                            </li>
+                                <li class="mzp-c-menu-category">
+                                    <a class="mzp-c-menu-title" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
+                                </li>
                             {{end}}
+
                             <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
                                 <a class="mzp-c-menu-title" href="#" aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">
-                                    More
-                                    <img src="/img/icons/arrow-down.svg" width="24" alt="">
+                                    {{title (i18n "morePagesTranslation")}}
                                 </a>
                                 <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-example">
                                     <div class="mzp-c-menu-panel-container">
@@ -175,25 +171,25 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="mzp-c-menu-category">
-                                <a class="mzp-c-menu-title" href="#">GitHub
-                                    <img src="/img/icons/external-link.svg" width="24" alt="">
-                                </a>
-                            </li>
-                            <li class="mzp-c-menu-category">
-                                <a class="mzp-c-menu-title" href="#">Linkedin
-                                    <img src="/img/icons/external-link.svg" width="24" alt="">
-                                </a>
-                            </li>
+                            {{range .Site.Params.ownerSocialLinks}}
+                                <li class="mzp-c-menu-category">
+                                    <a class="mzp-c-menu-title" href="{{.link}}">{{title .name}}
+                                        <img src="/img/icons/external-link.svg" width="24" alt="">
+                                    </a>
+                                </li>
+                            {{end}}
+
+
                         </ul>
                     </nav>
 
                 </div>
+
                 <div class="mzp-c-navigation-download">
 
-                    <div class="mzp-c-button-download-container">
-                        <a href="contact" class="mzp-c-button mzp-t-product mzp-t-secondary mzp-t-md">
-                            Contact
+                    <div class="mzp-c-button-download-container ">
+                        <a href="/contact" class="mzp-c-button mzp-t-product mzp-t-md">
+                            {{title (i18n "pageContactTranslation")}}
                         </a>
                     </div>
 

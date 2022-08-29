@@ -1,7 +1,7 @@
 ---
 title: Vestibulum et quam commodo, gravida lacus ullamcorper, dictum dolor.
 slug: second-blog-post-en
-description: Quisque a turpis vel nunc vestibulum tincidunt. Nulla consequat odio eros, a fermentum lorem volutpat ut. Morbi bibendum mollis vestibulum.
+description: GitHub is the place where open source and commercial coding projects live, communicate and grow through pull requests. Learn how to use the iOS GitHub app to manage your projects while on the go.
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
 draft: false
 ---

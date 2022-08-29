@@ -1,52 +1,59 @@
 {{ $allBlogs:= where .ctx.Site.Pages "Section" "blog"   }}
 {{ $blogPosts:=(where $allBlogs ".IsPage" true).Reverse}}
 {{ $listPage:=(first 1 (where $allBlogs ".IsNode" true)) }}
-{{ $paginator:= .ctx.Paginate $blogPosts 16}}
-{{.onHome}}
-{{$blogPosts}}
-{{where .ctx.Site.Pages "Type" "blog"}}
+{{ $paginator:= .ctx.Paginate $blogPosts 2}}
 {{if .onHome}}
+    <h2>What I have been writing about lately</h2>
     {{if gt (len $blogPosts) 0}}
-        <section >
+        <section class="mzp-l-card-quarter">
             <div >
-                {{range first 5 $blogPosts}}
-                <div >
-                    <h1>hello</h1>
-                    {{.Params.Description}}
-                </div>
+                {{range first 3 $blogPosts}}
+                    {{- partial "components/card.html"
+                    ( dict
+                    "ctx" .
+                    "cardTag" "Java"
+                    "cardTitle" .Params.Title
+                    "cardDescription" .Params.Description
+                    "cardCTAText" "Read more"
+                    "cardLink" .Permalink
+                    "cardMeta" "*Not applicable"
+                    )
+                    -}}
                 {{end}}
-                {{if gt (len $blogPosts) 5}}
-                {{range $listPage}}
-                <div >
-
-                </div>
-                {{end}}
+                {{if gt (len $blogPosts) 3}}
+                    {{range $listPage}}
+                        {{- partial "components/index-card.html"
+                        ( dict
+                        "ctx" .
+                        "cardTitle" "Ceva"
+                        "cardDescription" "asd"
+                        "cardCTAText" "Read more"
+                        "cardLink" .Permalink
+                        )
+                        -}}
+                    {{end}}
                 {{end}}
             </div>
-            </section>
+        </section>
+
     {{end}}
 {{else}}
-<div class=" mzp-l-card-third">
+<div class=" mzp-l-card-quarter">
     {{if gt (len $blogPosts) 0}}
         {{range $paginator.Pages}}
-            <div class="mzp-c-card  mzp-has-aspect-1-1 mzp-has-video">
-                <a class="mzp-c-card-block-link" href="{{.Permalink}}">
-                    <div class="mzp-c-card-media-wrapper ">
-                        <img class="mzp-c-card-image" src="{{.Params.Media}}" alt="">
-                    </div>
-                    <div class="mzp-c-card-content ">
-                        <h2 class="mzp-c-card-title">{{.Params.Title}}</h2>
-                        <p class="mzp-c-card-desc">{{.Params.Description}}</p>
-                        <p class="mzp-c-card-cta">
-                            <span class="mzp-c-card-cta-text">Read more</span>
-                            <img src="/img/icons/arrow-right.svg" width="18" alt="">
-
-                        </p>
-
-                    </div>
-                </a>
-            </div>
+            {{- partial "components/card.html"
+            ( dict
+            "ctx" .
+            "cardTag" "Java"
+            "cardTitle" .Params.Title
+            "cardDescription" .Params.Description
+            "cardCTAText" "Read more"
+            "cardLink" .Permalink
+            "cardMeta" "*Not applicable"
+            )
+            -}}
         {{end}}
     {{end}}
 </div>
+{{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
 {{end}}

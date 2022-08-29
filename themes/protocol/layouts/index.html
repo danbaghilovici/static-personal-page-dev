@@ -1,32 +1,64 @@
 {{define "main"}}
+<div class="mzp-c-split mzp-t-dark" id="about-page-leadspace">
+    <div class="mzp-c-split-bg">
+        <div class="mzp-c-split-container">
+            <div class="mzp-c-split-body ">
+
+                <h1 class="mzp-u-title-md">A Software Developer that loves building high quality software.</h1>
+                <p>
+                    I write about it and more on my blog. Besides contributing to Open Source projects, I also help people bring their software projects to the market.
+                </p>
+                <p>Want to know how I may help with your future project?</p>
+                <p><a class="mzp-c-button mzp-t-product" href="#">Let's talk</a></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mzp-l-content">
+
+    <section >
+        <h1>{{i18n "homeAboutShortDescriptionTranslation" }}</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, unde. Illum accusantium molestiae inventore ex molestias consequuntur?</p>
+        <p>Exercitationem id aut maxime distinctio autem! Iste incidunt fuga voluptate amet. Officiis unde ex deleniti ad velit optio qui accusantium, id suscipit eius nemo exercitationem quae enim consequatur. Quas vitae, amet rem beatae sequi porro.</p>
+        <p>Numquam esse, minima ullam architecto vel ipsa voluptatum unde ut odit aliquam corporis et deleniti earum a maxime dicta sapiente iste consequatur iusto delectus voluptas veniam nam alias.</p>
+        <p>Nesciunt harum iure delectus eveniet consequuntur quod, beatae cupiditate soluta eos, temporibus minus quas, ducimus nulla asperiores provident voluptas repudiandae!</p>
+    </section>
+    <section>
+
+        <table class="mzp-u-data-table">
+            <thead>
+            <tr>
+                <td></td>
+                <th scope="col">Core technologies</th>
+                <th scope="col">	Frameworks / Libraries / Tool kits / Utilities</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>Java</td>
+                <td>Vertx, Spring</td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>Javascript</td>
+                <td>Typescript, Angular, Nodejs</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h3>Demo content to show scroll behaviour</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, unde. Illum accusantium molestiae inventore ex molestias consequuntur?</p>
+        <p>Exercitationem id aut maxime distinctio autem! Iste incidunt fuga voluptate amet. Officiis unde ex deleniti ad velit optio qui accusantium, id suscipit eius nemo exercitationem quae enim consequatur. Quas vitae, amet rem beatae sequi porro.</p>
+        <p>Numquam esse, minima ullam architecto vel ipsa voluptatum unde ut odit aliquam corporis et deleniti earum a maxime dicta sapiente iste consequatur iusto delectus voluptas veniam nam alias.</p>
+        <p>Nesciunt harum iure delectus eveniet consequuntur quod, beatae cupiditate soluta eos, temporibus minus quas, ducimus nulla asperiores provident voluptas repudiandae!</p>
+    </section>
+    {{- partial "pages/projects-list.html" (dict "ctx" . "onHome" true) -}}
+    {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
+</div>
 
 
-<section>
-    <h1>{{i18n "homeAboutShortDescriptionTranslation"}}</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, unde. Illum accusantium molestiae inventore ex molestias consequuntur?</p>
-    <p>Exercitationem id aut maxime distinctio autem! Iste incidunt fuga voluptate amet. Officiis unde ex deleniti ad velit optio qui accusantium, id suscipit eius nemo exercitationem quae enim consequatur. Quas vitae, amet rem beatae sequi porro.</p>
-    <p>Numquam esse, minima ullam architecto vel ipsa voluptatum unde ut odit aliquam corporis et deleniti earum a maxime dicta sapiente iste consequatur iusto delectus voluptas veniam nam alias.</p>
-    <p>Nesciunt harum iure delectus eveniet consequuntur quod, beatae cupiditate soluta eos, temporibus minus quas, ducimus nulla asperiores provident voluptas repudiandae!</p>
-</section>
-<section>
-    <h2>Demo content to show scroll behaviour</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, unde. Illum accusantium molestiae inventore ex molestias consequuntur?</p>
-    <p>Exercitationem id aut maxime distinctio autem! Iste incidunt fuga voluptate amet. Officiis unde ex deleniti ad velit optio qui accusantium, id suscipit eius nemo exercitationem quae enim consequatur. Quas vitae, amet rem beatae sequi porro.</p>
-    <p>Numquam esse, minima ullam architecto vel ipsa voluptatum unde ut odit aliquam corporis et deleniti earum a maxime dicta sapiente iste consequatur iusto delectus voluptas veniam nam alias.</p>
-    <p>Nesciunt harum iure delectus eveniet consequuntur quod, beatae cupiditate soluta eos, temporibus minus quas, ducimus nulla asperiores provident voluptas repudiandae!</p>
-</section>
-<section>
-    <h3>Demo content to show scroll behaviour</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, unde. Illum accusantium molestiae inventore ex molestias consequuntur?</p>
-    <p>Exercitationem id aut maxime distinctio autem! Iste incidunt fuga voluptate amet. Officiis unde ex deleniti ad velit optio qui accusantium, id suscipit eius nemo exercitationem quae enim consequatur. Quas vitae, amet rem beatae sequi porro.</p>
-    <p>Numquam esse, minima ullam architecto vel ipsa voluptatum unde ut odit aliquam corporis et deleniti earum a maxime dicta sapiente iste consequatur iusto delectus voluptas veniam nam alias.</p>
-    <p>Nesciunt harum iure delectus eveniet consequuntur quod, beatae cupiditate soluta eos, temporibus minus quas, ducimus nulla asperiores provident voluptas repudiandae!</p>
-</section>
-<section>
-    <h4>Demo content to show scroll behaviour</h4>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, unde. Illum accusantium molestiae inventore ex molestias consequuntur?</p>
-    <p>Exercitationem id aut maxime distinctio autem! Iste incidunt fuga voluptate amet. Officiis unde ex deleniti ad velit optio qui accusantium, id suscipit eius nemo exercitationem quae enim consequatur. Quas vitae, amet rem beatae sequi porro.</p>
-    <p>Numquam esse, minima ullam architecto vel ipsa voluptatum unde ut odit aliquam corporis et deleniti earum a maxime dicta sapiente iste consequatur iusto delectus voluptas veniam nam alias.</p>
-    <p>Nesciunt harum iure delectus eveniet consequuntur quod, beatae cupiditate soluta eos, temporibus minus quas, ducimus nulla asperiores provident voluptas repudiandae!</p>
-</section>
 {{end}}

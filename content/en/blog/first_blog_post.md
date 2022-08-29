@@ -1,5 +1,5 @@
 ---
-title: First blog title
+title: Top 5 javascript frameworks to learn in 2022
 slug: first-blog-post-en
 description: Phasellus luctus urna id purus bibendum, ut tempor odio pulvinar. Aenean venenatis nisi justo, at vestibulum nisl lacinia vitae. Etiam at urna urna.
 keywords: [ceva, 2]
@@ -25,7 +25,7 @@ Lorem ipsum dolor sit amet, **consectetur adipiscing elit**.
 Vivamus mattis justo id quam pulvinar, et cursus urna sagittis. 
 In lobortis velit libero, id aliquet erat lobortis non. 
 Nunc gravida ultricies dignissim. 
-[Aliquam](https://www.example.com) ante eros, vehicula ac sapien a, auctor varius orci. 
+[Aliquam]({{< ref "second_blog_post.md" >}}) ante eros, vehicula ac sapien a, auctor varius orci. 
 In at enim ut erat egestas bibendum pellentesque sed enim.
 Vivamus consequat et lacus ut vehicula. 
 Vestibulum quis erat ut arcu interdum ultricies vel at lorem. 
