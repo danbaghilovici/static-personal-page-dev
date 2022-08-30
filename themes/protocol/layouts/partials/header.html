@@ -21,86 +21,22 @@
                                 </a>
                                 <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-example">
                                     <div class="mzp-c-menu-panel-container">
-                                        <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-example">
+                                        <button class="mzp-c-menu-button-close has-label" type="button" aria-controls="mzp-c-menu-panel-example">
                                             Close menu
                                         </button>
                                         <div class="mzp-c-menu-panel-content">
+
                                             <ul>
                                                 <li>
                                                     <section class="mzp-c-menu-item  mzp-has-icon">
                                                         <div class="mzp-c-menu-item-head">
-                                                            <img class="mzp-c-menu-item-icon" src="/img/icons/image.svg" alt="Useful alt text where appropriate">
-                                                            <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
-
-                                                            <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
-
+                                                            <h4 class="mzp-c-menu-item-title">Additional Information</h4>
                                                         </div>
 
                                                         <ul class="mzp-c-menu-item-list">
 
                                                             <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                        </ul>
-
-                                                    </section>
-
-                                                </li>
-                                                <li>
-                                                    <section class="mzp-c-menu-item  mzp-has-icon">
-                                                        <div class="mzp-c-menu-item-head">
-                                                            <img class="mzp-c-menu-item-icon" src="/img/icons/image.svg" alt="Useful alt text where appropriate">
-                                                            <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
-
-                                                            <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
-
-                                                        </div>
-
-                                                        <ul class="mzp-c-menu-item-list">
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">Secondary link</a>
+                                                                <a href="#">Resume</a>
                                                             </li>
 
                                                         </ul>
@@ -111,75 +47,28 @@
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <section class="mzp-c-menu-item  ">
+                                                    <section class="mzp-c-menu-item  mzp-has-icon">
                                                         <div class="mzp-c-menu-item-head">
-
-                                                            <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
-
-                                                            <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
-
+                                                            <h5 class="mzp-c-menu-item-title">Socials</h5>
                                                         </div>
 
-                                                    </section>
+                                                        <ul class="mzp-c-menu-item-list">
+                                                            {{range .Site.Params.ownerSocialLinks}}
+                                                            <li>
+                                                                <a href="{{.link}}">{{title .name}} <img src="/img/icons/external-link.svg" width="16" alt=""></a>
+                                                            </li>
+                                                            {{end}}
 
-                                                </li>
-                                                <li>
-                                                    <section class="mzp-c-menu-item  ">
-                                                        <div class="mzp-c-menu-item-head">
-
-                                                            <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
-
-                                                            <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
-
-                                                        </div>
-
-                                                    </section>
-
-                                                </li>
-                                                <li>
-                                                    <section class="mzp-c-menu-item  ">
-                                                        <div class="mzp-c-menu-item-head">
-
-                                                            <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
-
-                                                            <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
-
-                                                        </div>
+                                                        </ul>
 
                                                     </section>
 
                                                 </li>
                                             </ul>
-                                        </div>
-                                        <div class="mzp-c-menu-panel-card">
-
-                                            <section class="mzp-c-card mzp-c-card-extra-small mzp-has-aspect-3-2">
-                                                <a class="mzp-c-card-block-link" href="#">
-                                                    <div class="mzp-c-card-media-wrapper">
-                                                        <img class="mzp-c-card-image" src="/img/image-3-2.jpg" alt="">
-                                                    </div>
-                                                    <div class="mzp-c-card-content">
-
-                                                        <h2 class="mzp-c-card-title">A short title</h2>
-                                                        <p class="mzp-c-card-desc">This is an optional card included in the menu. Only visible on wide viewports.</p>
-
-                                                    </div>
-                                                </a>
-                                            </section>
-
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            {{range .Site.Params.ownerSocialLinks}}
-                                <li class="mzp-c-menu-category">
-                                    <a class="mzp-c-menu-title" href="{{.link}}">{{title .name}}
-                                        <img src="/img/icons/external-link.svg" width="24" alt="">
-                                    </a>
-                                </li>
-                            {{end}}
-
-
                         </ul>
                     </nav>
 
@@ -188,7 +77,7 @@
                 <div class="mzp-c-navigation-download">
 
                     <div class="mzp-c-button-download-container ">
-                        <a href="/en/contact" class="mzp-c-button  mzp-t-md">
+                        <a href="{{.Site.BaseURL | relLangURL}}/contact" class="mzp-c-button  mzp-t-md">
                             {{title (i18n "pageContactTranslation")}}
                         </a>
                     </div>
