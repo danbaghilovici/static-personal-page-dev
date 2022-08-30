@@ -1,7 +1,7 @@
 {{ $allBlogs:= where .ctx.Site.Pages "Section" "blog"   }}
 {{ $blogPosts:=(where $allBlogs ".IsPage" true).Reverse}}
 {{ $listPage:=(first 1 (where $allBlogs ".IsNode" true)) }}
-{{ $paginator:= .ctx.Paginate $blogPosts 2}}
+{{ $paginator:= .ctx.Paginate $blogPosts 4}}
 {{if .onHome}}
     <h2>What I have been writing about lately</h2>
     {{if gt (len $blogPosts) 0}}
@@ -38,6 +38,7 @@
 
     {{end}}
 {{else}}
+<h2>For this it what mattters</h2>
 <div class=" mzp-l-card-quarter">
     {{if gt (len $blogPosts) 0}}
         {{range $paginator.Pages}}

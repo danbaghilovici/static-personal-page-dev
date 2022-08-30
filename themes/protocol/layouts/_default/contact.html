@@ -1,46 +1,21 @@
 {{define "main"}}
-<div class="mzp-l-content">
+<div class="mzp-l-content mzp-t-content-md">
     <form class="mzp-c-form">
         <div class="mzp-c-form-header">
-            <h2 class="mzp-c-form-title">Speaker request form</h2>
-            <p>Please complete and submit the form below to request a speaker from Mozilla for your upcoming event.</p>
+            <h2 class="mzp-c-form-title">Get in touch</h2>
+            <p>You can contact me on <a href="#">Linkedin</a> or by email : <a href="mailto:danbaghilovici@gmail.com">danbaghilovici at gmail dot com</a>.
+                <br>Alternatively you can complete and submit the form below and I will get in touch with you</p>
         </div>
-
-        <fieldset class="mzp-c-field-set">
-            <legend class="mzp-c-form-subtitle">Event Information</legend>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="event_name">Event Name <span class="mzp-c-fieldnote">Required</span></label>
-                <input class="mzp-c-field-control" type="text" name="event_name" id="event_name" value="" required aria-required="true">
-            </div>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="event_url">Event URL <span class="mzp-c-fieldnote">Required</span></label>
-                <input class="mzp-c-field-control" type="url" name="event_url" id="event_url" value="" required aria-required="true" placeholder="https://">
-            </div>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="event_date">Event Date <span class="mzp-c-fieldnote">Required</span></label>
-                <input class="mzp-c-field-control" type="date" name="event_date" id="event_date" value="" required aria-required="true">
-                <p class="mzp-c-field-info">If the event is sooner than 20 business days we are unlikely to be able to provide a speaker</p>
-            </div>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="event_time">Event Time <span class="mzp-c-fieldnote">Required</span></label>
-                <input class="mzp-c-field-control" type="time" name="event_time" id="event_time" value="" required aria-required="true">
-            </div>
-
-        </fieldset>
 
         <fieldset class="mzp-c-field-set">
             <legend class="mzp-c-form-subtitle">Your Contact Information</legend>
 
             <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="contact_company">Company <span class="mzp-c-fieldnote">Required</span></label>
-                <input class="mzp-c-field-control" type="text" name="contact_company" id="contact_company" value="" required aria-required="true">
+                <label class="mzp-c-field-label" for="contact_company">Company <span class="mzp-c-fieldnote">Optional</span></label>
+                <input class="mzp-c-field-control" type="text" name="contact_company" id="contact_company" value="" required aria-required="false">
             </div>
 
-            <div class="mzp-c-field">
+            <div class="mzp-c-field" >
                 <label class="mzp-c-field-label" for="contact_name">Name <span class="mzp-c-fieldnote">Required</span></label>
                 <input class="mzp-c-field-control" type="text" name="contact_name" id="contact_name" value="" required aria-required="true">
             </div>
@@ -51,70 +26,18 @@
             </div>
 
             <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="contact_phone">Phone <span class="mzp-c-fieldnote">Required</span></label>
-                <input class="mzp-c-field-control" type="tel" name="contact_phone" id="contact_phone" value="" required aria-required="true">
-            </div>
-
-        </fieldset>
-
-        <fieldset class="mzp-c-field-set">
-            <legend class="mzp-c-form-subtitle">Event Details</legend>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="event_details">Tell us about your event <span class="mzp-c-fieldnote">Theme, venue, audience demographics, confirmed speakers…</span></label>
+                <label class="mzp-c-field-label" for="event_details">What do you need my help with
+                    <span class="mzp-c-fieldnote">Consultancy, Developement , Integrations ...</span>
+                </label>
                 <textarea class="mzp-c-field-control" id="event_details" rows="5" cols="60"></textarea>
             </div>
-
         </fieldset>
 
-        <fieldset class="mzp-c-field-set">
-            <legend class="mzp-c-form-subtitle">Speaker Request</legend>
 
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="guest_1">Guest Speaker Choice #1</label>
-                <input class="mzp-c-field-control" type="text" name="guest_1" id="guest_1" value="">
-            </div>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="guest_2">Guest Speaker Choice #2</label>
-                <input class="mzp-c-field-control" type="text" name="guest_2" id="guest_2" value="">
-            </div>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="guest_topic">Topic of Presentation</label>
-                <input class="mzp-c-field-control" type="text" name="guest_topic" id="guest_topic" value="">
-            </div>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="guest_lang">Presentation Language</label>
-                <select class="mzp-c-field-control" name="guest_lang" id="guest_lang">
-                    <option value="de">Deutsch</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                    <option value="fr">Français</option>
-                    <option value="hi-IN">हिन्दी (भारत)</option>
-                    <option value="ja">日本語</option>
-                </select>
-            </div>
-
-            <div class="mzp-c-field">
-                <label class="mzp-c-field-label" for="guest_length">Presentation Length <span class="mzp-c-fieldnote">Hours</span></label>
-                <input class="mzp-c-field-control" type="number" name="guest_length" id="guest_length" value="" min="0.5" max="4" step="0.5" size="5" placeholder="1">
-            </div>
-
-            <div class="mzp-c-choices">
-
-                <div class="mzp-c-choice">
-                    <input class="mzp-c-choice-control" type="checkbox" name="guest_travel_covered" id="guest_travel_covered" value="yes">
-                    <label class="mzp-c-choice-label" for="guest_travel_covered">Travel expenses will be paid by the requester.</label>
-                </div>
-
-            </div>
-        </fieldset>
 
         <footer class="mzp-c-form-footer">
             <div class="mzp-c-button-container mzp-l-h-between">
-                <button class="mzp-c-button" type="submit">Submit Request</button>
+                <button class="mzp-c-button mz" type="submit">Submit Request</button>
                 <button class="mzp-c-button mzp-t-secondary" type="reset">Clear</button>
                 <p class="mzp-c-button-info">
                     Expect a response in 2-3 business days.

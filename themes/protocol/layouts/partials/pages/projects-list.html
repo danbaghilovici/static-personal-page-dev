@@ -1,83 +1,42 @@
 {{ $allProjects:= where .ctx.Site.Pages "Section" "portfolio"   }}
 {{ $projects:=(where $allProjects ".IsPage" true).Reverse}}
 {{ $listPage:=(first 1 (where $allProjects ".IsNode" true)) }}
-{{ $paginator:=.ctx.Paginate $projects 3}}
+{{ $paginator:=.ctx.Paginate $projects 4}}
 <section id="portfolio-list-section" >
     {{if .onHome}}
-    <h2>What I have been working on lately</h2>
+        <h2>What I have been working on lately</h2>
 
-    <div class="mzp-l-card-half">
+        <div class="mzp-l-card-half">
 
-        {{range $i,$project:=first 4 $projects}}
-            {{- partial "components/card.html"
+            {{range $i,$project:=first 4 $projects}}
+                {{- partial "components/card.html"
+                ( dict
+                "ctx" .
+                "cardTitle" .Params.Title
+                "cardDescription" .Params.Description
+                "cardCTAText" "Find out more"
+                "cardLink" .Permalink
+                "cardMedia" $project.Params.Media
+                "cardLargeType" true
+                )
+                -}}
+            {{end}}
+    {{else}}
+        {{range $i,$project:=$paginator.Pages}}
+            {{- partial "components/call-out.html"
             ( dict
             "ctx" .
-            "cardTitle" .Params.Title
-            "cardDescription" .Params.Description
-            "cardCTAText" "Find out more"
-            "cardLink" .Permalink
-            "cardMedia" $project.Params.Media
-            "cardLargeType" true
+            "callOutReversed" (eq (mod $i 2) 0)
+            "callOutTitle" .Params.Title
+            "callOutDescription" .Params.Description
+            "callOutCtaText" "Read more"
+            "callOutCtaLink" .Permalink
+            "callOutMedia" .Params.Media
             )
             -}}
         {{end}}
-
-        {{range $listPage}}
-
-        {{end}}
-
-    {{else}}
-
-    <div class="bx--grid" >
-        <div class="bx--row">
-            <div class="bx--col-lg-2 ">
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-            </div>
-            <div class="bx--col">
-                <div class="bx--grid--condensed">
-                    <div class="bx--row" >
-                        {{range $i,$project:=$paginator.Pages}}
-                        <section class="mzp-c-split ">
-                            <div class="mzp-c-split-container">
-                                <div class="mzp-c-split-body ">
-
-                                    <h1 class="mzp-u-title-md">Lorem ipsum dolor sit amet</h1>
-                                    <p>Lorem ipsum dolor sit amet, amet dolores tincidunt te sea. His aliquid epicuri detraxit in, cum tantas populo periculis te. Ei vix idque noster.</p>
-                                    <p><a class="mzp-c-button" href="{{$project.Permalink}}">Afla mai multe</a></p>
-
-                                </div>
-                                <div class="mzp-c-split-media ">
-                                    <img class="mzp-c-split-media-asset" src="{{$project.Params.Media}}" alt="">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="mzp-c-split mzp-l-split-reversed">
-                            <div class="mzp-c-split-container">
-                                <div class="mzp-c-split-body ">
-
-                                    <h1 class="mzp-u-title-md">Lorem ipsum dolor sit amet</h1>
-                                    <p>Lorem ipsum dolor sit amet, amet dolores tincidunt te sea. His aliquid epicuri detraxit in, cum tantas populo periculis te. Ei vix idque noster.</p>
-                                    <p><a class="mzp-c-button" href="#">Call to action</a></p>
-
-                                </div>
-                                <div class="mzp-c-split-media ">
-                                    <img class="mzp-c-split-media-asset" src="../../img/image-16-9.jpg" alt="" srcset="../../img/image-16-9-high-res.jpg 2x">
-                                </div>
-                            </div>
-                        </section>
-                        {{end}}
-                    </div>
-                    <div class="bx--row">
-                        <div class="bx--col" ></div>
-
-                        <div class="bx--col" >
-
-                        </div>
-                        <div class="bx--col" ></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <br/>
+        {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
     {{end}}
+
 </section>
