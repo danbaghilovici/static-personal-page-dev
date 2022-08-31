@@ -19,18 +19,17 @@
                                 <a class="mzp-c-menu-title" href="#" aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">
                                     {{title (i18n "morePagesTranslation")}}
                                 </a>
-                                <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-example">
+                                <div class="mzp-c-menu-panel " id="mzp-c-menu-panel-example">
                                     <div class="mzp-c-menu-panel-container">
                                         <button class="mzp-c-menu-button-close has-label" type="button" aria-controls="mzp-c-menu-panel-example">
                                             Close menu
                                         </button>
                                         <div class="mzp-c-menu-panel-content">
-
                                             <ul>
                                                 <li>
-                                                    <section class="mzp-c-menu-item  mzp-has-icon">
+                                                    <section class="mzp-c-menu-item">
                                                         <div class="mzp-c-menu-item-head">
-                                                            <h4 class="mzp-c-menu-item-title">Additional Information</h4>
+                                                            <h3 class="mzp-c-menu-item-title">Additional Links</h3>
                                                         </div>
 
                                                         <ul class="mzp-c-menu-item-list">
@@ -44,10 +43,8 @@
                                                     </section>
 
                                                 </li>
-                                            </ul>
-                                            <ul>
                                                 <li>
-                                                    <section class="mzp-c-menu-item  mzp-has-icon">
+                                                    <section class="mzp-c-menu-item  ">
                                                         <div class="mzp-c-menu-item-head">
                                                             <h5 class="mzp-c-menu-item-title">Socials</h5>
                                                         </div>
@@ -62,25 +59,37 @@
                                                         </ul>
 
                                                     </section>
-
                                                 </li>
                                             </ul>
+                                            <ul>
+                                                <li>
+                                                    <section class="mzp-c-menu-item  ">
+                                                        <div class="mzp-c-menu-item-head">
+                                                            <h5 class="mzp-c-menu-item-title">Site Language</h5>
+                                                        </div>
+                                                        <ul class="mzp-c-menu-item-list">
+                                                            <li>
+                                                                <p class="mzp-c-cta-link">{{.Site.Language.LanguageName}} <img src="/img/icons/check.svg" width="16" alt=""></p>
+                                                            </li>
+                                                            {{range .Translations}}
+                                                            <li>
+                                                                <a href="{{ .Permalink }}" >{{ .Language.LanguageName }} </a>
+                                                            </li>
+                                                            {{end}}
+
+                                                        </ul>
+                                                    </section>
+                                                </li>
+                                            </ul>
+
+
+
                                         </div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </nav>
-
-                </div>
-
-                <div class="mzp-c-navigation-download">
-
-                    <div class="mzp-c-button-download-container ">
-                        <a href="{{.Site.BaseURL | relLangURL}}/contact" class="mzp-c-button  mzp-t-md">
-                            {{title (i18n "pageContactTranslation")}}
-                        </a>
-                    </div>
 
                 </div>
             </div>
