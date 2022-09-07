@@ -35,7 +35,9 @@
                                                         <ul class="mzp-c-menu-item-list">
 
                                                             <li>
-                                                                <a href="#">Resume</a>
+                                                                {{ range $i,$item:=.Site.Menus.more }}
+                                                                    <a href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
+                                                                {{end}}
                                                             </li>
 
                                                         </ul>

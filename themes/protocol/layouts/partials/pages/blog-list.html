@@ -3,8 +3,8 @@
 {{ $listPage:=(first 1 (where $allBlogs ".IsNode" true)) }}
 {{ $paginator:= .ctx.Paginate $blogPosts 4}}
 {{if .onHome}}
-    <h2>What I have been writing about lately</h2>
     {{if gt (len $blogPosts) 0}}
+    <h2>What I have been writing about lately</h2>
         <section class="mzp-l-card-quarter">
             <div >
                 {{range first 3 $blogPosts}}
@@ -35,26 +35,53 @@
                 {{end}}
             </div>
         </section>
-
     {{end}}
 {{else}}
-<h1>A collection of my blog posts</h1>
-<div class=" mzp-l-card-quarter">
     {{if gt (len $blogPosts) 0}}
-        {{range $paginator.Pages}}
-            {{- partial "components/card.html"
-            ( dict
-            "ctx" .
-            "cardTag" "Java"
-            "cardTitle" .Params.Title
-            "cardDescription" .Params.Description
-            "cardCTAText" "Read more"
-            "cardLink" .Permalink
-            "cardMeta" "*Not applicable"
-            )
-            -}}
-        {{end}}
+        <h1>A collection of my blog posts</h1>
+        <div class=" mzp-l-card-quarter">
+
+                {{range $paginator.Pages}}
+                    {{- partial "components/card.html"
+                    ( dict
+                    "ctx" .
+                    "cardTag" "Java"
+                    "cardTitle" .Params.Title
+                    "cardDescription" .Params.Description
+                    "cardCTAText" "Read more"
+                    "cardLink" .Permalink
+                    "cardMeta" "*Not applicable"
+                    )
+                    -}}
+                {{end}}
+
+        </div>
+        {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
+    {{else}}
+<aside class="mzp-c-newsletter">
+    <div class="mzp-c-newsletter-image">
+        <img src="../../img/newsletter-image.png" width="346" height="346" alt="">
+    </div>
+
+    <form id="newsletter-form" class="mzp-c-newsletter-form" name="newsletter-form" action="#" method="">
+        <header class="mzp-c-newsletter-header">
+            <h3 class="mzp-c-newsletter-title">No blog posts imported yet,</h3>
+            <p class="mzp-c-newsletter-tagline">Get the Mozilla newsletter and help us keep it open and free.</p>
+        </header>
+
+        <fieldset class="mzp-c-newsletter-content">
+            <div>
+                <label for="email">Your email address</label>
+                <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="yourname@example.com" required aria-required="true">
+            </div>
+
+            <p class="mzp-c-form-submit">
+                <button type="submit" class="mzp-c-button" id="newsletter-submit">Sign up now</button>
+            </p>
+        </fieldset>
+    </form>
+
+</aside>
     {{end}}
-</div>
-{{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
+
 {{end}}

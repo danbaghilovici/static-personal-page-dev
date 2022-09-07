@@ -22,6 +22,8 @@ pagePortfolioTranslation:
   other: projects
 pageBlogTranslation:
   other: blog
+pageResumeTranslation:
+  other: resume
 pageContactTranslation:
   other: contact
 morePagesTranslation:
