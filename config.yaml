@@ -35,6 +35,10 @@ languages:
         - url: /blog-en
           name: pageBlogTranslation
           weight: 3
+      more:
+        - url: /resume
+          name: pageResumeTranslation
+          weight: 1
       contact:
         - url: /contact
           name: pageContactTranslation
