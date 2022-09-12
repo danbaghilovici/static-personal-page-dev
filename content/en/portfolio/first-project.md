@@ -4,6 +4,7 @@ slug: first-project-en
 description: Mobile application that holds your clannerz's most valuable moments.
 media: https://media.giphy.com/media/iIGJ3idZ7ULWmQ7VgQ/giphy.gif
 keywords: [ceva, 2]
+draft: true
 ---
 
 # Sed viverra sit amet ante nec aliquam

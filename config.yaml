@@ -101,105 +101,105 @@ params:
           weight: 2
     - title: Javascript
       description: ownerSkillsJavascript
-      iconClass: /imgs/brands/js.svg
+      iconClass: /img/brands/js.svg
       weight: 1
       libs:
         - title: Typescript
           description: aa
-          iconClass: /imgs/brands/typescript.svg
+          iconClass: /img/brands/typescript.svg
           weight: 2
         - title: Angular
           description: ownerSkillsAngular
-          iconClass: /imgs/brands/angular.svg
+          iconClass: /img/brands/angular.svg
           weight: 2.1
         - title: Ionic
           description: ownerSkillIonic
-          iconClass: /imgs/brands/ionic.svg
+          iconClass: /img/brands/ionic.svg
           weight: 2.3
         - title: Node.js
           description: ownerSkillNode
-          iconClass: /imgs/brands/nodejs.svg
+          iconClass: /img/brands/nodejs.svg
           weight: 1
         - title: Express.js
           description: ownerSkillNode
-          iconClass: /imgs/brands/expressjs.svg
+          iconClass: /img/brands/expressjs.svg
           weight: 1.1
         - title: NestJS
           description: ownerSkillIonic
-          iconClass: /imgs/brands/nestjs.svg
+          iconClass: /img/brands/nestjs.svg
           weight: 1.2
 
     - title: Python
       description: ownerSkillsPython
-      iconClass: /imgs/brands/python.svg
+      iconClass: /img/brands/python.svg
       weight: 2
       libs:
         - title: Django
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/django.svg
+          iconClass: /img/brands/django.svg
           weight: 1
         - title: Flask
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/flask.svg
+          iconClass: /img/brands/flask.svg
           weight: 1
         - title: Numpy
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/numpy.svg
+          iconClass: /img/brands/numpy.svg
           weight: 1
     - title: Databases
       description: ownerSkillsPython
-      iconClass: /imgs/brands/database.svg
+      iconClass: /img/brands/database.svg
       weight: 3
       libs:
         - title: MongoDB
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/mongodb.svg
+          iconClass: /img/brands/mongodb.svg
           weight: 1
         - title: MySQL
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/postqresql.svg
+          iconClass: /img/brands/postqresql.svg
           weight: 1
         - title: Firebase
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/firebase.svg
+          iconClass: /img/brands/firebase.svg
           weight: 1
     - title: Markup & Stylesheet
       description: ownerSkillsPython
-      iconClass: /imgs/brands/document.svg
+      iconClass: /img/brands/document.svg
       weight: 4
       libs:
         - title: HTML
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/html.svg
+          iconClass: /img/brands/html.svg
           weight: 1
         - title: Markdown
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/markdown.svg
+          iconClass: /img/brands/markdown.svg
           weight: 1
         - title: CSS
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/css3.svg
+          iconClass: /img/brands/css3.svg
           weight: 1
         - title: Sass
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/sass.svg
+          iconClass: /img/brands/sass.svg
           weight: 1
         - title: Bootstrap
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/bootstrap.svg
+          iconClass: /img/brands/bootstrap.svg
           weight: 1
     - title: Others
       description: ownerSkillsPython
-      iconClass: /imgs/brands/random.svg
+      iconClass: /img/brands/random.svg
       weight: 5
       libs:
         - title: Git
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/git.svg
+          iconClass: /img/brands/git.svg
           weight: 1
         - title: Selenium
           description: ownerSkillsDjango
-          iconClass: /imgs/brands/selenium.svg
+          iconClass: /img/brands/selenium.svg
           weight: 1
   ownerWorkExperience:
     - jobTitle: resumeJobTitleVlinde

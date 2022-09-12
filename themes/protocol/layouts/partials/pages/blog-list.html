@@ -58,30 +58,10 @@
         </div>
         {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
     {{else}}
-<aside class="mzp-c-newsletter">
-    <div class="mzp-c-newsletter-image">
-        <img src="/imgs/illustrations/Donuts_2.svg" width="346" height="346" alt="">
-    </div>
-
-    <form id="newsletter-form" class="mzp-c-newsletter-form" name="newsletter-form" action="#" method="">
-        <header class="mzp-c-newsletter-header">
-            <h3 class="mzp-c-newsletter-title">No blog posts imported yet,</h3>
-            <p class="mzp-c-newsletter-tagline">Get the Mozilla newsletter and help us keep it open and free.</p>
-        </header>
-
-        <fieldset class="mzp-c-newsletter-content">
-            <div>
-                <label for="email">Your email address</label>
-                <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="yourname@example.com" required aria-required="true">
-            </div>
-
-            <p class="mzp-c-form-submit">
-                <button type="submit" class="mzp-c-button" id="newsletter-submit">Sign up now</button>
-            </p>
-        </fieldset>
-    </form>
-
-</aside>
+        {{- partial "components/newsletter" (dict "ctx" .
+                                    "nlHeader" "No blog posts have been imported yet"
+                                    "nlDescription" "Sign up for my newsletter to"
+                                    "nlImage" "/img/illustrations/Sprinkle_8.svg" ) -}}
     {{end}}
 
 {{end}}

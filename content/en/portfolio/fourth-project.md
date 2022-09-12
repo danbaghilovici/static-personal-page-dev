@@ -4,6 +4,7 @@ slug: fourth-project-en
 description: Integer vel lobortis libero, et ultricies tortor. Nunc ut luctus massa. Integer porta vestibulum risus, eget laoreet lectus placerat nec. Donec ut eros in erat luctus luctus sed vel erat. Curabitur hendrerit volutpat lacus, at imperdiet nibh lobortis vel. Duis purus turpis, pellentesque sit amet lectus non, ornare tincidunt nunc. Nunc convallis ipsum a diam faucibus consectetur. Etiam dapibus sapien at libero blandit dapibus. Vestibulum a lacus dictum, consectetur nibh eu, lacinia diam. Donec ac viverra augue, vitae faucibus tortor. Nulla hendrerit vestibulum turpis eu porta. Pellentesque ex nibh, iaculis vitae consequat in, viverra sed neque. Aenean viverra enim at nisl consequat elementum at ultricies eros.
 media: https://media.giphy.com/media/3eC5DDRoItetfKL768/giphy.gif
 keywords: [ceva, 2]
+draft: true
 ---
 
 # Sed viverra sit amet ante nec aliquam

@@ -2,13 +2,14 @@
 {{ $projects:=(where $allProjects ".IsPage" true).Reverse}}
 {{ $listPage:=(first 1 (where $allProjects ".IsNode" true)) }}
 {{ $paginator:=.ctx.Paginate $projects 4}}
-<section id="portfolio-list-section" >
-    {{if .onHome}}
-        <h2>What I have been working on lately</h2>
+{{if .onHome}}
+    {{if gt (len $projects) 0}}
+        <section class="" >
+            <h2>What I have been working on lately</h2>
 
-        <div class="mzp-l-card-half">
+            <div class="mzp-l-card-half">
 
-            {{range $i,$project:=first 4 $projects}}
+                {{range $i,$project:=first 4 $projects}}
                 {{- partial "components/card.html"
                 ( dict
                 "ctx" .
@@ -20,9 +21,14 @@
                 "cardLargeType" true
                 )
                 -}}
-            {{end}}
-    {{else}}
-        {{range $i,$project:=$paginator.Pages}}
+                {{end}}
+            </div>
+        </section>
+    {{end}}
+{{else}}
+    {{if gt (len $projects) 0}}
+        <section>
+            {{range $i,$project:=$paginator.Pages}}
             {{- partial "components/call-out.html"
             ( dict
             "ctx" .
@@ -34,9 +40,15 @@
             "callOutMedia" .Params.Media
             )
             -}}
-        {{end}}
+            {{end}}
+        </section>
         <br/>
         {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
+    {{else}}
+        {{- partial "components/newsletter" (dict "ctx" .
+        "nlHeader" "No blog posts have been imported yet"
+        "nlDescription" "Sign up for my newsletter to"
+        "nlImage" "/img/illustrations/Sprinkle_5.svg" ) -}}
     {{end}}
 
-</section>
+{{end}}
