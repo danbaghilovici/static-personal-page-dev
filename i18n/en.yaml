@@ -1,77 +1,44 @@
-#GLOBAL
-spainCountryTextTranslation:
-  other: Spain
-jobPeriodPresentTextTranslation:
-  other: Present
-socialLinkGithubTooltipTranslation:
-  other: See my repositories on GitHub
-socialLinkLinkedinTooltipTranslation:
-  other: Connect with Linkedin
-socialLinkTwitterTooltipTranslation:
-  other: Follow me on Twitter
-# BLOG ENTRIES
-readMoreTranslation:
-  other: read more
-publishedOnTranslation:
-  other: published on
-# /BLOG ENTRIES
+# GLOBALS
+navbarMenuOpenedTr:
+  other: menu
+navbarMenuCloseTr:
+  other: close menu
 # HEADER
-pageAboutTranslation:
+headerAboutSectionTr:
   other: about
-pagePortfolioTranslation:
+headerPortfolioSectionTr:
   other: projects
-pageBlogTranslation:
+headerBlogSectionTr:
   other: blog
-pageResumeTranslation:
+headerResumeSectionTr:
   other: resume
-pageContactTranslation:
+headerContactSectionTr:
   other: contact
-morePagesTranslation:
+headerMoreSectionsTr:
   other: more
-# /SIDENAV
-# HOME PAGE
-# HOME ABOUT
-homeAboutHelloHeading:
-  other: hello
-homeAboutImStart:
-  other: I'm
-homeAboutLetsTalkButton:
-  other: let's talk
-homeAboutExplorePortfolioButton:
-  other: explore my portfolio
-homeAboutShortDescriptionTranslation:
-  other: A Software Developer that loves building high quality software.
-homeAboutCheckMyBlogTextTranslation:
-  other: I write about it and more on my <a class="text-primary" href="{{ .blogLink }}"> blog</a>.
-homeAboutContributingTranslation:
-  other: Besides contributing to Open Source blog, I also help people bring their <a class="text-primary" href="{{ .portfolioLink }}"> software blog </a> to the market.
-homeAboutHowMayIHelpTextTranslation:
-  other: Want to know how I may help with your future project?
-viewTextTranslation:
-  other: view
-portfolioTextTranslation:
-  other: portfolio
-resumeTextTranslation:
-  other: resume
-blogPostsTextTranslation:
-  other: blog posts
-homeAboutProfilePictureAltText:
-  other: A picture with me
-# HOME WHAT
-homeWhatMiniHeaderTextTranslation:
-  other: what
-homeWhatHeaderTextTranslation:
-  other: i do
-homeWhatDescriptionIntroTextTranslation:
-  other: Having an undestanding of multiple technologies always helped me better choose the right tools I will need for a project.
-homeWhatDescriptionIntroMainSkillsTextTranslation:
-  other: Below is a quick overview of my main technical skill sets and technologies I use.
-homeWhatDescriptionCheckLinksTextTranslation:
-  other: Want to find out more about my experience? Check out my <a class="link-on-bg" href="{{.resumeLink}}">online resume</a> and <a class="link-on-bg" href="{{.portfolioLink}}">project portfolio</a>.
-homeLatestBlogsHeaderTextTranslation:
-  other: latest blog posts
-homeFeaturedProjectsHeaderTextTranslation:
-  other: featured blog
+moreSectionAdditionalLinksHeaderTr:
+  other: additional links
+moreSectionSocialsHeaderTr:
+  other: socials
+moreSectionLanguagesHeaderTr:
+  other: site language
+# FOOTER
+allSectionsHeaderTr:
+  other: site links
+footerPrintTr:
+  other: Site made with <a target="_blank" class="external-link-dark" href="https://gohugo.io/">Hugo </a> using <a target="_blank" class="external-link-dark" href="https://github.com/mozilla/protocol">Mozilla's Protocol</a> theme and some <a target="_blank" class="external-link-dark" href="https://www.highlights.design/">Highlights illustrations</a>.
+# LEADSPACE
+lpHeaderCarrerTitleTr:
+  other: software developer
+lpHeaderTr:
+  other: that loves building quality software products
+lpSubtitleTr:
+  other: Bringing your software ideas to the market
+# ABOUT SECTION
+aboutSectionHeaderTr:
+  other: more about me
+aboutSectionIntroTr:
+  other: more about me
 # HOME PORTFOLIO
 homePortfolioMiniHeaderTextTranslation:
   other: blog

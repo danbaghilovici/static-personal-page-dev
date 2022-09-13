@@ -2,7 +2,7 @@
     <div class="mzp-c-navigation-l-content">
         <div class="mzp-c-navigation-container">
             <button class="mzp-c-navigation-menu-button has-label" type="button" aria-controls="navigation-demo">
-                Menu
+                {{humanize (i18n "navbarMenuOpenedTr")}}
             </button>
 
             <div class="mzp-c-navigation-items" id="navigation-demos">
@@ -17,19 +17,19 @@
 
                             <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
                                 <p class="mzp-c-menu-title"  aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">
-                                    {{title (i18n "morePagesTranslation")}}
+                                    {{title (i18n "headerMoreSectionsTr")}}
                                 </p>
                                 <div class="mzp-c-menu-panel " id="mzp-c-menu-panel-example">
                                     <div class="mzp-c-menu-panel-container">
                                         <button class="mzp-c-menu-button-close has-label" type="button" aria-controls="mzp-c-menu-panel-example">
-                                            Close menu
+                                            {{humanize (i18n "navbarMenuCloseTr")}}
                                         </button>
                                         <div class="mzp-c-menu-panel-content">
                                             <ul>
                                                 <li>
                                                     <section class="mzp-c-menu-item">
                                                         <div class="mzp-c-menu-item-head">
-                                                            <h3 class="mzp-c-menu-item-title">Additional Links</h3>
+                                                            <h3 class="mzp-c-menu-item-title">{{title (i18n "moreSectionAdditionalLinksHeaderTr")}}</h3>
                                                         </div>
 
                                                         <ul class="mzp-c-menu-item-list">
@@ -48,13 +48,13 @@
                                                 <li>
                                                     <section class="mzp-c-menu-item  ">
                                                         <div class="mzp-c-menu-item-head">
-                                                            <h5 class="mzp-c-menu-item-title">Socials</h5>
+                                                            <h5 class="mzp-c-menu-item-title">{{title (i18n "moreSectionSocialsHeaderTr")}}</h5>
                                                         </div>
 
                                                         <ul class="mzp-c-menu-item-list">
                                                             {{range .Site.Params.ownerSocialLinks}}
                                                             <li>
-                                                                <a href="{{.link}}">{{title .name}} <img src="/img/icons/external-link.svg" width="16" alt=""></a>
+                                                                <a href="{{.link}}" class="external-link">{{title .name}}</a>
                                                             </li>
                                                             {{end}}
 
@@ -67,7 +67,7 @@
                                                 <li>
                                                     <section class="mzp-c-menu-item  ">
                                                         <div class="mzp-c-menu-item-head">
-                                                            <h5 class="mzp-c-menu-item-title">Site Language</h5>
+                                                            <h5 class="mzp-c-menu-item-title">{{title (i18n "moreSectionLanguagesHeaderTr")}}</h5>
                                                         </div>
                                                         <ul class="mzp-c-menu-item-list">
                                                             <li>

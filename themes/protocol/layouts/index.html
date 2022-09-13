@@ -4,27 +4,43 @@
         <div class="mzp-c-split-container">
             <div class="mzp-c-split-body ">
 
-                <h1 class="mzp-u-title-md">A Software Developer that loves building high quality software.</h1>
+                <h1 class="mzp-u-title-md">
+                    <u>{{title (i18n "lpHeaderCarrerTitleTr")}}</u>
+                    <br>
+                    {{ i18n "lpHeaderTr"}}.
+                </h1>
                 <p>
-                    I write about it and more on my blog. Besides contributing to Open Source projects, I also help people bring their software projects to the market.
+                    {{i18n "lpSubtitleTr"}}
                 </p>
-                <p>Want to know how I may help with your future project?</p>
+                <p>Want to know how I may help with your product?</p>
                 <p><a class="mzp-c-button mzp-t-product mzp-t-dark" href="#">Contact me</a></p>
             </div>
         </div>
     </div>
 </div>
 <div class="mzp-l-content">
-    <section >
-        <h2 class="">What I do</h2>
-        <p>Having an undestanding of multiple technologies always helped me better choose the right tools I will need for a project. Below is a quick overview of my main technical skill sets and technologies I use.</p>
+    <section>
+        <h2 >{{humanize (i18n "aboutSectionHeaderTr")}}</h2>
+        <p>
+            I am a passionate software developer who makes use of the best programming practices a priority.
+            Knowing technologies at a deeper level allows me to optimize for the best performance available,
+            whether it's on the front-end, back-end or areas in between.
+            Having worked in the field made me discover the value of shipping a
+            product on time and with consistent updates, thus always meeting client satisfaction.
+        </p>
+        <p> I write about it and more on my blog. Besides contributing to Open Source projects,
+            I also help people bring their software projects to the market.</p>
+        <p>Having an undestanding of multiple technologies always helped me better choose the right tools I will need
+            for a project.
+            <br><b>Below is a quick overview of the technical skill sets and technologies I'm most familiar with:</b>
+        </p>
 
         <table class="mzp-u-data-table">
             <thead>
             <tr>
                 <td></td>
                 <th scope="col">Core technologies</th>
-                <th scope="col">	Frameworks / Libraries / Tool kits / Utilities</th>
+                <th scope="col"> Frameworks / Libraries / Tool kits / Utilities</th>
             </tr>
             </thead>
             <tbody>
@@ -45,7 +61,11 @@
             </tr>
             </tbody>
         </table>
+        <p>This shall not be considered final since I'm always interested
+            in learning new technologies and discovering new areas of software in this industry.
+        </p>
     </section>
+    <a href="#" class="external-link">a very long test</a>
     {{- partial "pages/projects-list.html" (dict "ctx" . "onHome" true) -}}
     {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
 </div>

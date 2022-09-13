@@ -26,22 +26,21 @@ languages:
     menu:
       main:
         - url: /
-          name: pageAboutTranslation
+          name: headerAboutSectionTr
           weight: 1
-        - indentifier: portfolio
-          url: portfolio-en/
-          name: pagePortfolioTranslation
+        - url: portfolio-en/
+          name: headerPortfolioSectionTr
           weight: 2
         - url: /blog-en
-          name: pageBlogTranslation
+          name: headerBlogSectionTr
           weight: 3
       more:
         - url: /resume
-          name: pageResumeTranslation
+          name: headerResumeSectionTr
           weight: 1
       contact:
         - url: /contact
-          name: pageContactTranslation
+          name: headerContactSectionTr
           weight: 5
   es:
     contentDir: content/es
@@ -53,29 +52,24 @@ languages:
     menu:
       main:
         - url: /
-          name: pageAboutTranslation
+          name: headerAboutSectionTr
           weight: 1
-        - indentifier: portfolio
-          url: portfolio-en/
-          name: pagePortfolioTranslation
+        - url: portfolio-en/
+          name: headerPortfolioSectionTr
           weight: 2
         - url: /blog-es
-          name: pageBlogTranslation
+          name: headerBlogSectionTr
           weight: 3
       contact:
         - url: "/contact"
-          name: pageContactTranslation
+          name: headerContactSectionTr
           weight: 5
 params:
   useDarkMode: true
   ownerFirstName: Dan
   ownerLastName: Baghilovici
   ownerEmail:
-    - contact@danbaghilovici.xyz
     - dan.baghilovici@gmail.com
-  showOwnerPhone: true
-  ownerPhoneNumbers:
-    - "0000"
   ownerLocation: Romania
   ownerWebsite: www.danbaghilovici.xyz
   ownerSocialLinks:

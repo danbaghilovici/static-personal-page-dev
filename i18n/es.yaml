@@ -1,16 +1,24 @@
+# GLOBALS
+
 # HEADER
-pageAboutTranslation:
+headerAboutSectionTr:
   other: sobre
-pagePortfolioTranslation:
-  other: proyectos
-pageBlogTranslation:
+headerPortfolioSectionTr:
+  other: proiectos
+headerBlogSectionTr:
   other: blog
-pageResumeTranslation:
-  other: CV
-pageContactTranslation:
+headerResumeSectionTr:
+  other: curriculum
+headerContactSectionTr:
   other: contact
-morePagesTranslation:
+headerMoreSectionsTr:
   other: mas
+moreSectionAdditionalLinksHeaderTr:
+  other: enlaces adiccionales
+moreSectionSocialsHeaderTr:
+  other: redes sociales
+moreSectionLanguagesHeaderTr:
+  other: idiomas del sitio web
 # CONTACT
 contactPageHeaderTextTranslation:
   other: contact
