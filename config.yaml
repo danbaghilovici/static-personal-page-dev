@@ -38,6 +38,9 @@ languages:
         - url: /resume
           name: headerResumeSectionTr
           weight: 1
+        - url: /dev-log
+          name: headerDevLogsSectionTr
+          weight: 2
       contact:
         - url: /contact
           name: headerContactSectionTr
@@ -75,7 +78,7 @@ params:
   ownerSocialLinks:
     - tooltip: socialLinkLinkedinTooltipTranslation
       name: Linkedin
-      link: https://linkedin.com/in/dan-baghilovici-a137251b8
+      link: https://linkedin.com/in/dan-baghilovici
     - tooltip: socialLinkGithubTooltipTranslation
       name: GitHub
       link: https://github.com/dntzbgh

@@ -3,6 +3,19 @@ navbarMenuOpenedTr:
   other: menu
 navbarMenuCloseTr:
   other: close menu
+nlCompCtaTextTr:
+  other: Sign up now
+nlCompFormEmailLabelTr:
+  other: Your email address
+nlCompFormEmailPlaceholderTr:
+  other: yourname@example.com
+# ERROR
+errorSectionTitleTr:
+  other: Not found
+errorSectionDescriptionTr:
+  other: it seems the page you are trying to reach is not available
+errorSectionCTATr:
+  other: Go back to main page
 # HEADER
 headerAboutSectionTr:
   other: about
@@ -12,6 +25,8 @@ headerBlogSectionTr:
   other: blog
 headerResumeSectionTr:
   other: resume
+headerDevLogsSectionTr:
+  other: developer logs
 headerContactSectionTr:
   other: contact
 headerMoreSectionsTr:
@@ -34,11 +49,26 @@ lpHeaderTr:
   other: that loves building quality software products
 lpSubtitleTr:
   other: Bringing your software ideas to the market
+lpPreCtaTextTr:
+  other: want to know how I may help with your product?
+lpCtaTextTr:
+  other: Contact me
 # ABOUT SECTION
 aboutSectionHeaderTr:
   other: more about me
 aboutSectionIntroTr:
   other: more about me
+# PROJECTS
+projectsSectionNoDataHeaderTr:
+  other: no projects have been imported yet!
+projectsSectionNoDataContentTr:
+  other: you can sign up with your email in order to receive updates about my newest projects.
+# BLOG
+blogSectionNoDataHeaderTr:
+  other: no blogs have been imported yet!
+blogSectionNoDataContentTr:
+  other: you can sign up with your email in order to receive updates about my newest blog posts.
+#---
 # HOME PORTFOLIO
 homePortfolioMiniHeaderTextTranslation:
   other: blog

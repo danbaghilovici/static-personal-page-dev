@@ -34,12 +34,11 @@
 
                                                         <ul class="mzp-c-menu-item-list">
 
+                                                            {{ range $i,$item:=.Site.Menus.more }}
                                                             <li>
-                                                                {{ range $i,$item:=.Site.Menus.more }}
                                                                     <a href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
-                                                                {{end}}
                                                             </li>
-
+                                                            {{end}}
                                                         </ul>
 
                                                     </section>

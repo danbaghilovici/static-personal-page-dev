@@ -12,8 +12,8 @@
                 <p>
                     {{i18n "lpSubtitleTr"}}
                 </p>
-                <p>Want to know how I may help with your product?</p>
-                <p><a class="mzp-c-button mzp-t-product mzp-t-dark" href="#">Contact me</a></p>
+                <p>{{humanize (i18n "lpPreCtaTextTr")}}</p>
+                <p><a class="mzp-c-button mzp-t-product mzp-t-dark" href="#">{{humanize (i18n "lpCtaTextTr")}}</a></p>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
             Having worked in the field made me discover the value of shipping a
             product on time and with consistent updates, thus always meeting client satisfaction.
         </p>
-        <p> I write about it and more on my blog. Besides contributing to Open Source projects,
+        <p> I write about it and more on <a   href="#">my blog</a>. Besides contributing to Open Source projects,
             I also help people bring their software projects to the market.</p>
         <p>Having an undestanding of multiple technologies always helped me better choose the right tools I will need
             for a project.
@@ -65,7 +65,6 @@
             in learning new technologies and discovering new areas of software in this industry.
         </p>
     </section>
-    <a href="#" class="external-link">a very long test</a>
     {{- partial "pages/projects-list.html" (dict "ctx" . "onHome" true) -}}
     {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
 </div>

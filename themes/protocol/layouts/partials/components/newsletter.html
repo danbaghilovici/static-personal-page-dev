@@ -13,12 +13,12 @@
 
     <fieldset class="mzp-c-newsletter-content">
       <div>
-        <label for="email">Your email address</label>
-        <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="yourname@example.com" required aria-required="true">
+        <label for="email">{{humanize (i18n "nlCompFormEmailLabelTr")}}</label>
+        <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="{{i18n "nlCompFormEmailPlaceholderTr"}}" required aria-required="true">
       </div>
 
       <p class="mzp-c-form-submit">
-        <button type="submit" class="mzp-c-button" id="newsletter-submit">Sign up now</button>
+        <button type="submit" class="mzp-c-button" id="newsletter-submit">{{humanize (i18n "nlCompCtaTextTr")}}</button>
       </p>
     </fieldset>
   </form>

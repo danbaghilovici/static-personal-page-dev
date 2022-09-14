@@ -59,9 +59,9 @@
         {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
     {{else}}
         {{- partial "components/newsletter" (dict "ctx" .
-                                    "nlHeader" "No blog posts have been imported yet"
-                                    "nlDescription" "Sign up for my newsletter to"
-                                    "nlImage" "/img/illustrations/Sprinkle_8.svg" ) -}}
+            "nlHeader" (humanize (i18n "blogSectionNoDataHeaderTr"))
+            "nlDescription" (humanize (i18n "blogSectionNoDataContentTr"))
+            "nlImage" "/img/illustrations/Sprinkle_8.svg" ) -}}
     {{end}}
 
 {{end}}
