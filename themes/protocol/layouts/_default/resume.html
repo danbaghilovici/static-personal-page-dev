@@ -1,6 +1,7 @@
 <html>
 <head>
     <link href="{{ .Site.BaseURL | absLangURL}}css/protocol.css" rel="stylesheet">
+<!--    <link href="{{ .Site.BaseURL | absLangURL}}css/protocol-components.css" rel="stylesheet">-->
     <style>
         /*@media print {*/
         /*  body { height:297mm; width:210mm; margin:0; }*/
@@ -11,11 +12,147 @@
             margin: 0;
             box-sizing: border-box;
         }
+        .container, .row, div[class^='col-']{
+            /*border: 1px solid red;*/
+            box-sizing: border-box;
+        }
+        div[class^='col-']{
+            /*padding:16px;*/
+        }
+        hr{
+            margin: 12px 0;
+        }
     </style>
 </head>
 <body>
-<div id="resume-wrap" style="width: 210mm;height: 300mm;border: 1px solid black;padding:16px;">
-    <h1>Dan Baghilovici</h1>
+<div id="resume-wrap" style="width: 210mm;height: 300mm;border: 1px solid black;padding:32px;">
+    <div class="container">
+        <div class="row" id="header-row">
+            <div class="col-8-sm" >
+                <h1 style="margin-bottom: 5px;">Dan Baghilovici</h1>
+                <h3>Software Developer</h3>
+            </div>
+            <div class="col-4-sm" >
+                <ul>
+                    <li>
+                        <p>000000000</p>
+                    </li>
+                    <li>
+                        <p>dan@danbaghilovici.dev</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-sm">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2-sm">
+                <img src="/img/bgs/me-face.jfif" style="border-radius: 50%;margin:auto;">
+            </div>
+            <div class="col-10-sm">
+                <p>
+                    I am a passionate software developer who makes
+                    use of the best programming practices a priority.
+                    Knowing technologies at a deeper level allows me
+                    to optimize for the best performance available,
+                    whether it's on the front-end, back-end or areas
+                    in between. Having worked in the field made me discover
+                    the value of shipping a product on time and with
+                    consistent updates, thus always meeting customer
+                    satisfaction. I am always interested in learning
+                    new technologies and discovering new areas of
+                    software in this industry.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-sm">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8-sm">
+<!--                // work exp-->
+                <h4>WORK EXPERIENCE</h4>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6-sm">
+                                <p><b>Software Developer</b></p>
+                            </div>
+                            <div class="col-6-sm">
+                                <img src="/img/companies/netflix.jpg" height="30" width="30" style="vertical-align: middle">
+                                <p style="display:inline"> <b>Netflix.Co</b> | 2011 - Present</p>
+                            </div>
+                            <div class="col-12-sm">
+                                <p>Berg Software is an outsorcing company that provides dedicated
+                                    developement teams and team extension solutions to major software
+                                    companies. My main responsabilities are:
+                                </p>
+                                <ul class="mzp-u-list-styled">
+                                    <li>
+                                        <p>Develop, maintain, test and improve existing Java / Spring REST API services by reducing dependencies, refactoring with the usage of TDD making the application more robust and reliable.</p>
+                                    </li>
+                                    <li><p>
+                                        Develop and maintain efficient APIs that are reliable, easy to maintain and catering to all internal and external client needs using the Neonbee framework.
+                                    </p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6-sm">
+                            <p><b>Software Developer</b></p>
+                        </div>
+                        <div class="col-6-sm">
+                            <img src="/img/companies/netflix.jpg" height="30" width="30" style="vertical-align: middle">
+                            <p style="display:inline"> <b>Netflix.Co</b> | 2011 - Present</p>
+                        </div>
+                        <div class="col-12-sm">
+                            <p>Berg Software is an outsorcing company that provides dedicated
+                                developement teams and team extension solutions to major software
+                                companies. My main responsabilities are:
+                            </p>
+                            <ul class="mzp-u-list-styled">
+                                <li>
+                                    <p>Develop, maintain, test and improve existing Java / Spring REST API services by reducing dependencies, refactoring with the usage of TDD making the application more robust and reliable.</p>
+                                </li>
+                                <li><p>
+                                    Develop and maintain efficient APIs that are reliable, easy to maintain and catering to all internal and external client needs using the Neonbee framework.
+                                </p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4-sm">
+
+                <div class="container">
+                    <div class="row">
+                        <h6>SKILLS</h6>
+                        <div class="col-12-sm">
+                            <p>Javascript / Typescript / NodeJS / NestJS/  Angular / Ionic</p>
+                            <p>Python</p>
+                            <p>MySQL / MongoDB / Firebase</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <h6>EDUCATION</h6>
+                        <div class="col-12-sm">
+                            ceva
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
