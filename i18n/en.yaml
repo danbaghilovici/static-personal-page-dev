@@ -99,13 +99,24 @@ resumeWorkSectionInterestsText:
 resumeJobTitleVlinde:
   other: software developer
 resumeJobDescriptionVlinde:
-  other: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis pharetra ex, quis tincidunt justo imperdiet id. Praesent pellentesque lacus sit amet interdum congue.
+  other: 'Vlinde is a German based web design agency that pays special attention to the customer experience with their offered services . Below are some of the key tasks I am involved in:'
 resumeJobBulletVlinde1:
-  other: Morbi et ipsum venenatis neque pulvinar mattis nec sed turpis
+  other: 'Develop, maintain and improve existing PHP / Laravel applications and services by reducing dependencies and refactoring the code base, resulting in lighter, more secure and faster applications.'
 resumeJobBulletVlinde2:
-  other: Praesent nibh ex, semper id lectus quis, venenatis lobortis eros.
+  other: 'Design and develop scalable mobile applications using Angular, the Ionic framework and Firebase Services, resulting in a fast MVP tailored to customer needs and ready to go to market.'
+resumeJobBulletVlinde3:
+  other: 'Build microservices and automation tools using Python and Docker.'
+
 resumeProject0Description:
   other: Nam tristique, risus et pulvinar aliquam, diam erat fermentum turpis, quis vestibulum purus risus a orci. Nunc tincidunt sapien ut ligula hendrerit, ac bibendum metus vestibulum. Mauris aliquam diam tempor, pharetra justo non, fermentum est. Etiam consequat mi eu molestie pulvinar. In molestie vitae ante et euismod. Quisque vehicula risus id varius sollicitudin.
+resumeJobDescriptionBerg:
+  other: 'Berg Software is an outsorcing company that provides dedicated developement teams and team extension solutions to major software companies. My main responsabilities are:'
+resumeJobBulletBerg1:
+  other: 'Develop, maintain, test and improve existing Java / Spring REST API services by reducing dependencies, refactoring with the usage of TDD making the application more robust and reliable.'
+resumeJobBulletBerg2:
+  other: 'Develop and maintain efficient APIs that are reliable, easy to maintain and catering to all internal and external client needs using the Neonbee framework.'
+jobPeriodPresentTextTranslation:
+  other: present
 # INTERESTS
 resumeInterestMathematicsTextTranslation:
   other: mathematics

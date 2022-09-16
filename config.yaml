@@ -201,16 +201,30 @@ params:
   ownerWorkExperience:
     - jobTitle: resumeJobTitleVlinde
       company:
-        name: Vlinde Transylvania
+        name: Vlinde GmbH
         website: https://www.vlinde.com/
         icon: ''
       period:
         from: '2019'
-        to: jobPeriodPresentTextTranslation
+        to: '2022'
       description: resumeJobDescriptionVlinde
       list:
         - resumeJobBulletVlinde1
         - resumeJobBulletVlinde2
+        - resumeJobBulletVlinde3
+    - jobTitle: resumeJobTitleVlinde
+      company:
+        name: Berg Software
+        website: https://www.berg-software.com/en/
+        icon: ''
+      period:
+        from: '2021'
+        to: jobPeriodPresentTextTranslation
+        toPresent: true
+      description: resumeJobDescriptionBerg
+      list:
+        - resumeJobBulletBerg1
+        - resumeJobBulletBerg2
   ownerProjects:
     - name: Mauris
       motto: resumeProjectMotto0

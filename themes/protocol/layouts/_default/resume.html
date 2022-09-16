@@ -1,8 +1,30 @@
 <html>
 <head>
     <link href="{{ .Site.BaseURL | absLangURL}}css/protocol.css" rel="stylesheet">
-<!--    <link href="{{ .Site.BaseURL | absLangURL}}css/protocol-components.css" rel="stylesheet">-->
+    <!--    <link href="{{ .Site.BaseURL | absLangURL}}css/protocol-components.css" rel="stylesheet">-->
     <style>
+        html{
+            font-size: 12px;
+            /*line-height: 5px!important;*/
+        }
+        h1{
+            /*font-size: 30px;*/
+        }
+        h2{
+            font-size: 22px;
+        }
+        h3{
+            font-size: 18px;
+        }
+        h4{
+            font-size: 16px;
+        }
+        h5{
+            font-size: 14px ;
+        }
+        h6{
+            font-size: 12px;
+        }
         /*@media print {*/
         /*  body { height:297mm; width:210mm; margin:0; }*/
         /*}*/
@@ -12,15 +34,22 @@
             margin: 0;
             box-sizing: border-box;
         }
-        .container, .row, div[class^='col-']{
+
+        .container, .row, div[class^='col-'] {
             /*border: 1px solid red;*/
             box-sizing: border-box;
         }
-        div[class^='col-']{
+
+        div[class^='col-'] {
             /*padding:16px;*/
         }
-        hr{
-            margin: 12px 0;
+
+        hr {
+            margin: 6px 0;
+        }
+
+        p {
+            margin-bottom: 8px;
         }
     </style>
 </head>
@@ -28,19 +57,60 @@
 <div id="resume-wrap" style="width: 210mm;height: 300mm;border: 1px solid black;padding:32px;">
     <div class="container">
         <div class="row" id="header-row">
-            <div class="col-8-sm" >
-                <h1 style="margin-bottom: 5px;">Dan Baghilovici</h1>
-                <h3>Software Developer</h3>
+            <div class="col-8-sm">
+                <h1 style="margin-bottom: 5px;">DAN BAGHILOVICI</h1>
+                <h2>Software Developer</h2>
             </div>
-            <div class="col-4-sm" >
-                <ul>
+            <div class="col-4-sm">
+                <ul class="mzp-u-list-styled" style="list-style: none;margin-left: 0;">
                     <li>
-                        <p>000000000</p>
+                        <p style="margin-bottom: 0;">
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                 style="vertical-align: sub">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(5.000000, 1.000000)" stroke="#000000" stroke-width="2">
+                                        <rect x="0" y="0" width="14" height="22" rx="2"></rect>
+                                        <path d="M0,4 L14,4"></path>
+                                        <path d="M0,18 L14,18"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            000000000 / 111111111111
+                        </p>
                     </li>
                     <li>
-                        <p>dan@danbaghilovici.dev</p>
+
+                        <p style="margin-bottom: 0;">
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                 style="vertical-align: sub">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                                   stroke-linejoin="round">
+                                    <g transform="translate(2.000000, 4.000000)" stroke="#000000" stroke-width="2">
+                                        <path d="M2,0 L18,0 C19.1,0 20,0.9 20,2 L20,14 C20,15.1 19.1,16 18,16 L2,16 C0.9,16 0,15.1 0,14 L0,2 C0,0.9 0.9,0 2,0 Z"></path>
+                                        <polyline points="20 2 10 9 0 2"></polyline>
+                                    </g>
+                                </g>
+                            </svg>
+                            <a href="mailto:dan@danbaghilovici.dev">dan@danbaghilovici.dev</a></p>
+                    </li>
+                    <li>
+
+                        <p style="margin-bottom: 0;">
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                 style="vertical-align: sub">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                                   stroke-linejoin="round">
+                                    <g transform="translate(2.000000, 2.000000)" stroke="#000000" stroke-width="2">
+                                        <circle cx="10" cy="10" r="10"></circle>
+                                        <path d="M0,10 L20,10"></path>
+                                        <path d="M10,2.22044605e-16 C12.5012804,2.73835289 13.9227528,6.29203385 14,10 C13.9227528,13.7079661 12.5012804,17.2616471 10,20 C7.49871962,17.2616471 6.07724724,13.7079661 6,10 C6.07724724,6.29203385 7.49871962,2.73835289 10,0 L10,2.22044605e-16 Z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <a href="danbaghilovici.dev">danbaghilovici.dev</a></p>
                     </li>
                 </ul>
+
             </div>
         </div>
         <div class="row">
@@ -50,10 +120,10 @@
         </div>
         <div class="row">
             <div class="col-2-sm">
-                <img src="/img/bgs/me-face.jfif" style="border-radius: 50%;margin:auto;">
+                <img src="/img/bgs/me-face.jfif" style="border-radius: 0;margin-top: auto;margin-bottom: auto;">
             </div>
             <div class="col-10-sm">
-                <p>
+                <p style="margin: 10px 0 10px 16px">
                     I am a passionate software developer who makes
                     use of the best programming practices a priority.
                     Knowing technologies at a deeper level allows me
@@ -73,78 +143,72 @@
                 <hr>
             </div>
         </div>
-        <div class="row">
-            <div class="col-8-sm">
-<!--                // work exp-->
-                <h4>WORK EXPERIENCE</h4>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6-sm">
-                                <p><b>Software Developer</b></p>
-                            </div>
-                            <div class="col-6-sm">
-                                <img src="/img/companies/netflix.jpg" height="30" width="30" style="vertical-align: middle">
-                                <p style="display:inline"> <b>Netflix.Co</b> | 2011 - Present</p>
-                            </div>
-                            <div class="col-12-sm">
-                                <p>Berg Software is an outsorcing company that provides dedicated
-                                    developement teams and team extension solutions to major software
-                                    companies. My main responsabilities are:
-                                </p>
-                                <ul class="mzp-u-list-styled">
-                                    <li>
-                                        <p>Develop, maintain, test and improve existing Java / Spring REST API services by reducing dependencies, refactoring with the usage of TDD making the application more robust and reliable.</p>
-                                    </li>
-                                    <li><p>
-                                        Develop and maintain efficient APIs that are reliable, easy to maintain and catering to all internal and external client needs using the Neonbee framework.
-                                    </p></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
+        <div class="row" style="margin-top: 16px;">
+            <div class="col-8-sm" style="padding-right: 16px;">
+                <!--                // work exp-->
+                <h3>WORK EXPERIENCE</h3>
+                {{range sort .Site.Params.OwnerWorkExperience "period.from" "desc"}}
                 <div class="container">
                     <div class="row">
                         <div class="col-6-sm">
-                            <p><b>Software Developer</b></p>
+                            <p ><b>{{title (i18n .jobTitle)}}</b></p>
                         </div>
                         <div class="col-6-sm">
                             <img src="/img/companies/netflix.jpg" height="30" width="30" style="vertical-align: middle">
-                            <p style="display:inline"> <b>Netflix.Co</b> | 2011 - Present</p>
+                            <p  style="display:inline"><a target="_blank" href="{{.company.website}}"><b>{{.company.name}}</b></a> | {{.period.from}} - {{with .period.toPresent}}{{title (i18n "jobPeriodPresentTextTranslation")}}{{else}}{{.period.to}}{{end}}</p>
                         </div>
                         <div class="col-12-sm">
-                            <p>Berg Software is an outsorcing company that provides dedicated
-                                developement teams and team extension solutions to major software
-                                companies. My main responsabilities are:
-                            </p>
+                            <p>{{i18n .description}}</p>
                             <ul class="mzp-u-list-styled">
+                                {{range .list}}
                                 <li>
-                                    <p>Develop, maintain, test and improve existing Java / Spring REST API services by reducing dependencies, refactoring with the usage of TDD making the application more robust and reliable.</p>
+                                    <p>{{i18n .}}</p>
                                 </li>
-                                <li><p>
-                                    Develop and maintain efficient APIs that are reliable, easy to maintain and catering to all internal and external client needs using the Neonbee framework.
-                                </p></li>
+                                {{end}}
                             </ul>
                         </div>
                     </div>
                 </div>
+                {{end}}
             </div>
             <div class="col-4-sm">
 
                 <div class="container">
                     <div class="row">
-                        <h6>SKILLS</h6>
+                        <h3>SKILLS</h3>
                         <div class="col-12-sm">
-                            <p>Javascript / Typescript / NodeJS / NestJS/  Angular / Ionic</p>
-                            <p>Python</p>
-                            <p>MySQL / MongoDB / Firebase</p>
+                            <dl class="mzp-u-list-styled">
+                                <dt>Programming Languages</dt>
+                                <dd>Java, Javascript, Python, HTML, CSS</dd>
+                                <dt>Libraries & Frameworks</dt>
+                                <dd>Angular, Ionic, Spring, Vertx, SCSS</dd>
+                                <dt>Tools & Platforms</dt>
+                                <dd>Firebase, DOcker, Git</dd>
+                            </dl>
                         </div>
 
                     </div>
                     <div class="row">
-                        <h6>EDUCATION</h6>
+                        <h3>EDUCATION</h3>
                         <div class="col-12-sm">
-                            ceva
+                            <dl class="mzp-u-list-styled">
+                                <dt>Attended for Title of
+                                    Computational Mathematics</dt>
+                                <dd>University JAUME I, 2013</dd>
+                                <dt>Bachelor's Degree</dt>
+                                <dd>I.E.S Joan Coromines , 2011 - 2013</dd>
+                            </dl>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <h3>LANGUAGES</h3>
+                        <div class="col-12-sm">
+                            <ul class="mzp-u-list-styled">
+                                {{range .Site.Params.OwnerLanguages}}
+                                <li><p>{{i18n .language}} {{with .info}}({{ i18n .}}) {{end}}</p></li>
+                                {{end}}
+                            </ul>
                         </div>
 
                     </div>
