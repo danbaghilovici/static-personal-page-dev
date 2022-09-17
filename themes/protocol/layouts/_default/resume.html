@@ -4,26 +4,26 @@
     <!--    <link href="{{ .Site.BaseURL | absLangURL}}css/protocol-components.css" rel="stylesheet">-->
     <style>
         html{
-            font-size: 12px;
+            font-size: 13px;
             /*line-height: 5px!important;*/
         }
         h1{
             /*font-size: 30px;*/
         }
         h2{
-            font-size: 22px;
+            font-size: 23px;
         }
         h3{
-            font-size: 18px;
+            font-size: 19px;
         }
         h4{
-            font-size: 16px;
+            font-size: 17px;
         }
         h5{
-            font-size: 14px ;
+            font-size: 15px ;
         }
         h6{
-            font-size: 12px;
+            font-size: 13px;
         }
         /*@media print {*/
         /*  body { height:297mm; width:210mm; margin:0; }*/
@@ -51,17 +51,21 @@
         p {
             margin-bottom: 8px;
         }
+        .side .row{
+            /*height: 20%;*/
+            margin-bottom: 3em;
+        }
     </style>
 </head>
 <body>
 <div id="resume-wrap" style="width: 210mm;height: 300mm;border: 1px solid black;padding:32px;">
     <div class="container">
         <div class="row" id="header-row">
-            <div class="col-8-sm">
+            <div class="col-9-sm">
                 <h1 style="margin-bottom: 5px;">DAN BAGHILOVICI</h1>
                 <h2>Software Developer</h2>
             </div>
-            <div class="col-4-sm">
+            <div class="col-3-sm">
                 <ul class="mzp-u-list-styled" style="list-style: none;margin-left: 0;">
                     <li>
                         <p style="margin-bottom: 0;">
@@ -75,7 +79,7 @@
                                     </g>
                                 </g>
                             </svg>
-                            000000000 / 111111111111
+                            +40 000 000 000 <br> +34 000 000 000
                         </p>
                     </li>
                     <li>
@@ -144,7 +148,7 @@
             </div>
         </div>
         <div class="row" style="margin-top: 16px;">
-            <div class="col-8-sm" style="padding-right: 16px;">
+            <div class="col-9-sm" style="padding-right: 16px;">
                 <!--                // work exp-->
                 <h3>WORK EXPERIENCE</h3>
                 {{range sort .Site.Params.OwnerWorkExperience "period.from" "desc"}}
@@ -153,7 +157,7 @@
                         <div class="col-6-sm">
                             <p ><b>{{title (i18n .jobTitle)}}</b></p>
                         </div>
-                        <div class="col-6-sm">
+                        <div class="col-6-sm" style="text-align:right">
                             <img src="/img/companies/netflix.jpg" height="30" width="30" style="vertical-align: middle">
                             <p  style="display:inline"><a target="_blank" href="{{.company.website}}"><b>{{.company.name}}</b></a> | {{.period.from}} - {{with .period.toPresent}}{{title (i18n "jobPeriodPresentTextTranslation")}}{{else}}{{.period.to}}{{end}}</p>
                         </div>
@@ -171,9 +175,9 @@
                 </div>
                 {{end}}
             </div>
-            <div class="col-4-sm">
+            <div class="col-3-sm" style="padding-left: 16px;height: 70%;border-left: 0 solid #ededf0;border-left-width: 4px;">
 
-                <div class="container">
+                <div class="container side">
                     <div class="row">
                         <h3>SKILLS</h3>
                         <div class="col-12-sm">
@@ -203,6 +207,18 @@
                     </div>
                     <div class="row">
                         <h3>LANGUAGES</h3>
+                        <div class="col-12-sm">
+                            <ul class="mzp-u-list-styled">
+                                {{range .Site.Params.OwnerLanguages}}
+                                <li><p>{{i18n .language}} {{with .info}}({{ i18n .}}) {{end}}</p></li>
+                                {{end}}
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <h3>INTERESTS</h3>
                         <div class="col-12-sm">
                             <ul class="mzp-u-list-styled">
                                 {{range .Site.Params.OwnerLanguages}}

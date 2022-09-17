@@ -15,10 +15,13 @@
                                 </li>
                             {{end}}
 
-                            <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
-                                <p class="mzp-c-menu-title"  aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">
-                                    {{title (i18n "headerMoreSectionsTr")}}
-                                </p>
+                            <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable ">
+                                <div class="expandable">
+                                    <p class="mzp-c-menu-title"  aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">
+                                        {{title (i18n "headerMoreSectionsTr")}}
+                                    </p>
+                                </div>
+
                                 <div class="mzp-c-menu-panel " id="mzp-c-menu-panel-example">
                                     <div class="mzp-c-menu-panel-container">
                                         <button class="mzp-c-menu-button-close has-label" type="button" aria-controls="mzp-c-menu-panel-example">
