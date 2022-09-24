@@ -230,6 +230,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-12-sm" style="padding-top: 16px;">
+                <hr>
+                <div class="row" style="text-align: center;margin-top: 16px;">
+                    {{range .Site.Params.ownerSocialLinks}}
+                    <div class="col-{{div 12 (len $.Site.Params.ownerSocialLinks)}}-sm">
+                        {{safeHTML .svg}}
+                        <a  href="{{.link}}">{{substr .link 8}}</a>
+                    </div>
+                    {{end}}
+                </div>
+            </div>
         </div>
     </div>
 
