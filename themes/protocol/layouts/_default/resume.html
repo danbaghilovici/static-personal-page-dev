@@ -55,10 +55,31 @@
             /*height: 20%;*/
             margin-bottom: 3em;
         }
+        a{
+            text-decoration: none!important;
+            color: rgb(0,96,223);
+            text-decoration-color: rgb(0,96,223);
+        }
+        a:visited,a:hover{
+            color: rgb(0,96,223);
+            text-decoration-color: rgb(0,96,223);
+        }
+        #resume-wrap{
+            width: 210mm;
+            height: 302mm;
+            /*border: 1px solid black;*/
+            padding:32px;
+        }
+        @media print {
+            #mobile-item{
+                display: none;
+            }
+
+        }
     </style>
 </head>
 <body>
-<div id="resume-wrap" style="width: 210mm;height: 300mm;border: 1px solid black;padding:32px;">
+<div id="resume-wrap" >
     <div class="container">
         <div class="row" id="header-row">
             <div class="col-9-sm">
@@ -67,7 +88,7 @@
             </div>
             <div class="col-3-sm">
                 <ul class="mzp-u-list-styled" style="list-style: none;margin-left: 0;">
-                    <li>
+                    <li id="mobile-item">
                         <p style="margin-bottom: 0;">
                             <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                  style="vertical-align: sub">
@@ -79,11 +100,12 @@
                                     </g>
                                 </g>
                             </svg>
-                            +40 000 000 000 <br> +34 000 000 000
+                            <a href="tel:+40 000 000 000">+40 000 000 000</a>
+                             <br> &nbsp; &nbsp; &nbsp;
+                            <a href="tel:+40 000 000 000">+34 000 000 000</a>
                         </p>
                     </li>
                     <li>
-
                         <p style="margin-bottom: 0;">
                             <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                  style="vertical-align: sub">
@@ -95,10 +117,9 @@
                                     </g>
                                 </g>
                             </svg>
-                            <a href="mailto:dan@danbaghilovici.dev">dan@danbaghilovici.dev</a></p>
+                            <a href="mailto:{{.Site.Params.ownerEmail}}">{{.Site.Params.ownerEmail}}</a></p>
                     </li>
                     <li>
-
                         <p style="margin-bottom: 0;">
                             <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                  style="vertical-align: sub">
@@ -111,7 +132,7 @@
                                     </g>
                                 </g>
                             </svg>
-                            <a href="danbaghilovici.dev">danbaghilovici.dev</a></p>
+                            <a href="{{.Site.Params.ownerWebsite}}">{{substr .Site.Params.ownerWebsite 8}}</a></p>
                     </li>
                 </ul>
 
@@ -154,12 +175,12 @@
                 {{range sort .Site.Params.OwnerWorkExperience "period.from" "desc"}}
                 <div class="container">
                     <div class="row">
-                        <div class="col-6-sm">
-                            <p ><b>{{title (i18n .jobTitle)}}</b></p>
+                        <div class="col-5-sm" style="min-height: 2.5em;">
+                            <h5 >{{title (i18n .jobTitle)}}</h5>
                         </div>
-                        <div class="col-6-sm" style="text-align:right">
-                            <img src="/img/companies/netflix.jpg" height="30" width="30" style="vertical-align: middle">
-                            <p  style="display:inline"><a target="_blank" href="{{.company.website}}"><b>{{.company.name}}</b></a> | {{.period.from}} - {{with .period.toPresent}}{{title (i18n "jobPeriodPresentTextTranslation")}}{{else}}{{.period.to}}{{end}}</p>
+                        <div class="col-7-sm" style="text-align:left">
+                            <img src="/img/{{.company.icon}}" height="64" width="64" style="vertical-align: middle">
+                            <p  style="display:inline"> <a target="_blank" href="{{.company.website}}">{{.company.name}}</a> | {{.period.from}} - {{with .period.toPresent}}{{title (i18n "jobPeriodPresentTextTranslation")}}{{else}}{{.period.to}}{{end}}</p>
                         </div>
                         <div class="col-12-sm">
                             <p>{{i18n .description}}</p>
