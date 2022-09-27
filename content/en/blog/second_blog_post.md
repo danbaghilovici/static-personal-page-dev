@@ -3,7 +3,7 @@ title: Vestibulum et quam commodo, gravida lacus ullamcorper, dictum dolor.
 slug: second-blog-post-en
 description: GitHub is the place where open source and commercial coding projects live, communicate and grow through pull requests. Learn how to use the iOS GitHub app to manage your projects while on the go.
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
-draft: true
+draft: false
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices odio non nisl mollis, faucibus scelerisque mauris rutrum. Fusce fringilla imperdiet gravida. Donec risus urna, ullamcorper quis ex vel, hendrerit rutrum purus. Nulla sagittis arcu nec tincidunt fermentum. Nullam blandit nisi non metus ullamcorper, quis facilisis tortor lobortis. Quisque tempor, tortor eu egestas fermentum, enim justo posuere urna, at consectetur urna sapien sed dui. Pellentesque vestibulum rutrum risus sit amet rutrum. Aliquam ligula turpis, iaculis id tincidunt sed, eleifend at nulla. Praesent sed eros libero. Ut iaculis sagittis diam a tincidunt. Donec tempus ipsum nec libero sodales elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed finibus ullamcorper velit id cursus. Pellentesque bibendum augue vitae nibh posuere, vitae malesuada justo venenatis. Vivamus finibus convallis sagittis.
 

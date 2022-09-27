@@ -5,17 +5,13 @@ description: Phasellus luctus urna id purus bibendum, ut tempor odio pulvinar. A
 keywords: [ceva, 2]
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
 gitSourceCode: https://www.github.com
-tags:
-- Development
-- Java
-- Vert.x
-- Firebase
+tags: [ Development , Java , Vert.x , Firebase, Clannerzzz-App]
 references:
 - Source code (GitHub) : https://github.com/dntzbgh/supreme-doodle
 - Firebase performances improvements : https://en.wikipedia.org/wiki/Group_(mathematics)
 - RxJava compatibility issues: https://en.wikipedia.org/wiki/Book_of_Kells
 - Sorting algorithms performance table: https://en.wikipedia.org/wiki/Bacteria 
-draft: true
+draft: false
 ---
 
 # Building Reactive Microservice Systems

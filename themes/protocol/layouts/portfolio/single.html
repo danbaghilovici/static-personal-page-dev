@@ -1,3 +1,30 @@
 {{define "main"}}
-hello
+<div class="mzp-c-split mzp-t-dark" id="project-lead" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{.Params.Media}}');">
+    <div class="mzp-c-split-bg">
+        <div class="mzp-c-split-container">
+            <div class="mzp-c-split-body ">
+                <h1 class="mzp-u-title-md">
+                    {{.Title}}: {{.Description}}
+                </h1>
+                <p>
+                    {{.Description}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mzp-l-content">
+    {{.Content}}
+    Hello
+    {{ range (.GetTerms "tags") }}
+    {{ $currTag := .LinkTitle }}
+        {{ $taggedPages := (index .Site.Taxonomies.tags (lower $currTag)).Pages }}
+    <ul>
+        {{ range $taggedPages }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
+
 {{end}}
