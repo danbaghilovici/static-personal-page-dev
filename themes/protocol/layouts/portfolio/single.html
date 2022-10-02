@@ -7,25 +7,11 @@
         </div>
     </div>
 </div>
+
 <div class="mzp-l-content">
+
     <div class="mzp-has-sidebar mzp-l-sidebar-left" >
-        <aside class="mzp-l-sidebar" style="height: 100vh">
-            <nav  class="mzp-c-sidemenu" style="height: 100%">
-                <section class="container" style="height: 100%">
-                    <div class="row" style="position: sticky;position: -webkit-sticky;top: 88px;left: 0;overflow: visible">
-                        <div class="col-12" style="margin: 3px 0;">
-                            <a style="width: 100%" class="mzp-c-button mzp-t-product" href="/"> Download App</a>
-                        </div>
-                        <div class="col-12" style="margin: 3px 0;" >
-                            <a style="width: 100%" class="mzp-c-button" type="button"> Source Code</a>
-                        </div>
-                        <div class="col-12" style="margin: 3px 0;" >
-                            <a style="width: 100%" class="mzp-c-button" type="button">Website </a>
-                        </div>
-                    </div>
-                </section>
-            </nav>
-        </aside>
+
         <main class="mzp-l-main">
             <article class="mzp-c-article">
                 <h1 class="mzp-c-article-title">{{.Title}} </h1>
@@ -33,6 +19,24 @@
                 {{.Content}}
             </article>
         </main>
+        <aside class="mzp-l-sidebar" >
+        <nav  class="mzp-c-sidemenu" >
+            <section class="container" >
+                {{range $key, $value := .Params.projectLinks}}
+                <div class="row" style="margin-bottom: 16px;">
+                    <p style="margin-bottom: 4px;"><b>{{title (i18n $key)}}</b></p>
+                    {{range $key, $value := .}}
+                    <div class="col-12" style="margin: 4px 0;">
+                        <a style="width: 100%" class="mzp-c-button " href="{{$value}}">{{title (i18n $key)}}</a>
+                    </div>
+                    {{end}}
+
+                </div>
+                {{end}}
+
+            </section>
+        </nav>
+    </aside>
 
     </div>
 

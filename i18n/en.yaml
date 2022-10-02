@@ -59,6 +59,22 @@ aboutSectionHeaderTr:
 aboutSectionIntroTr:
   other: more about me
 # PROJECTS
+googleplaystoredownloadlinktr:
+  other: play store
+fdroiddownloadlinktr:
+  other: f droid
+githubdownloadlinktr:
+  other: git hub
+projectsectionsidemenuheaderdownloadstr:
+  other: download links
+projectsectionsidemenuheadersourcetr:
+  other: source code
+projectsectionsidemenuheaderlinkstr:
+  other: project links
+projectsectionlinkmainpagelinktr:
+  other: website
+projectsectionlinkdemopagelinktr:
+  other: demo
 projectsSectionNoDataHeaderTr:
   other: no projects have been imported yet!
 projectsSectionNoDataContentTr:

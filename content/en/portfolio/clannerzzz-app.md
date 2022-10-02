@@ -1,10 +1,19 @@
 ---
-title: ClannerZZz App.
+title: ClannerZZz App
 slug: clannerzzz-app
 description: Mobile application that holds your clannerz's most valuable moments. Made by Clannerzzz, for Clannerzzz.
 media: https://media.giphy.com/media/iIGJ3idZ7ULWmQ7VgQ/giphy.gif
 keywords: [ceva, 2]
 tags: [Clannerzzz-App, Firebase]
+projectLinks:
+    projectsectionsidemenuheaderdownloadstr:
+        googleplaystoredownloadlinktr: "https://example.com"
+        fdroiddownloadlinktr: "https://example.com"
+    projectsectionsidemenuheadersourcetr:
+        githubdownloadlinktr: https://github.com/danbaghilovici/clannerzzz-app
+    projectsectionsidemenuheaderlinkstr:
+        projectsectionlinkmainpagelinktr: "https://www.example.com"
+        projectsectionlinkdemopagelinktr: "https://www.example.com"
 draft: true
 ---
 
@@ -29,14 +38,14 @@ As I managed to execute on the main feature of the app successfully , now there 
 * Support for iOS and web
 
 
-## It started as a joke
+## It started with an idea
 
 The idea of the application started as a joke between my group of friends that we used to play together. Every time we wanted to joke with each other we would send a voice message on the different platforms that we would communicate. At some point we reached a good amount of audio files sparse around the different apps that we used to communicate, we would have copies of the same audio file, shortened audios that together formed an even bigger audio file.
 We also lost some funny and silly audios along the way since no backup was available. If one of use would lose,swap its phone and the others would not have the audio file, it would be forever lost.
 At some point one of my friends asked me: “Wouldn’t be great to have all these audios on a single app?”.
 
 ## Stack
-The technologies I decided to use are Ionic and Firebase. I’m already familiar with both of them and I used them extensively on my previous job so I had a base idea on how things would play out regarding development, and although it did not worked so smoothly as I thought I managed to have an MVP.
+The technologies I decided to use are [Ionic](https://ionicframework.com/) and [Firebase](https://firebase.google.com/). I’m already familiar with both of them and I used them extensively on my previous job so I had a base idea on how things would play out regarding development, and although it did not worked so smoothly as I thought I managed to have an MVP.
 Apart from the familiarity with the tech I chose:
 
 Ionic simply for the fact that it allows me to build for both android and ios seamlessly* (not really)

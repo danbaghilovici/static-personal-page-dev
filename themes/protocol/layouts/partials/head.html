@@ -14,7 +14,7 @@
     <script defer src="{{ .Site.BaseURL | absLangURL}}js/protocol-footer.js"></script>
     <script defer src="{{ .Site.BaseURL | absLangURL}}js/protocol-navigation.js"></script>
     <script defer src="{{ .Site.BaseURL | absLangURL}}js/protocol-sidemenu.js"></script>
-<!--    <script defer src="{{ .Site.BaseURL | absLangURL}}js/protocol-sticky-promo.js"></script>-->
+    <script defer src="{{ .Site.BaseURL | absLangURL}}js/protocol-sticky-promo.js"></script>
 
 
 
@@ -23,6 +23,13 @@
         window.onload = function (){
             Mzp.Navigation.init()
             // Mzp.Menu.init();
+            document.querySelectorAll("article a").forEach(node=>{
+                if (!node.getAttribute("href").includes("{{.Site.BaseURL}}")){
+                    node.setAttribute("target","_blank");
+                    node.classList.add("external-link");
+                    console.info("node "+node+" has been set");
+                }
+            });
         }
     </script>
 
