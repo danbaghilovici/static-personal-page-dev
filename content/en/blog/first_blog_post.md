@@ -5,7 +5,7 @@ description: Phasellus luctus urna id purus bibendum, ut tempor odio pulvinar. A
 keywords: [ceva, 2]
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
 gitSourceCode: https://www.github.com
-tags: [ Development , Java , Vert.x , Firebase, Clannerzzz-App]
+tags: [ Development , Java , Vert.x , Firebase, Clannerzzz-App ]
 references:
 - Source code (GitHub) : https://github.com/dntzbgh/supreme-doodle
 - Firebase performances improvements : https://en.wikipedia.org/wiki/Group_(mathematics)

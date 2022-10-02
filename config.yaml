@@ -257,9 +257,9 @@ params:
       info:
 markup:
   tableOfContents:
-    endLevel: 3
+    endLevel: 6
     ordered: false
-    startLevel: 3
+    startLevel: 1
   blackFriday:
     angledQuotes: false
     extensions: [
