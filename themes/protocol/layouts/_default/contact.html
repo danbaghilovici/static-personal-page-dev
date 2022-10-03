@@ -1,9 +1,9 @@
 {{define "main"}}
-<div class="mzp-l-content mzp-t-content-md">
-    <form class="mzp-c-form">
+<div class="mzp-l-content ">
+    <form class="mzp-c-form" >
         <div class="mzp-c-form-header">
-            <h2 class="mzp-c-form-title">Get in touch</h2>
-            <p>You can contact me on <a href="#">Linkedin</a> or by email : <a href="mailto:danbaghilovici@gmail.com">danbaghilovici at gmail dot com</a>.
+            <h2 class="">Get in touch</h2>
+            <p>You can contact me on <a target="_blank" class="external-link" href="{{(index .Site.Params.ownerSocialLinks 0).link}}">Linkedin</a> or by email : <a target="_blank" class="external-link" href="mailto:{{.Site.Params.ownerEmail}}">{{.Site.Params.ownerEmail}}</a>
                 <br>Alternatively you can complete and submit the form below and I will get in touch with you</p>
         </div>
 

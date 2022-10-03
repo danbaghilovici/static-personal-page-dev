@@ -42,6 +42,11 @@
                                                                     <a href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
                                                             </li>
                                                             {{end}}
+                                                            {{ range $i,$item:=.Site.Menus.contact }}
+                                                            <li>
+                                                                <a href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
+                                                            </li>
+                                                            {{end}}
                                                         </ul>
 
                                                     </section>
