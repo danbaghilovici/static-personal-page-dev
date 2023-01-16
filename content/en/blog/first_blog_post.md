@@ -32,14 +32,14 @@ Vestibulum quis erat ut arcu interdum ultricies vel at lorem.
 Nullam aliquam purus eget pretium fermentum. 
 Aliquam pharetra lacus et quam facilisis, vitae mollis dolor congue.       
 
-{{< line_break >}}
+
 ## Service Discovery
-{{< line_break >}}
+
 Sed maximus est pharetra magna bibendum tempus non id lacus. Pellentesque consequat ultricies nisl, sollicitudin suscipit dolor semper sed. Curabitur id euismod risus. Proin eu convallis justo. Pellentesque porttitor tortor ut ultrices volutpat. Donec mattis vitae neque at tincidunt. Mauris elementum urna vitae urna bibendum, vel ullamcorper urna congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean volutpat porta vestibulum. Proin eu nibh id est tincidunt maximus. Donec rhoncus sem in nisl scelerisque convallis. Integer sit amet tortor semper, placerat lectus ut, commodo tellus.
 
-{{< line_break >}}
+
 ### Client- and Server-Side Service Discovery
-{{< line_break >}}
+
 - Etiam pulvinar arcu quis mi fringilla aliquam. 
 - In dapibus mollis justo eget sagittis. 
     - Aenean diam nisi, sollicitudin vel velit quis, luctus faucibus dolor. 
@@ -49,19 +49,19 @@ Sed maximus est pharetra magna bibendum tempus non id lacus. Pellentesque conseq
 2. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
 3. Duis interdum leo gravida purus blandit iaculis.
 
-{{< line_break >}}
+
 
 > In laoreet lacus velit, a sodales dolor mollis nec. Phasellus quis mauris a nunc rutrum dignissim a non leo. Vivamus vel ultrices turpis, quis posuere eros. Aliquam vehicula ipsum velit, et iaculis dui dictum a. Fusce pharetra luctus libero eu bibendum. Morbi non libero lacus. Mauris accumsan feugiat nunc vel dignissim. Nam nibh ex, tincidunt et varius in, hendrerit vitae est. Mauris consequat felis turpis, id dignissim ipsum suscipit eu. In hac habitasse platea dictumst. Sed accumsan eget tellus sit amet ultricies.
 — Benjamin Franklin
 
-{{< line_break >}}
+
 
 Donec feugiat in sapien ac volutpat. Vivamus fermentum justo lorem, vel molestie libero vestibulum vitae. Donec venenatis nulla metus, nec fermentum diam pretium convallis. Nullam viverra viverra suscipit. Ut euismod id ex vitae imperdiet. Curabitur eu nisl arcu. Praesent hendrerit sollicitudin est ac interdum. Nam et leo cursus, dignissim elit in, scelerisque lectus.
 
 
 Nunc a faucibus erat. Fusce in arcu in leo malesuada maximus ut et justo. Phasellus tortor metus, posuere at consequat sed, tincidunt vitae ex. Nam est nibh, porttitor eu venenatis id, malesuada a enim. Cras ultricies nibh est, eget suscipit erat ornare quis. Vivamus condimentum id enim sit amet scelerisque. Quisque vehicula faucibus justo ut venenatis. Praesent sollicitudin a dolor in facilisis. Donec sed sollicitudin libero. Sed commodo varius eros quis cursus. Ut malesuada hendrerit viverra.
 
-{{< line_break >}}
+
 
 | Name | Protocol  |
 |:----|:------|
@@ -69,9 +69,9 @@ Nunc a faucibus erat. Fusce in arcu in leo malesuada maximus ut et justo. Phasel
 | 123 | 2314  |
 | 123 | 61346 |
 
-{{< line_break >}}
+
 ### Vert.x Service Discovery
-{{< line_break >}}
+
 
 Etiam semper efficitur turpis, ac maximus metus finibus non. Proin sed lacus vel augue maximus sagittis ac vitae dolor. Ut porttitor tellus massa, consectetur fermentum massa aliquet id. Etiam a ex porta, pharetra ligula nec, rutrum nibh. In aliquam, ex id imperdiet suscipit, augue sem rutrum nunc, quis mollis justo libero pulvinar felis. Integer pharetra risus eget eros hendrerit, vitae sollicitudin turpis euismod. Integer sollicitudin condimentum tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam elementum tortor id accumsan malesuada.
 
@@ -81,7 +81,7 @@ Praesent molestie eleifend pretium. Nulla scelerisque lacus metus, vel lacinia e
 
 Pellentesque facilisis et neque vel rutrum. Aenean pellentesque dolor a nunc feugiat, eget posuere libero sagittis. Maecenas quis cursus lorem. Nulla at orci et ante eleifend consectetur ut in mauris. Donec eros eros, lobortis ac iaculis vitae, elementum quis nisi. Duis ut dui cursus, cursus purus a, ultricies enim. Nam et vehicula purus. Pellentesque non enim porta, cursus ex nec, accumsan quam. Vivamus quis lacinia risus. Nulla eget metus sapien. Suspendisse imperdiet augue quis imperdiet sagittis. Morbi tempus lacus orci, non iaculis felis mollis ac. Pellentesque ligula nibh, porttitor in lorem bibendum, condimentum sollicitudin mi. Phasellus vel ipsum eleifend, lacinia neque vel, mattis diam.
 
-{{< line_break >}}
+
 
 {{< highlight go  >}}
 // We create an instance of service discovery 

@@ -1,7 +1,7 @@
 ---
 baseUrl: /
 languageCode: en-us
-theme: hugo-personal-theme
+theme: bs-carbon
 description: ceva
 DefaultContentLanguage: en
 defaultContentLanguageInSubdir: true

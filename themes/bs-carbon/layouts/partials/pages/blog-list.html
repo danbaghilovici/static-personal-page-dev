@@ -1,0 +1,67 @@
+{{ $allBlogs:= where .ctx.Site.Pages "Section" "blog"   }}
+{{ $blogPosts:=(where $allBlogs ".IsPage" true).Reverse}}
+{{ $listPage:=(first 1 (where $allBlogs ".IsNode" true)) }}
+{{ $paginator:= .ctx.Paginate $blogPosts 4}}
+{{if .onHome}}
+    {{if gt (len $blogPosts) 0}}
+    <h2>What I have been writing about lately</h2>
+        <section class="mzp-l-card-quarter">
+            <div >
+                {{range first 3 $blogPosts}}
+                    {{- partial "components/card.html"
+                    ( dict
+                    "ctx" .
+                    "cardTag" "Java"
+                    "cardTitle" .Params.Title
+                    "cardDescription" .Params.Description
+                    "cardCTAText" "Read more"
+                    "cardLink" .Permalink
+                    "cardMeta" "*Not applicable"
+                    )
+                    -}}
+                {{end}}
+                {{if gt (len $blogPosts) 3}}
+                    {{range $listPage}}
+                        {{- partial "components/index-card.html"
+                        ( dict
+                        "ctx" .
+                        "cardTitle" "Ceva"
+                        "cardDescription" "asd"
+                        "cardCTAText" "Read more"
+                        "cardLink" .Permalink
+                        )
+                        -}}
+                    {{end}}
+                {{end}}
+            </div>
+        </section>
+    {{end}}
+{{else}}
+    {{if gt (len $blogPosts) 0}}
+        <h1>A collection of my blog posts</h1>
+        <div class=" mzp-l-card-quarter">
+
+                {{range $paginator.Pages}}
+                    {{- partial "components/card.html"
+                    ( dict
+                    "ctx" .
+                    "cardTag" "Java"
+                    "cardTitle" .Params.Title
+                    "cardDescription" .Params.Description
+                    "cardCTAText" "Read more"
+                    "cardLink" .Permalink
+                    "cardMeta" "*Not applicable"
+                    )
+                    -}}
+                {{end}}
+
+        </div>
+        {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
+    {{else}}
+        {{- partial "components/newsletter" (dict "ctx" .
+            "nlHeader" (humanize (i18n "blogSectionNoDataHeaderTr"))
+            "nlDescription" (humanize (i18n "blogSectionNoDataContentTr"))
+            "nlImage" "/img/illustrations/Sprinkle_8.svg" ) -}}
+    {{end}}
+
+{{end}}

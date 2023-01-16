@@ -1,0 +1,26 @@
+<aside class="mzp-c-newsletter">
+  {{with .nlImage}}
+  <div class="mzp-c-newsletter-image">
+    <img src="{{.}}" width="346" height="346" alt="" >
+  </div>
+  {{end}}
+
+  <form id="newsletter-form" class="mzp-c-newsletter-form" name="newsletter-form" action="#" method="">
+    <header class="mzp-c-newsletter-header">
+      {{with .nlHeader}} <h3 class="mzp-c-newsletter-title">{{.}}</h3>{{end}}
+      {{with .nlDescription}}<p class="mzp-c-newsletter-tagline">{{.}}</p>{{end}}
+    </header>
+
+    <fieldset class="mzp-c-newsletter-content">
+      <div>
+        <label for="email">{{humanize (i18n "nlCompFormEmailLabelTr")}}</label>
+        <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="{{i18n "nlCompFormEmailPlaceholderTr"}}" required aria-required="true">
+      </div>
+
+      <p class="mzp-c-form-submit">
+        <button type="submit" class="mzp-c-button" id="newsletter-submit">{{humanize (i18n "nlCompCtaTextTr")}}</button>
+      </p>
+    </fieldset>
+  </form>
+
+</aside>

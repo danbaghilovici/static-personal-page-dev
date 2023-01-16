@@ -1,0 +1,17 @@
+{{define "main"}}
+<div class="mzp-c-billboard mzp-l-billboard-right mzp-c-billboard-transparent" >
+    <div class="mzp-c-billboard-image-container">
+        <img class="mzp-c-billboard-image" src="/img/illustrations/Punctuation_3.svg" alt="">
+    </div>
+    <div class="mzp-c-billboard-content">
+        <div class="mzp-c-billboard-content-container">
+            <div class="mzp-c-billboard-content-inner">
+                <h2 class="mzp-c-billboard-title">{{title (i18n "errorSectionTitleTr")}}</h2>
+                <p class="mzp-c-billboard-desc">{{humanize (i18n "errorSectionDescriptionTr")}}</p>
+                <a class="mzp-c-cta-link" href="/">{{humanize (i18n "errorSectionCTATr")}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{end}}

@@ -1,0 +1,31 @@
+<div class="mzp-c-card mzp-has-aspect-3-2 {{with .cardLargeType}}mzp-c-card-medium{{end}}">
+    <a class="mzp-c-card-block-link" href="{{with .cardLink}}{{.}}{{end}}">
+        {{with .cardMedia}}
+            <div class="mzp-c-card-media-wrapper">
+                <img class="mzp-c-card-image" src="{{.}}" alt="">
+            </div>
+        {{end}}
+        <div class="mzp-c-card-content">
+            {{with .cardTag}}<div class="mzp-c-card-tag">{{.}}</div>{{end}}
+            {{with .cardTitle}}
+            <h2 class="mzp-c-card-title">
+                {{ . | truncate 60}}
+            </h2>
+            {{end}}
+            {{with .cardDescription}}
+                <p class="mzp-c-card-desc">
+                    {{. | truncate 150}}
+
+                </p>
+            {{end}}
+            {{with .cardCTAText}}
+            <p class="mzp-c-card-cta">
+                <span class="mzp-c-card-cta-text">{{.}}</span></p>
+            {{end}}
+            {{with .cardMeta}}
+                <p class="mzp-c-card-meta">{{.}}</p>
+            {{end}}
+
+        </div>
+    </a>
+</div>

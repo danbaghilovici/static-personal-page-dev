@@ -1,0 +1,44 @@
+{{define "main"}}
+<div class="mzp-l-content">
+    <div class="mzp-has-sidebar mzp-l-sidebar-left">
+
+        <aside class="mzp-l-sidebar" >
+            <nav class="mzp-c-sidemenu">
+                <section class="mzp-c-sidemenu-summary mzp-js-toggle" aria-controls="sidebar-menu">
+                    <h3 class="mzp-c-sidemenu-label">Menu label</h3>
+                    <ul>
+                        <li>Menu title</li>
+                        <li class="mzp-is-current">Menu item one</li>
+                    </ul>
+                </section>
+
+                <section class="mzp-c-sidemenu-main" id="sidebar-menu">
+                    <h4 class="mzp-c-sidemenu-title"><a href="#">Table of contents for</a></h4>
+                    {{.TableOfContents}}
+                </section>
+
+                <section class="mzp-c-card mzp-has-aspect-1-1 mzp-has-audio">
+                    <a class="mzp-c-card-block-link" href="https://example.com">
+                        <div class="mzp-c-card-content">
+                            <div class="mzp-c-card-tag">Audio</div>
+                            <h2 class="mzp-c-card-title">Card title with about 30-40 characters</h2>
+                            <p class="mzp-c-card-desc">A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
+                            <p class="mzp-c-card-cta"><span class="mzp-c-card-cta-text">This call to action is 37 characters</span></p>
+
+                        </div>
+                    </a>
+                </section>
+            </nav>
+
+        </aside>
+
+        <main class="mzp-l-main">
+            {{.Content}}
+
+        </main>
+
+
+    </div>
+</div>
+
+{{end}}
