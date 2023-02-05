@@ -1,50 +1,39 @@
-<div style="text-align: center">
-    {{if .paginator.HasPrev}}
-        <a href="{{$.ctx.ctx.Permalink}}page/{{sub .paginator.PageNumber 1}}"
-                                {{else}}
-                                <button type="button"
-                                {{end}}
-        class="mzp-c-button mzp-t-secondary "
-        {{if .paginator.HasPrev}}{{else}}disabled{{end}}
-
-        aria-disabled="{{if .paginator.HasPrev}}false{{else}}true{{end}}"
-    >
-                                    &#8249;
-    {{if .paginator.HasPrev}}</a>{{else}}</button>{{end}}
-
-
-    {{range (seq .paginator.TotalPages)}}
-        {{if eq . $.paginator.PageNumber}}
-            <button
-               class=" mzp-c-button mzp-t-product mzp-t-primary "
-               {{if eq . $.paginator.PageNumber}}disabled{{end}}
-               aria-current="page" type="button"
-               aria-disabled="{{if eq . $.paginator.PageNumber}}true{{else}}false{{end}}"
-            >{{.}}
-            </button>
+<nav aria-label="Page navigation example" >
+    <ul class="pagination justify-content-center">
+        {{if .paginator.HasPrev}}
+            <li class="page-item">
+                <a class="page-link" href="{{$.ctx.ctx.Permalink}}page/{{sub .paginator.PageNumber 1}}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
         {{else}}
-            <a href="{{$.ctx.ctx.Permalink}}page/{{.}}"
-               class=" mzp-c-button mzp-t-secondary "
-               {{if eq . $.paginator.PageNumber}}disabled{{end}}
-               aria-current="page"
-               aria-disabled="{{if eq . $.paginator.PageNumber}}true{{else}}false{{end}}"
-            >{{.}}
-            </a>
+            <li class="page-item">
+                <a class="page-link disabled" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        {{end}}
+        {{range (seq .paginator.TotalPages)}}
+            {{if eq . $.paginator.PageNumber}}
+                <li class="page-item"><a class="page-link disabled" href="{{$.ctx.ctx.Permalink}}page/{{.}}">{{.}}</a></li>
+            {{else}}
+                <li class="page-item"><a class="page-link" href="{{$.ctx.ctx.Permalink}}page/{{.}}">{{.}}</a></li>
+            {{end}}
         {{end}}
 
-    {{end}}
+        {{if .paginator.HasNext}}
+            <li class="page-item">
+                <a class="page-link" href="{{$.ctx.ctx.Permalink}}page/{{add .paginator.PageNumber 1}}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        {{else}}
+            <li class="page-item">
+                <a class="page-link disabled" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        {{end}}
 
-    {{if .paginator.HasNext}}
-    <a href="{{$.ctx.ctx.Permalink}}page/{{add .paginator.PageNumber 1}}"
-       {{else}}
-    <button type="button"
-            {{end}}
-            class="mzp-c-button mzp-t-secondary "
-            {{if .paginator.HasNext}}{{else}}disabled{{end}}
-
-            aria-disabled="{{if .paginator.HasNext}}false{{else}}true{{end}}"
-    >
-        &#8250;
-        {{if .paginator.HasNext}}<a/>{{else}}</button>{{end}}
-
-</div>
+    </ul>
+</nav>

@@ -4,12 +4,14 @@
 {{ $paginator:=.ctx.Paginate $projects 4}}
 {{if .onHome}}
     {{if gt (len $projects) 0}}
-        <section>
-            <h2>What I have been working on lately</h2>
-
-            <div class="mzp-l-card-half">
-
-                {{range $i,$project:=first 4 $projects}}
+        <div class="row">
+            <div class="col-sm-12 col-lg-3">
+                <h6 class="pb-sm-1"><strong>What I have been working on lately</strong></h6>
+            </div>
+            <div class="col">
+        <div class="row g-0">
+            {{range $i,$project:=first 4 $projects}}
+            <div class="col-16">
                 {{- partial "components/card.html"
                 ( dict
                 "ctx" .
@@ -21,29 +23,56 @@
                 "cardLargeType" true
                 )
                 -}}
-                {{end}}
             </div>
-        </section>
+            {{end}}
+            <div class="col-8">
+                <div class="card w-100 bg-dark text-bg-dark" >
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+        </div>
     {{end}}
 {{else}}
     {{if gt (len $projects) 0}}
-        <section>
-            {{range $i,$project:=$paginator.Pages}}
-            {{- partial "components/call-out.html"
-            ( dict
-            "ctx" .
-            "callOutReversed" (eq (mod $i 2) 0)
-            "callOutTitle" .Params.Title
-            "callOutDescription" .Params.Description
-            "callOutCtaText" "Read more"
-            "callOutCtaLink" .Permalink
-            "callOutMedia" .Params.Media
-            )
-            -}}
-            {{end}}
+        <section class="container pt-5">
+            <div class="row">
+                <div class="col-4">
+                    <h5><strong>Recent projects</strong></h5>
+                    <p>Latest projects that I have been working on</p>
+                </div>
+                <div class="col">
+                    <div class="row g-0">
+                        {{range $i,$project:=$paginator.Pages}}
+                        <div class="col">
+                            {{- partial "components/card.html"
+                            ( dict
+                            "ctx" .
+                            "cardTitle" .Params.Title
+                            "cardDescription" .Params.Description
+                            "cardCTAText" "Find out more"
+                            "cardLink" .Permalink
+                            "cardMedia" $project.Params.Media
+                            )
+                            -}}
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+            </div>
+
+            {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
         </section>
-        <br/>
-        {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
+
     {{else}}
         {{- partial "components/newsletter" (dict "ctx" .
         "nlHeader" (humanize (i18n "projectsSectionNoDataHeaderTr"))

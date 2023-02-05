@@ -1,31 +1,30 @@
-<div class="mzp-c-card mzp-has-aspect-3-2 {{with .cardLargeType}}mzp-c-card-medium{{end}}">
-    <a class="mzp-c-card-block-link" href="{{with .cardLink}}{{.}}{{end}}">
+<!--<div class="card w-100 " >-->
+<!--    {{with .cardMedia}}-->
+<!--        <img src="{{.}}" class="card-img-top h-auto" alt="...">-->
+<!--    {{end}}-->
+<!--    <div class="card-body">-->
+<!--        {{with .cardTag}}<h6 class="card-subtitle mb-2 text-muted"><strong>{{.}}</strong></h6>{{end}}-->
+<!--        {{with .cardTitle}}<h5 class="card-title">{{ . | truncate 60}}</h5>{{end}}-->
+
+<!--        {{with .cardDescription}}<p class="card-text"> {{. | truncate 150}}</p>{{end}}-->
+<!--        {{with .cardCTAText}}<a href="{{with $.cardLink}}{{.}}{{end}}" class="card-link stretched-link">{{.}}</a>{{end}}-->
+<!--    </div>-->
+<!--</div>-->
+<div class="card w-100" >
+    <div class="row g-0">
         {{with .cardMedia}}
-            <div class="mzp-c-card-media-wrapper">
-                <img class="mzp-c-card-image" src="{{.}}" alt="">
-            </div>
-        {{end}}
-        <div class="mzp-c-card-content">
-            {{with .cardTag}}<div class="mzp-c-card-tag">{{.}}</div>{{end}}
-            {{with .cardTitle}}
-            <h2 class="mzp-c-card-title">
-                {{ . | truncate 60}}
-            </h2>
-            {{end}}
-            {{with .cardDescription}}
-                <p class="mzp-c-card-desc">
-                    {{. | truncate 150}}
-
-                </p>
-            {{end}}
-            {{with .cardCTAText}}
-            <p class="mzp-c-card-cta">
-                <span class="mzp-c-card-cta-text">{{.}}</span></p>
-            {{end}}
-            {{with .cardMeta}}
-                <p class="mzp-c-card-meta">{{.}}</p>
-            {{end}}
-
+        <div class="col">
+            <img src="{{.}}" class="img-fluid h-100 w-auto" alt="...">
         </div>
-    </a>
+        {{end}}
+        <div class="col">
+            <div class="card-body">
+                {{with .cardTag}}<h6 class="card-subtitle mb-2 text-muted"><strong>{{.}}</strong></h6>{{end}}
+                {{with .cardTitle}}<h5 class="card-title">{{ . | truncate 60}}</h5>{{end}}
+
+                {{with .cardDescription}}<p class="card-text"> {{. | truncate 150}}</p>{{end}}
+                {{with .cardCTAText}}<a href="{{with $.cardLink}}{{.}}{{end}}" class="card-link stretched-link">{{.}}</a>{{end}}
+            </div>
+        </div>
+    </div>
 </div>

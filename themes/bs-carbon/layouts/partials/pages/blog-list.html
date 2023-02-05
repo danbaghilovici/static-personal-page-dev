@@ -4,58 +4,74 @@
 {{ $paginator:= .ctx.Paginate $blogPosts 4}}
 {{if .onHome}}
     {{if gt (len $blogPosts) 0}}
-    <h2>What I have been writing about lately</h2>
-        <section class="mzp-l-card-quarter">
-            <div >
-                {{range first 3 $blogPosts}}
-                    {{- partial "components/card.html"
-                    ( dict
-                    "ctx" .
-                    "cardTag" "Java"
-                    "cardTitle" .Params.Title
-                    "cardDescription" .Params.Description
-                    "cardCTAText" "Read more"
-                    "cardLink" .Permalink
-                    "cardMeta" "*Not applicable"
-                    )
-                    -}}
-                {{end}}
-                {{if gt (len $blogPosts) 3}}
-                    {{range $listPage}}
-                        {{- partial "components/index-card.html"
-                        ( dict
-                        "ctx" .
-                        "cardTitle" "Ceva"
-                        "cardDescription" "asd"
-                        "cardCTAText" "Read more"
-                        "cardLink" .Permalink
-                        )
-                        -}}
-                    {{end}}
-                {{end}}
+        <div class="row">
+            <div class="section-header">
+                <h6 class="section-header-text"><strong>What I have been writing about lately</strong></h6>
             </div>
-        </section>
+            <div class="section-content">
+                <div class="row g-0">
+                    {{range first 3 $blogPosts}}
+                        <div class="col-sm-12 col-md-6 col-xxl-4">
+                            {{- partial "components/card.html"
+                            ( dict
+                            "ctx" .
+                            "cardTag" "Java"
+                            "cardTitle" .Params.Title
+                            "cardDescription" .Params.Description
+                            "cardCTAText" "Read more"
+                            "cardLink" .Permalink
+                            "cardMeta" "*Not applicable"
+                            )
+                            -}}
+                        </div>
+                    {{end}}
+                    {{if gt (len $blogPosts) 3}}
+                        {{range $listPage}}
+                            <div class="col-sm-12 col-md-6 col-xxl-4">
+                                {{- partial "components/index-card.html"
+                                ( dict
+                                "ctx" .
+                                "cardTitle" "Ceva"
+                                "cardDescription" "asd"
+                                "cardCTAText" "Read more"
+                                "cardLink" .Permalink
+                                )
+                                -}}
+                            </div>
+                        {{end}}
+                    {{end}}
+                </div>
+            </div>
+        </div>
     {{end}}
 {{else}}
     {{if gt (len $blogPosts) 0}}
-        <h1>A collection of my blog posts</h1>
-        <div class=" mzp-l-card-quarter">
-
-                {{range $paginator.Pages}}
-                    {{- partial "components/card.html"
-                    ( dict
-                    "ctx" .
-                    "cardTag" "Java"
-                    "cardTitle" .Params.Title
-                    "cardDescription" .Params.Description
-                    "cardCTAText" "Read more"
-                    "cardLink" .Permalink
-                    "cardMeta" "*Not applicable"
-                    )
-                    -}}
-                {{end}}
-
-        </div>
+        <section class="container pt-5">
+            <div class="row">
+                <div class="section-header-full ">
+                    <h5 class="section-header-text-full"><strong>A collection of my blog posts</strong></h5>
+                </div>
+                <div class="section-content">
+                    <div class="row g-0">
+                        {{range $paginator.Pages}}
+                        <div class="col-sm-12 col-md-6 col-xxl-4">
+                            {{- partial "components/card.html"
+                            ( dict
+                            "ctx" .
+                            "cardTag" "Java"
+                            "cardTitle" .Params.Title
+                            "cardDescription" .Params.Description
+                            "cardCTAText" "Read more"
+                            "cardLink" .Permalink
+                            "cardMeta" "*Not applicable"
+                            )
+                            -}}
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+            </div>
+        </section>
         {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
     {{else}}
         {{- partial "components/newsletter" (dict "ctx" .

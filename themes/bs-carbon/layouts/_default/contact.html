@@ -1,39 +1,28 @@
 {{define "main"}}
-<section class="container p-0 position-relative pt-5" style="height: 100vh">
-    <div class="row g-5">
-        <div class="col-4">
-            <h5><strong>Contact</strong></h5>
-            <p>
+<section class="container position-relative pt-5" style="min-height: 100vh">
+    <div class="row">
+        <div class="section-header-full">
+            <h5 class="section-header-text-full"><strong>Contact</strong></h5>
+            <p class="text-muted">
                 Aliquam erat volutpat. Donec hendrerit vel sapien id blandit. Nullam nunc orci, pulvinar at lacus a, lacinia bibendum tortor. Integer convallis fringilla mi, in fringilla nunc suscipit a. Nunc consequat sed mi congue suscipit. Sed eget hendrerit nisi. Fusce in sodales ex, eu viverra lorem. Curabitur non quam vel tortor tincidunt rhoncus et eu nisl. Vivamus nec arcu venenatis, cursus nulla ut, lacinia magna. Etiam arcu ipsum, blandit vitae congue eu, ultricies at diam. Nunc consectetur vestibulum odio vel ullamcorper.
             </p>
         </div>
-        <div class="col-12">
+        <div class="section-content">
             <div class="row g-0">
-                <div class="col">
-                    <div class="card w-100 h-100 bg-secondary " >
-                        <div class="card-body">
-                            <h5 class="card-title">Aerospace and defence</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link ">Card linksend <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                            </svg></a>
 
-                        </div>
-                    </div>
+                {{range .Site.Params.ownerSocialLinks}}
+                <div class="col-sm-6 col-lg-3">
+                    {{- partial "components/card-link.html"
+                    (dict "ctx" $
+                    "cardTitle" (title .name)
+                    "cardDescription" (i18n .tooltip)
+                    "cardCTALink" .link
+                    )
+                    -}}
                 </div>
-                <div class="col">
-                    <div class="card w-100 h-100 bg-secondary " >
-                        <div class="card-body">
-                            <h5 class="card-title">Aerospace and defence</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="mailto:{{.Site.Params.ownerEmail}}" class="card-link stretched-link "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                            </svg></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-16">
+                {{end}}
+
+                <div class="col-12">
                     <div class="card w-100 h-100 bg-secondary " >
                         <form>
                             <div class="card-body pb-0">

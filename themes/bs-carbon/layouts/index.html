@@ -1,7 +1,7 @@
 {{define "main"}}
-<section class="container-fluid p-0 position-relative" style="height: 100vh">
-    <div class="" style="height: 100%;background-color:#000;background-image: url('static/img/bgs/me.jpg');background-repeat: no-repeat;background-size: cover;background-position: right;filter: brightness(0.5);"></div>
-    <div class="h-100 w-100 position-absolute top-0 left-0">
+<section class="leadspace">
+    <div class="lead-media" ></div>
+    <div class="lead-body">
         <div class="container h-100" >
             <div class="row align-content-center h-100" >
                 <div class="col-md-10 col-sm-16 text-light">
@@ -9,7 +9,7 @@
                         that loves building quality software products.</h1>
                     <p>{{i18n "lpSubtitleTr"}}</p>
                     <div class="d-grid gap-0 d-sm-flex justify-content-sm-start">
-                        <button class="btn btn-primary btn-lg" type="button">Contact me</button>
+                        <button class="btn btn-primary btn-lg " type="button">Contact me</button>
                         <button class="btn btn-secondary btn-lg" type="button">Some random text with multiple lines</button>
                     </div>
                 </div>
@@ -17,57 +17,55 @@
         </div>
     </div>
 </section>
+<section class="container pt-5">
+    <div class="row">
+        <div class="section-header">
+            <h6 class="section-header-text"> <strong>About Me</strong></h6>
+        </div>
+        <div class="section-content">
+            <p>
+                I am a passionate software developer who makes use of the best programming practices a priority.
+                Knowing technologies at a deeper level allows me to optimize for the best performance available,
+                whether it's on the front-end, back-end or areas in between.
+                Having worked in the field made me discover the value of shipping a
+                product on time and with consistent updates, thus always meeting client satisfaction.
+            </p>
+            <p> I write about it and more on <a   href="#">my blog</a>. Besides contributing to Open Source projects,
+                I also help people bring their software projects to the market.</p>
+            <p>Having an undestanding of multiple technologies always helped me better choose the right tools I will need
+                for a project.
+                <br><b>Below is a quick overview of the technical skill sets and technologies I'm most familiar with:</b>
+            </p>
 
-<div class="mzp-l-content">
-    <section>
-        <h2 >{{humanize (i18n "aboutSectionHeaderTr")}}</h2>
-        <p>
-            I am a passionate software developer who makes use of the best programming practices a priority.
-            Knowing technologies at a deeper level allows me to optimize for the best performance available,
-            whether it's on the front-end, back-end or areas in between.
-            Having worked in the field made me discover the value of shipping a
-            product on time and with consistent updates, thus always meeting client satisfaction.
-        </p>
-        <p> I write about it and more on <a   href="#">my blog</a>. Besides contributing to Open Source projects,
-            I also help people bring their software projects to the market.</p>
-        <p>Having an undestanding of multiple technologies always helped me better choose the right tools I will need
-            for a project.
-            <br><b>Below is a quick overview of the technical skill sets and technologies I'm most familiar with:</b>
-        </p>
+            <div class="row">
+                <div class="col">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Core technologies</th>
+                            <th>Frameworks / Libraries / Tool kits / Utilities</th>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>Spring, Vertx</td>
+                        </tr>
+                        <tr>
+                            <td>Javascript</td>
+                            <td>NodeJS, Angular</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-        <table class="mzp-u-data-table">
-            <thead>
-            <tr>
-                <td></td>
-                <th scope="col">Core technologies</th>
-                <th scope="col"> Frameworks / Libraries / Tool kits / Utilities</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td>Java</td>
-                <td>Vertx, Spring</td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td>Javascript</td>
-                <td>Typescript, Angular, Nodejs</td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td>Databases</td>
-                <td>Firebase, MongoDB, MySQL</td>
-            </tr>
-            </tbody>
-        </table>
-        <p>This shall not be considered final since I'm always interested
-            in learning new technologies and discovering new areas of software in this industry.
-        </p>
-    </section>
+    </div>
+</section>
+<section class="container pt-5">
     {{- partial "pages/projects-list.html" (dict "ctx" . "onHome" true) -}}
+</section>
+<section class="container pt-5">
     {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
-</div>
+</section>
+
 
 
 {{end}}

@@ -9,6 +9,8 @@ socialLinkLinkedinTooltipTranslation:
   other: Connect with Linkedin
 socialLinkTwitterTooltipTranslation:
   other: Follow me on Twitter
+socialLinkEmailTooltipTranslation:
+  other: Use the good old email
 # BLOG ENTRIES
 readMoreTranslation:
   other: read more
