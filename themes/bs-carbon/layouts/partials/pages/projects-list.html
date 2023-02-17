@@ -6,12 +6,12 @@
     {{if gt (len $projects) 0}}
         <div class="row">
             <div class="col-sm-12 col-lg-3">
-                <h6 class="pb-sm-1"><strong>What I have been working on lately</strong></h6>
+                <h5 class="pb-sm-1"><strong>What I have been working on lately</strong></h5>
             </div>
             <div class="col">
         <div class="row g-0">
             {{range $i,$project:=first 4 $projects}}
-            <div class="col-16">
+            <div class="col-6">
                 {{- partial "components/card.html"
                 ( dict
                 "ctx" .
@@ -25,7 +25,7 @@
                 -}}
             </div>
             {{end}}
-            <div class="col-8">
+            <div class="col-6">
                 <div class="card w-100 bg-dark text-bg-dark" >
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
