@@ -1,36 +1,33 @@
-<div class="container-fluid bg-dark text-bg-dark mt-5">
+<div class="container-fluid bg-dark text-bg-dark">
     <footer class="py-5 container-md ">
         <div class="row">
             <div class="col-6 col-md-2 mb-3">
                 <h5>Section</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    {{ range $i,$item:=.Site.Menus.main }}
+                        <li class="nav-item mb-2"><a href="{{.URL | relLangURL}}" class="nav-link p-0 text-secondary">{{title (i18n .Name)}}</a></li>
+                    {{end}}
+                    {{ range $i,$item:=.Site.Menus.contact }}
+                        <li class="nav-item mb-2"><a href="{{.URL | relLangURL}}" class="nav-link p-0 text-secondary">{{title (i18n .Name)}}</a></li>
+                    {{end}}
                 </ul>
             </div>
 
             <div class="col-6 col-md-2 mb-3">
                 <h5>Section</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    {{ range $i,$item:=.Site.Menus.more }}
+                    <li class="nav-item mb-2"><a href="{{.URL | relLangURL}}" class="nav-link p-0 text-secondary">{{title (i18n .Name)}}</a></li>
+                    {{end}}
                 </ul>
             </div>
 
             <div class="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
+                <h5>Socials</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    {{range .Site.Params.ownerSocialLinks}}
+                        <li class="nav-item mb-2"><a href="{{.link}}" class="nav-link p-0 text-secondary ">{{(title .name)}}</a></li>
+                    {{end}}
                 </ul>
             </div>
 

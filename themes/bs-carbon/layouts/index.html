@@ -1,23 +1,22 @@
 {{define "main"}}
 <section class="leadspace">
-    <div class="lead-media" ></div>
+    <div class="lead-media" style="background-image: url('/img/bgs/me.jpg');"></div>
     <div class="lead-body">
         <div class="container h-100" >
             <div class="row align-content-center h-100" >
                 <div class="col-md-10 col-sm-16 text-light">
-                    <h1 class="display-1">Dan, <br>Software Developer
+                    <h1 class="display-2">Dan, <br>Software Developer
                         that loves building quality software products.</h1>
                     <p>{{i18n "lpSubtitleTr"}}</p>
                     <div class="d-grid gap-0 d-sm-flex justify-content-sm-start">
                         <button class="btn btn-primary" type="button">Contact me</button>
-                        <button class="btn btn-secondary " type="button">Some random text with multiple lines</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="container pt-5">
+<section class="container pt-5 pb-2">
     <div class="row">
         <div class="section-header">
             <h5 class="section-header-text"> <strong>About Me</strong></h5>
@@ -59,13 +58,10 @@
 
     </div>
 </section>
-<section class="container pt-5">
+<section class="container pb-5">
     {{- partial "pages/projects-list.html" (dict "ctx" . "onHome" true) -}}
 </section>
-<section class="container pt-5">
+<section class="container pb-5">
     {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
 </section>
-
-
-
 {{end}}

@@ -76,10 +76,11 @@
         </section>
         {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
     {{else}}
-        {{- partial "components/newsletter" (dict "ctx" .
-            "nlHeader" (humanize (i18n "blogSectionNoDataHeaderTr"))
-            "nlDescription" (humanize (i18n "blogSectionNoDataContentTr"))
-            "nlImage" "/img/illustrations/Sprinkle_8.svg" ) -}}
+        {{- partial "components/newsletter"
+        (dict "ctx" .
+        "header" "There is no data available for the selected category."
+        "description" "There are no available blog posts imported."
+        ) -}}
     {{end}}
 
 {{end}}

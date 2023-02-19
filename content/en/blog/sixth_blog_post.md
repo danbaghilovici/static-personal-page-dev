@@ -14,6 +14,7 @@ references:
 - Firebase performances improvements : https://en.wikipedia.org/wiki/Group_(mathematics)
 - RxJava compatibility issues: https://en.wikipedia.org/wiki/Book_of_Kells
 - Sorting algorithms performance table: https://en.wikipedia.org/wiki/Bacteria
+draft: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices odio non nisl mollis, faucibus scelerisque mauris rutrum. Fusce fringilla imperdiet gravida. Donec risus urna, ullamcorper quis ex vel, hendrerit rutrum purus. Nulla sagittis arcu nec tincidunt fermentum. Nullam blandit nisi non metus ullamcorper, quis facilisis tortor lobortis. Quisque tempor, tortor eu egestas fermentum, enim justo posuere urna, at consectetur urna sapien sed dui. Pellentesque vestibulum rutrum risus sit amet rutrum. Aliquam ligula turpis, iaculis id tincidunt sed, eleifend at nulla. Praesent sed eros libero. Ut iaculis sagittis diam a tincidunt. Donec tempus ipsum nec libero sodales elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed finibus ullamcorper velit id cursus. Pellentesque bibendum augue vitae nibh posuere, vitae malesuada justo venenatis. Vivamus finibus convallis sagittis.

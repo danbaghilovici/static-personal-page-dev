@@ -1,24 +1,7 @@
 {{define "main"}}
-<div class="container-fluid">
-    <div class="container pt-5">
-        <div class="row">
-            <div class="col-lg-8 col-md-16">
-                <h1 class="display-1">Nulla dignissim porta ligula at congue.</h1>
-                <p>Aliquam et commodo velit. Curabitur nec placerat turpis. Donec venenatis suscipit iaculis. Nunc in nisi quis eros molestie tempor. Proin volutpat condimentum purus. Aliquam tempus felis cursus lorem scelerisque lacinia. Vivamus in leo ornare, venenatis arcu eget, maximus erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <a class="btn btn-primary " href="/">Navigate to main page</a>
-            </div>
-            <h6 class="pt-5"><strong>Continue exploring</strong></h6>
-            <div class="col-lg-4 col-sm-8">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
+    {{- partial "components/newsletter"
+    (dict "ctx" .
+    "header" "The page you requested could not be found. Please check the URL for errors and try again."
+    "description" "Please use the navigation menu to find what you need, or contact us if you require further assistance."
+    ) -}}
 {{end}}

@@ -1,26 +1,15 @@
-<aside class="mzp-c-newsletter">
-  {{with .nlImage}}
-  <div class="mzp-c-newsletter-image">
-    <img src="{{.}}" width="346" height="346" alt="" >
-  </div>
-  {{end}}
-
-  <form id="newsletter-form" class="mzp-c-newsletter-form" name="newsletter-form" action="#" method="">
-    <header class="mzp-c-newsletter-header">
-      {{with .nlHeader}} <h3 class="mzp-c-newsletter-title">{{.}}</h3>{{end}}
-      {{with .nlDescription}}<p class="mzp-c-newsletter-tagline">{{.}}</p>{{end}}
-    </header>
-
-    <fieldset class="mzp-c-newsletter-content">
-      <div>
-        <label for="email">{{humanize (i18n "nlCompFormEmailLabelTr")}}</label>
-        <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="{{i18n "nlCompFormEmailPlaceholderTr"}}" required aria-required="true">
+<section class="leadspace " >
+  <div class="lead-body bg-secondary text-bg-secondary">
+    <div class="container h-100" >
+      <div class="row align-content-center h-100" >
+        <div class="col-md-8 col-sm-12">
+          <h1 class="display-4">{{.header}}</h1>
+          <p>{{.description}}</p>
+          <div class="btn-group-vertical">
+            <button class="btn btn-primary" type="button">Navigate to the main page</button>
+          </div>
+        </div>
       </div>
-
-      <p class="mzp-c-form-submit">
-        <button type="submit" class="mzp-c-button" id="newsletter-submit">{{humanize (i18n "nlCompCtaTextTr")}}</button>
-      </p>
-    </fieldset>
-  </form>
-
-</aside>
+    </div>
+  </div>
+</section>

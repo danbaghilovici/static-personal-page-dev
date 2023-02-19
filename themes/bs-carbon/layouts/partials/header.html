@@ -11,11 +11,17 @@
                     <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
                 </li>
                 {{end}}
-                {{ range $i,$item:=.Site.Menus.more }}
-                <li>
-                    <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><h6 class="dropdown-header">Additional Links</h6></li>
+                        {{ range $i,$item:=.Site.Menus.more }}
+                            <li><a class="dropdown-item" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a></li>
+                        {{end}}
+                    </ul>
                 </li>
-                {{end}}
                 {{ range $i,$item:=.Site.Menus.contact }}
                 <li>
                     <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>

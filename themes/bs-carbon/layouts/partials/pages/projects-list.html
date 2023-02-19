@@ -74,10 +74,11 @@
         </section>
 
     {{else}}
-        {{- partial "components/newsletter" (dict "ctx" .
-        "nlHeader" (humanize (i18n "projectsSectionNoDataHeaderTr"))
-        "nlDescription" (humanize (i18n "projectsSectionNoDataContentTr"))
-        "nlImage" "/img/illustrations/Sprinkle_5.svg" ) -}}
+        {{- partial "components/newsletter"
+            (dict "ctx" .
+            "header" "Projects case studies have not been imported yet"
+            "description" "There are no available case studies imported."
+            ) -}}
     {{end}}
 
 {{end}}
