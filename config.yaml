@@ -99,22 +99,31 @@ params:
     - dan.baghilovici@gmail.com
   showOwnerPhone: true
   ownerPhoneNumbers:
-    - "0000"
+    - "+40 072 123 584"
+    - "+40 072 123 584"
   ownerLocation: Romania
   ownerWebsite: www.danbaghilovici.dev
   ownerSocialLinks:
-    - tooltip: socialLinkTwitterTooltipTranslation
-      name: twitter
-      link: https://twitter.com/dntzbgh
+    - tooltip: socialLinkEmailTooltipTranslation
+      name: E-Mail
+      link: dan@danbaghilovici.dev
+      id: email
+      weight: 1
     - tooltip: socialLinkLinkedinTooltipTranslation
       name: linkedin
       link: https://www.linkedin.com/in/danbaghilovici/
+      id: linkedin
+      weight: 2
     - tooltip: socialLinkGithubTooltipTranslation
       name: github
       link: https://github.com/danbaghilovici
-    - tooltip: socialLinkEmailTooltipTranslation
-      name: Email
-      link: dan.baghilovici@gmail.com
+      id: github
+      weight: 3
+    - tooltip: socialLinkTwitterTooltipTranslation
+      name: twitter
+      link: https://twitter.com/dntzbgh
+      id: twitter
+      weight: 4
   ownerSkillsSet:
     - title: Java
       description: ''

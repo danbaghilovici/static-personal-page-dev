@@ -582,24 +582,24 @@ progress {
   }
 }
 
-.display-5, section.container .section-header-full .section-header-text-full {
+.display-5 {
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
-  .display-5, section.container .section-header-full .section-header-text-full {
+  .display-5 {
     font-size: 3rem;
   }
 }
 
-.display-6 {
+.display-6, section.container .section-header-full .section-header-text-full {
   font-size: calc(1.375rem + 1.5vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
-  .display-6 {
+  .display-6, section.container .section-header-full .section-header-text-full {
     font-size: 2.5rem;
   }
 }
@@ -16638,7 +16638,10 @@ textarea.form-control-lg {
   max-height: 25rem !important;
 }
 .card .card-body {
-  min-height: 10rem !important;
+  min-height: 15rem !important;
+}
+.card .card-body.card-body-sm {
+  min-height: 7rem !important;
 }
 .card .card-body .card-text {
   flex: 3;

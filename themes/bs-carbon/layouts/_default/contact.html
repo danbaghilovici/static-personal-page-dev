@@ -3,14 +3,11 @@
     <div class="row">
         <div class="section-header-full">
             <h5 class="section-header-text-full"><strong>Contact</strong></h5>
-            <p class="text-muted">
-                Aliquam erat volutpat. Donec hendrerit vel sapien id blandit. Nullam nunc orci, pulvinar at lacus a, lacinia bibendum tortor. Integer convallis fringilla mi, in fringilla nunc suscipit a. Nunc consequat sed mi congue suscipit. Sed eget hendrerit nisi. Fusce in sodales ex, eu viverra lorem. Curabitur non quam vel tortor tincidunt rhoncus et eu nisl. Vivamus nec arcu venenatis, cursus nulla ut, lacinia magna. Etiam arcu ipsum, blandit vitae congue eu, ultricies at diam. Nunc consectetur vestibulum odio vel ullamcorper.
-            </p>
         </div>
         <div class="section-content">
+            <h5 class="pt-0 pb-0">You can contact me through:</h5>
             <div class="row g-0">
-
-                {{range .Site.Params.ownerSocialLinks}}
+                {{range first 2 .Site.Params.ownerSocialLinks}}
                 <div class="col-sm-6 col-lg-3">
                     {{- partial "components/card.html"
                     ( dict
@@ -19,18 +16,20 @@
                     "cardDescription" (i18n .tooltip)
                     "cardLink" .link
                     "cardCTAText" ""
+                    "cardSm" true
                     )
                     -}}
                 </div>
                 {{end}}
 
                 <div class="col-12">
+                    <h5 class="pt-4 pb-0">Alternatively you can complete and submit the form below and I will get in touch with you</h5>
                     <form class="">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="mb-3">Your contact information</h5>
                                 <div class="row mb-2">
-                                    <div class="col">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
                                         <div class="mb-2">
                                             <label for="userName" class="form-label ">Your Name</label>
                                             <div id="userNameHelp" class="form-text mt-0 mb-1">Required</div>
@@ -38,7 +37,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
                                         <div class="mb-3">
                                             <label for="companyName" class="form-label ">Company Name</label>
                                             <div id="companyNameHelp" class="form-text mt-0 mb-1">Optional</div>

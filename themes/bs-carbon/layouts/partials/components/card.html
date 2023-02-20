@@ -4,7 +4,7 @@
             <img src="{{.}}" class="" alt="">
         </div>
     {{end}}
-    <div class="card-body ">
+    <div class="card-body {{with .cardSm}}card-body-sm{{end}}">
         {{with .cardTag}}<h6 class="card-subtitle mb-2 text-muted"><strong>{{.}}</strong></h6>{{end}}
         {{with .cardTitle}}<h5 class="card-title" >{{.}}</h5>{{end}}
         {{with .cardDescription}}<p class="card-text">{{.}}</p>{{end}}

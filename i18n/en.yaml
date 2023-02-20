@@ -6,11 +6,11 @@ jobPeriodPresentTextTranslation:
 socialLinkGithubTooltipTranslation:
   other: See my repositories on GitHub
 socialLinkLinkedinTooltipTranslation:
-  other: Connect with Linkedin
+  other: Connect with me using your Linkedin account
 socialLinkTwitterTooltipTranslation:
   other: Follow me on Twitter
 socialLinkEmailTooltipTranslation:
-  other: Use the good old email
+  other: Using your default email client
 # BLOG ENTRIES
 readMoreTranslation:
   other: read more
