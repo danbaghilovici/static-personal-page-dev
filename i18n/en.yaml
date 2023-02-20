@@ -1,82 +1,93 @@
-#GLOBAL
-spainCountryTextTranslation:
-  other: Spain
-jobPeriodPresentTextTranslation:
-  other: Present
-socialLinkGithubTooltipTranslation:
-  other: See my repositories on GitHub
-socialLinkLinkedinTooltipTranslation:
-  other: Connect with me using your Linkedin account
-socialLinkTwitterTooltipTranslation:
-  other: Follow me on Twitter
-socialLinkEmailTooltipTranslation:
-  other: Using your default email client
-# BLOG ENTRIES
-readMoreTranslation:
-  other: read more
-publishedOnTranslation:
-  other: published on
-# /BLOG ENTRIES
+# GLOBALS
+navbarMenuOpenedTr:
+  other: menu
+navbarMenuCloseTr:
+  other: close menu
+nlCompCtaTextTr:
+  other: Sign up now
+nlCompFormEmailLabelTr:
+  other: Your email address
+nlCompFormEmailPlaceholderTr:
+  other: yourname@example.com
+# ERROR
+errorSectionTitleTr:
+  other: Not found
+errorSectionDescriptionTr:
+  other: it seems the page you are trying to reach is not available
+errorSectionCTATr:
+  other: Go back to main page
 # HEADER
-pageAboutTranslation:
+headerAboutSectionTr:
   other: about
-pagePortfolioTranslation:
-  other: Projects
-pageBlogTranslation:
+headerPortfolioSectionTr:
+  other: projects
+headerBlogSectionTr:
   other: blog
-pageResumeTranslation:
+headerResumeSectionTr:
   other: resume
-pageContactTranslation:
+headerDevLogsSectionTr:
+  other: developer logs
+headerContactSectionTr:
   other: contact
-morePagesTranslation:
+headerMoreSectionsTr:
   other: more
-# /SIDENAV
-# HOME PAGE
-# HOME ABOUT
-homeAboutHelloHeading:
-  other: hello
-homeAboutImStart:
-  other: I'm
-homeAboutLetsTalkButton:
-  other: let's talk
-homeAboutExplorePortfolioButton:
-  other: explore my portfolio
-homeAboutShortDescriptionTranslation:
-  other: A Software Developer that loves building high quality software.
-homeAboutCheckMyBlogTextTranslation:
-  other: I write about it and more on my <a class="text-primary" href="{{ .blogLink }}"> blog</a>.
-homeAboutContributingTranslation:
-  other: Besides contributing to Open Source projects, I also help people bring their <a class="text-primary" href="{{ .portfolioLink }}"> software projects </a> to the market.
-homeAboutHowMayIHelpTextTranslation:
-  other: Want to know how I may help with your future project?
-viewTextTranslation:
-  other: view
-portfolioTextTranslation:
-  other: portfolio
-resumeTextTranslation:
-  other: resume
-blogPostsTextTranslation:
-  other: blog posts
-homeAboutProfilePictureAltText:
-  other: A picture with me
-# HOME WHAT
-homeWhatMiniHeaderTextTranslation:
-  other: what
-homeWhatHeaderTextTranslation:
-  other: i do
-homeWhatDescriptionIntroTextTranslation:
-  other: Having an undestanding of multiple technologies always helped me better choose the right tools I will need for a project.
-homeWhatDescriptionIntroMainSkillsTextTranslation:
-  other: Below is a quick overview of my main technical skill sets and technologies I use.
-homeWhatDescriptionCheckLinksTextTranslation:
-  other: Want to find out more about my experience? Check out my <a class="link-on-bg" href="{{.resumeLink}}">online resume</a> and <a class="link-on-bg" href="{{.portfolioLink}}">project portfolio</a>.
-homeLatestBlogsHeaderTextTranslation:
-  other: latest blog posts
-homeFeaturedProjectsHeaderTextTranslation:
-  other: featured projects
+moreSectionAdditionalLinksHeaderTr:
+  other: additional links
+moreSectionSocialsHeaderTr:
+  other: socials
+moreSectionLanguagesHeaderTr:
+  other: site language
+# FOOTER
+allSectionsHeaderTr:
+  other: site links
+footerPrintTr:
+  other: Site made with <a target="_blank" class="external-link-dark" href="https://gohugo.io/">Hugo </a> using <a target="_blank" class="external-link-dark" href="https://github.com/mozilla/protocol">Mozilla's Protocol</a> theme and some <a target="_blank" class="external-link-dark" href="https://www.highlights.design/">Highlights illustrations</a>.
+# LEADSPACE
+lpHeaderCarrerTitleTr:
+  other: software developer
+lpHeaderTr:
+  other: that loves building quality software products
+lpSubtitleTr:
+  other: Bringing your software ideas to the market
+lpPreCtaTextTr:
+  other: want to know how I may help with your product?
+lpCtaTextTr:
+  other: Contact me
+# ABOUT SECTION
+aboutSectionHeaderTr:
+  other: more about me
+aboutSectionIntroTr:
+  other: more about me
+# PROJECTS
+googleplaystoredownloadlinktr:
+  other: play store
+fdroiddownloadlinktr:
+  other: f droid
+githubdownloadlinktr:
+  other: git hub
+projectsectionsidemenuheaderdownloadstr:
+  other: download links
+projectsectionsidemenuheadersourcetr:
+  other: source code
+projectsectionsidemenuheaderlinkstr:
+  other: project links
+projectsectionlinkmainpagelinktr:
+  other: website
+projectsectionlinkdemopagelinktr:
+  other: demo
+projectsSectionNoDataHeaderTr:
+  other: no projects have been imported yet!
+projectsSectionNoDataContentTr:
+  other: you can sign up with your email in order to receive updates about my newest projects.
+# BLOG
+blogSectionNoDataHeaderTr:
+  other: no blogs have been imported yet!
+blogSectionNoDataContentTr:
+  other: you can sign up with your email in order to receive updates about my newest blog posts.
+#---
 # HOME PORTFOLIO
 homePortfolioMiniHeaderTextTranslation:
-  other: projects
+  other: blog
 homePortfolioHeaderTextTranslation:
   other: Recently working on
 # HOME BLOG
@@ -92,7 +103,7 @@ resumeCareerSummaryText:
 resumeWorkSectionHeaderText:
   other: work experience
 resumeWorkSectionProjectsText:
-  other: projects
+  other: blog
 resumeWorkSectionSkillsText:
   other: skills
 resumeWorkSectionEducationText:
@@ -104,13 +115,24 @@ resumeWorkSectionInterestsText:
 resumeJobTitleVlinde:
   other: software developer
 resumeJobDescriptionVlinde:
-  other: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis pharetra ex, quis tincidunt justo imperdiet id. Praesent pellentesque lacus sit amet interdum congue.
+  other: 'Vlinde is a German based web design agency that pays special attention to the customer experience with their offered services . Below are some of the key tasks I am involved in:'
 resumeJobBulletVlinde1:
-  other: Morbi et ipsum venenatis neque pulvinar mattis nec sed turpis
+  other: 'Develop, maintain and improve existing PHP / Laravel applications and services by reducing dependencies and refactoring the code base, resulting in lighter, more secure and faster applications.'
 resumeJobBulletVlinde2:
-  other: Praesent nibh ex, semper id lectus quis, venenatis lobortis eros.
+  other: 'Design and develop scalable mobile applications using Angular, the Ionic framework and Firebase Services, resulting in a fast MVP tailored to customer needs and ready to go to market.'
+resumeJobBulletVlinde3:
+  other: 'Build microservices and automation tools using Python and Docker.'
+
 resumeProject0Description:
   other: Nam tristique, risus et pulvinar aliquam, diam erat fermentum turpis, quis vestibulum purus risus a orci. Nunc tincidunt sapien ut ligula hendrerit, ac bibendum metus vestibulum. Mauris aliquam diam tempor, pharetra justo non, fermentum est. Etiam consequat mi eu molestie pulvinar. In molestie vitae ante et euismod. Quisque vehicula risus id varius sollicitudin.
+resumeJobDescriptionBerg:
+  other: 'Berg Software is an outsorcing company that provides dedicated developement teams and team extension solutions to major software companies. My main responsabilities are:'
+resumeJobBulletBerg1:
+  other: 'Develop, maintain, test and improve existing Java / Spring REST API services by reducing dependencies, refactoring with the usage of TDD making the application more robust and reliable.'
+resumeJobBulletBerg2:
+  other: 'Develop and maintain efficient APIs that are reliable, easy to maintain and catering to all internal and external client needs using the Neonbee framework.'
+jobPeriodPresentTextTranslation:
+  other: present
 # INTERESTS
 resumeInterestMathematicsTextTranslation:
   other: mathematics

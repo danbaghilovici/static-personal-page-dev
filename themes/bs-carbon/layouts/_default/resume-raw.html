@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html{
-      font-size: 16px;
+      font-size: 14px;
       /*line-height: 5px!important;*/
     }
     *{
@@ -89,26 +89,18 @@
   </div>
   <div class="row">
     <div class="col-8">
-      <h5><strong>Work Experience</strong></h5>
-
-        <ol class="list-group border-0">
-          {{range sort .Site.Params.OwnerWorkExperience "period.from" "desc"}}
-          <li class="list-group-item d-flex justify-content-between align-items-start border-0">
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">{{title (i18n .jobTitle)}} @ <span class="fw-normal">{{.company.name}}</span></div>
-              {{i18n .description}}
-              <ul class="list-group list-group-flush">
-                {{range .list}}
-                  <li class="list-group-item">{{i18n .}}</li>
-                {{end}}
-              </ul>
-            </div>
+      <h4><strong>Work Experience</strong></h4>
+      {{range sort .Site.Params.OwnerWorkExperience "period.from" "desc"}}
+        <h5><strong>{{title (i18n .jobTitle)}} <span class="fw-normal">@ {{.company.name}}</span> </strong></h5>
+        <p class="mb-1">{{i18n .description}}</p>
+        <ul>
+          {{range .list}}
+          <li>
+            <p class="mb-1">{{i18n .}}</p>
           </li>
           {{end}}
-        </ol>
-
-
-
+        </ul>
+      {{end}}
 
     </div>
     <div class="col-4">
@@ -118,7 +110,6 @@
             <div class="card-body">
               <h5 class="card-title"><strong>Skills</strong></h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
