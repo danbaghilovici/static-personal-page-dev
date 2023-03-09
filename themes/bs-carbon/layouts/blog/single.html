@@ -1,44 +1,68 @@
 {{define "main"}}
-<div class="mzp-l-content">
-    <div class="mzp-has-sidebar mzp-l-sidebar-left">
+<section class="container pt-5 ">
+    <div class="row">
+        <div class="col-md-3 d-none d-lg-block">
+            <div class="sticky-top " style="top: 3rem">
+                {{.TableOfContents}}
+            </div>
 
-        <aside class="mzp-l-sidebar" >
-            <nav class="mzp-c-sidemenu">
-                <section class="mzp-c-sidemenu-summary mzp-js-toggle" aria-controls="sidebar-menu">
-                    <h3 class="mzp-c-sidemenu-label">Menu label</h3>
-                    <ul>
-                        <li>Menu title</li>
-                        <li class="mzp-is-current">Menu item one</li>
-                    </ul>
-                </section>
-
-                <section class="mzp-c-sidemenu-main" id="sidebar-menu">
-                    <h4 class="mzp-c-sidemenu-title"><a href="#">Table of contents for</a></h4>
-                    {{.TableOfContents}}
-                </section>
-
-                <section class="mzp-c-card mzp-has-aspect-1-1 mzp-has-audio">
-                    <a class="mzp-c-card-block-link" href="https://example.com">
-                        <div class="mzp-c-card-content">
-                            <div class="mzp-c-card-tag">Audio</div>
-                            <h2 class="mzp-c-card-title">Card title with about 30-40 characters</h2>
-                            <p class="mzp-c-card-desc">A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-                            <p class="mzp-c-card-cta"><span class="mzp-c-card-cta-text">This call to action is 37 characters</span></p>
-
-                        </div>
-                    </a>
-                </section>
-            </nav>
-
-        </aside>
-
-        <main class="mzp-l-main">
+        </div>
+        <div class="col-sm-12 col-lg-7">
             {{.Content}}
-
-        </main>
-
-
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-md-3 d-none d-lg-block"></div>
+        <div class="col-sm-12 col-lg-7 pb-3">
+            <h6><strong>Enjoyed the article?</strong><br> Share it with your colleagues</h6>
+            <button type="button" class="btn btn-primary btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
+                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
+                </svg>
+            </button>
+            <button type="button" class="btn btn-secondary btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
+                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
+                </svg>
+            </button>
+            <button type="button" class="btn btn-secondary btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
+                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
+                </svg>
+            </button>
+            <button type="button" class="btn btn-secondary btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
+                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
 
+
+
+</section>
+<div class="container-fluid p-0 mt-1 bg-secondary">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-3 d-none d-lg-block "></div>
+            <div class="col-3">
+                <a href="#" class="btn btn-secondary btn-lg w-100 h-100">
+                    <h6>Previous article:</h6>
+                    <h4>Some article name</h4>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="btn btn-primary btn-lg w-100 h-100">
+                    <h6>Next article:</h6>
+                    <h4>Some other article with a longer text that maybe just wraps</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
 {{end}}

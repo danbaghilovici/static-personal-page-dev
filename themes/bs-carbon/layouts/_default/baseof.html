@@ -5,6 +5,7 @@
         {{- partial "header.html" . -}}
         <div id="main-wrapper" class="min-vh-100" >
         {{- block "main" . }} {{- end }}
+            {{- partial "alert.html" . -}}
         </div>
         {{- partial "footer.html" . -}}
     </body>
