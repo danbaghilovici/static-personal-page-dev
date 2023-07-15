@@ -15,7 +15,7 @@
         {{end}}
         {{range (seq .paginator.TotalPages)}}
             {{if eq . $.paginator.PageNumber}}
-                <li class="page-item"><a class="page-link disabled" href="{{$.ctx.ctx.Permalink}}page/{{.}}">{{.}}</a></li>
+                <li class="page-item"><a class="page-link active" href="{{$.ctx.ctx.Permalink}}page/{{.}}">{{.}}</a></li>
             {{else}}
                 <li class="page-item"><a class="page-link" href="{{$.ctx.ctx.Permalink}}page/{{.}}">{{.}}</a></li>
             {{end}}
