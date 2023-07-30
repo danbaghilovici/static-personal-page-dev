@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="" data-bs-theme="light">
     {{- partial "head.html" . -}}
     <body class="" >
         {{- partial "header.html" . -}}
-        <div id="main-wrapper" class="min-vh-100" >
+        <div id="main-wrapper" class="min-vh-no-navbar" >
         {{- block "main" . }} {{- end }}
             {{- partial "alert.html" . -}}
         </div>

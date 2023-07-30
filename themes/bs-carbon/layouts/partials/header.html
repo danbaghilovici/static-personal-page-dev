@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-    <div class="container-lg">
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+    <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#">Dan Baghilovici</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 {{ range $i,$item:=.Site.Menus.main }}
                 <li class="nav-item">
                     <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
@@ -15,7 +15,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         More
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
+                    <ul class="dropdown-menu dropdown-menu-dark p-0" data-bs-theme="dark">
                         <li><h6 class="dropdown-header">Additional Links</h6></li>
                         {{ range $i,$item:=.Site.Menus.more }}
                             <li><a class="dropdown-item" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a></li>
@@ -44,4 +44,6 @@
             </div>
         </div>
     </div>
+
 </nav>
+

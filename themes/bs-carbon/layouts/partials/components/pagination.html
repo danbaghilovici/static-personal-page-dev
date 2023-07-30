@@ -3,13 +3,13 @@
         {{if .paginator.HasPrev}}
             <li class="page-item">
                 <a class="page-link" href="{{$.ctx.ctx.Permalink}}page/{{sub .paginator.PageNumber 1}}" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
+                    <i class="bi bi-caret-left-fill"></i>
                 </a>
             </li>
         {{else}}
             <li class="page-item">
                 <a class="page-link disabled" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
+                    <i class="bi bi-caret-left-fill"></i>
                 </a>
             </li>
         {{end}}
@@ -24,13 +24,13 @@
         {{if .paginator.HasNext}}
             <li class="page-item">
                 <a class="page-link" href="{{$.ctx.ctx.Permalink}}page/{{add .paginator.PageNumber 1}}" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
+                    <i class="bi bi-caret-right-fill"></i>
                 </a>
             </li>
         {{else}}
             <li class="page-item">
                 <a class="page-link disabled" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
+                    <i class="bi bi-caret-right-fill"></i>
                 </a>
             </li>
         {{end}}

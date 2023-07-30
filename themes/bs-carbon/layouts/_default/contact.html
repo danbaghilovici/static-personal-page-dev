@@ -1,46 +1,44 @@
 {{define "main"}}
-<section class="container py-5" >
+<section class="container py-5 min-vh-no-navbar" >
     <div class="row">
         <div class="section-header-full">
-            <h5 class="section-header-text-full"><strong>Contact</strong></h5>
+            <h5 class="section-header-text-full">Contact</h5>
         </div>
         <div class="section-content">
-            <h5 class="pt-0 pb-0">You can contact me through:</h5>
+            <p class="pt-0 pb-0 lead">You can contact me through:</p>
             <div class="row g-0">
                 {{range first 2 .Site.Params.ownerSocialLinks}}
-                <div class="col-sm-6 col-lg-3">
-                    {{- partial "components/card.html"
+                <div class="col-sm-6 col-lg-5">
+                    {{- partial "components/bs-link-card.html"
                     ( dict
                     "ctx" $
                     "cardTitle" (title .name)
                     "cardDescription" (i18n .tooltip)
                     "cardLink" .link
-                    "cardCTAText" ""
+                    "cardCTAText" "asd"
                     "cardSm" true
                     )
                     -}}
                 </div>
                 {{end}}
 
-                <div class="col-12">
-                    <h5 class="pt-4 pb-0">Alternatively you can complete and submit the form below and I will get in touch with you</h5>
-                    <form class="">
+                <div class="col-18">
+                    <form >
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="mb-3">Your contact information</h5>
-                                <div class="row mb-2">
-                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                <p class="small mb-1">Alternatively you can fill and submit the form below and I will get reach you</p>
+                                <h5 >Contact Information</h5>
+                                <div class="row ">
+                                    <div class="col-18 col-lg-9">
                                         <div class="mb-2">
-                                            <label for="userName" class="form-label ">Your Name</label>
-                                            <div id="userNameHelp" class="form-text mt-0 mb-1">Required</div>
+                                            <label for="userName" class="form-label small">Name (required)</label>
                                             <input type="text" class="form-control" id="userName" aria-describedby="userNameHelp" required minlength="3" placeholder="Ex. Dan">
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <div class="col-18  col-lg-9">
                                         <div class="mb-3">
-                                            <label for="companyName" class="form-label ">Company Name</label>
-                                            <div id="companyNameHelp" class="form-text mt-0 mb-1">Optional</div>
+                                            <label for="companyName" class="form-label small">Company Name</label>
                                             <input type="text" class="form-control" id="companyName" aria-describedby="companyName" placeholder="Ex. NCD">
                                         </div>
                                     </div>
@@ -48,32 +46,27 @@
 
 
                                 <div class="mb-3">
-                                    <label for="userEmail" class="form-label ">Your Email</label>
-                                    <div id="userEmailHelp" class="form-text mt-0 mb-1">Required</div>
+                                    <label for="userEmail" class="form-label small">Email (required)</label>
                                     <input type="email" class="form-control" id="userEmail" required placeholder="username@example.com">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="userMsg" class="form-label ">What do you need my help with ?</label>
-                                    <div id="userMsgHelp" class="form-text mt-0 mb-1">Required</div>
-                                    <textarea class="form-control" id="userMsg" rows="3" required placeholder="Consultancy, Developement , Integrations ..."></textarea>
+                                <div class="mb-1">
+                                    <label for="userMsg" class="form-label small">Inquiry (required)</label>
+                                    <textarea class="form-control" id="userMsg" rows="3" required placeholder="Consultancy, Developement , Integration, Testing ..."></textarea>
                                 </div>
 
                                 <div class="form-text">Expect a response in 2-3 business days.</div>
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer bg-transparent p-0">
                                 <div class="btn-group btn-group-lg w-100" role="group" aria-label="Button submit group">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <button type="button" class="btn btn-dark">Reset</button>
+                                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                                    <button type="button" class="btn btn-danger">Reset Form</button>
                                 </div>
                             </div>
                         </div>
-
                     </form>
-
-
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
 </section>

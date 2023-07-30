@@ -1,31 +1,24 @@
 {{define "main"}}
-<section class="leadspace">
-    <div class="lead-media" style="background-image: url('/img/bgs/me.jpg');"></div>
-    <div class="lead-body">
-        <div class="container h-100" >
-            <div class="row align-content-center h-100" >
-                <div class="col-md-10 col-sm-16 text-light">
-                    <h1 class="display-2">Dan, <br>Software Developer
-                        that loves building quality software products.</h1>
-                    <p>{{i18n "lpSubtitleTr"}}</p>
-                    <div class="row g-0 justify-content-start">
-                        <div class="col-sm-12 col-md-4">
-                            <a class="btn btn-primary w-100" href="#" >Contact me</a>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <a class="btn btn-secondary w-100" href="#" >Contact me</a>
-                        </div>
-                    </div>
-
-                </div>
+<section id="hero" class="container p-0" >
+    <div class="row h-100 flex-md-row-reverse align-items-center m-0 justify-content-end">
+        <div class="col-sm-18 col-md-9 pb-3 d-none d-xl-flex">
+            <img src="/img/bgs/me3_cropped.jpeg" class="d-block mx-lg-auto img-fluid " alt="My face"  loading="lazy">
+        </div>
+        <div class="col-18 col-xl-8">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-sm-1 mb-3">Software Developer Shaping the Digital Landscape with Scalable Solutions</h1>
+            <p class="lead lh-sm">Unleashing the Potential of Code: Driving Innovation and Transforming Realities through Proficient Software Development</p>
+            <div class="hero-cta d-grid gap-0 d-sm-flex justify-content-md-start">
+                <a href="#" class="btn btn-dark btn-lg w-100">Get in touch</a>
+                <a href="#" class="btn btn-outline-primary btn-lg w-100">Check my portfolio</a>
             </div>
         </div>
     </div>
 </section>
-<section class="container pt-5 pb-2">
+<section class="container pb-5 ">
     <div class="row">
         <div class="section-header">
-            <h5 class="section-header-text"> <strong>About Me</strong></h5>
+            <p class="section-header-text">About</p>
+            <p class="small text-body-secondary">Beyond the Surface: A Candid Glimpse into My Background and Motivations</p>
         </div>
         <div class="section-content">
             <p>
@@ -35,7 +28,7 @@
                 Having worked in the field made me discover the value of shipping a
                 product on time and with consistent updates, thus always meeting client satisfaction.
             </p>
-            <p> I write about it and more on <a   href="#">my blog</a>. Besides contributing to Open Source projects,
+            <p> I write about it and more on <a href="#">my blog</a>. Besides contributing to Open Source projects,
                 I also help people bring their software projects to the market.</p>
             <p>Having an undestanding of multiple technologies always helped me better choose the right tools I will need
                 for a project.
@@ -65,9 +58,11 @@
     </div>
 </section>
 <section class="container pb-5">
-    {{- partial "pages/projects-list.html" (dict "ctx" . "onHome" true) -}}
+    {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
 </section>
 <section class="container pb-5">
-    {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
+    <div class="row">
+        <div class="col"></div>
+    </div>
 </section>
 {{end}}

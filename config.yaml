@@ -1,5 +1,5 @@
 ---
-baseUrl: https://www.danbaghilovici.dev/
+baseUrl: http://localhost:1313
 languageCode: en-us
 theme: bs-carbon
 description: ceva
@@ -69,7 +69,6 @@ languages:
           weight: 5
 params:
   alerts:
-    - alertOne
   useDarkMode: true
   ownerFirstName: Dan
   ownerLastName: Baghilovici

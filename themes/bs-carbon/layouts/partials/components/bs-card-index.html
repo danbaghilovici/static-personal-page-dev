@@ -1,0 +1,8 @@
+<div class="card h-100 bg-dark text-bg-dark card-index" >
+  <div class="card-body h-100">
+    {{with .cardTopic}}<p class="card-subtitle mb-1 text-muted">{{.}}</p>{{end}}
+    {{with .cardTitle}}<h5 class="card-title" >{{ .  }}</h5>{{end}}
+    {{with .cardDescription}}<p class="card-text display-4 lead">{{ . | truncate 110}}</p>{{end}}
+  </div>
+  <a href="{{with .cardLink}}{{.}}{{else}}#{{end}}" class="card-link"></a>
+</div>

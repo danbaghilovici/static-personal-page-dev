@@ -1,0 +1,17 @@
+<div class="card " >
+  <div class="card-body">
+    {{with .cardTopic}}<p class="card-subtitle mb-1 text-muted">{{.}}</p>{{end}}
+    {{with .cardTitle}}<h5 class="card-title" >{{ .  }}</h5>{{end}}
+    {{with .cardDescription}}<p class="card-text ">{{ . | truncate 110}}</p>{{end}}
+  </div>
+  <div class="card-footer bg-transparent border-0">
+    <a href="{{with .cardLink}}{{.}}{{else}}#{{end}}" class="card-link">
+      {{with .cardCTAText}}{{.}}{{end}}
+      {{if strings.Contains .cardLink .ctx.Site.BaseURL }}
+        <i class="bi bi-arrow-right"></i>
+      {{else}}
+        <i class="bi bi-box-arrow-up-right"></i>
+      {{end}}
+    </a>
+  </div>
+</div>

@@ -1,86 +1,88 @@
 {{ $allBlogs:= where .ctx.Site.Pages "Section" "blog"   }}
-{{ $blogPosts:=(where $allBlogs ".IsPage" true).Reverse}}
+{{ $blogPosts:=(where $allBlogs ".IsPage" true).ByDate.Reverse}}
 {{ $listPage:=(first 1 (where $allBlogs ".IsNode" true)) }}
-{{ $paginator:= .ctx.Paginate $blogPosts 4}}
+{{ $paginator:= .ctx.Paginate $blogPosts 6}}
+{{ $numOfItems:=5 }}
 {{if .onHome}}
-    {{if gt (len $blogPosts) 0}}
-        <div class="row">
-            <div class="section-header">
-                <h5 class="section-header-text"><strong>What I have been writing about lately</strong></h5>
+{{if gt (len $blogPosts) 0}}
+<div class="row">
+    <div class="section-header">
+        <p class="section-header-text ">Blog posts</p>
+        <p class="small text-body-secondary">Exploring the Frontiers: Thought-Provoking Insights and In-Depth Analysis.</p>
+    </div>
+    <div class="section-content">
+        <div class="row g-0">
+            {{range first $numOfItems $blogPosts}}
+            <div class="col-18 col-md-9 col-lg-6">
+                {{- partial "components/bs-card.html"
+                ( dict
+                "ctx" .
+                "cardTopic" "Automation"
+                "cardTitle" .Params.Title
+                "cardDescription" .Params.Description
+                "cardCTAText" "Read more"
+                "cardLink" .Permalink
+                "cardMeta" "*Not applicable"
+                )
+                -}}
             </div>
-            <div class="section-content">
-                <div class="row g-0">
-                    {{range first 3 $blogPosts}}
-                        <div class="col-sm-12 col-md-6 col-xxl-4">
-                            {{- partial "components/card.html"
-                            ( dict
-                            "ctx" .
-                            "cardTag" "Java"
-                            "cardTitle" .Params.Title
-                            "cardDescription" .Params.Description
-                            "cardCTAText" "Read more"
-                            "cardLink" .Permalink
-                            "cardMeta" "*Not applicable"
-                            )
-                            -}}
-                        </div>
-                    {{end}}
-                    {{if gt (len $blogPosts) 3}}
-                        {{range $listPage}}
-                            <div class="col-sm-12 col-md-6 col-xxl-4">
-                                {{- partial "components/index-card.html"
-                                ( dict
-                                "ctx" .
-                                "cardTitle" "Ceva"
-                                "cardDescription" "asd"
-                                "cardCTAText" "Read more"
-                                "cardLink" .Permalink
-                                )
-                                -}}
-                            </div>
-                        {{end}}
-                    {{range $listPage}}
-                    {{end}}
-                    {{end}}
+            {{end}}
+            {{if gt (len $blogPosts) $numOfItems}}
+            {{range $listPage}}
+            <div class="col-18 col-sm-9 col-lg-6">
+                {{- partial "components/bs-card-index.html"
+                ( dict
+                "ctx" .
+                "cardDescription" "Discover more"
+                "cardCTAText" ""
+                "cardLink" .Permalink
+                )
+                -}}
+            </div>
+            {{end}}
+            {{range $listPage}}
+            {{end}}
+            {{end}}
+        </div>
+    </div>
+</div>
+{{end}}
+{{else}}
+{{if gt (len $blogPosts) 0}}
+<section class="container pt-5 min-vh-no-navbar">
+    <div class="row">
+        <div class="section-header-full ">
+            <p class="section-header-text-full ">A collection of my blog posts</p>
+            <p>Dive into the Realm of Knowledge: Engaging Perspectives, Thought-Provoking Ideas, and In-Depth Analyses for the Curious Mind</p>
+        </div>
+        <div class="section-content">
+            <div class="row g-0">
+                {{range $paginator.Pages}}
+                <div class="col-18 col-md-9 col-lg-5">
+                    {{- partial "components/bs-card.html"
+                    ( dict
+                    "ctx" .
+                    "cardTag" "Java"
+                    "cardTitle" .Params.Title
+                    "cardDescription" .Params.Description
+                    "cardCTAText" "Read more"
+                    "cardLink" .Permalink
+                    "cardMeta" "*Not applicable"
+                    )
+                    -}}
                 </div>
+                {{end}}
             </div>
         </div>
-    {{end}}
+    </div>
+</section>
+{{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
 {{else}}
-    {{if gt (len $blogPosts) 0}}
-        <section class="container pt-5">
-            <div class="row">
-                <div class="section-header-full ">
-                    <h5 class="section-header-text-full"><strong>A collection of my blog posts</strong></h5>
-                </div>
-                <div class="section-content">
-                    <div class="row g-0">
-                        {{range $paginator.Pages}}
-                        <div class="col-sm-12 col-md-6 col-xxl-4">
-                            {{- partial "components/card.html"
-                            ( dict
-                            "ctx" .
-                            "cardTag" "Java"
-                            "cardTitle" .Params.Title
-                            "cardDescription" .Params.Description
-                            "cardCTAText" "Read more"
-                            "cardLink" .Permalink
-                            "cardMeta" "*Not applicable"
-                            )
-                            -}}
-                        </div>
-                        {{end}}
-                    </div>
-                </div>
-            </div>
-        </section>
-        {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
-    {{else}}
-        {{- partial "components/newsletter"
-        (dict "ctx" .
-        "header" "There is no data available for the selected category."
-        "description" "There are no available blog posts imported."
-        ) -}}
-    {{end}}
+{{- partial "components/newsletter"
+(dict "ctx" .
+"header" "There is no data available for the selected category."
+"description" "There are no available blog posts imported."
+) -}}
+{{end}}
 
 {{end}}
