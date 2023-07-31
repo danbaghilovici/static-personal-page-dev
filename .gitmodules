@@ -1,3 +1,3 @@
 [submodule "modules/theme"]
 	path = modules/theme
-	url = git@github.com:danbaghilovici/bootstrap.git
+	url = https://github.com:danbaghilovici/bootstrap.git
