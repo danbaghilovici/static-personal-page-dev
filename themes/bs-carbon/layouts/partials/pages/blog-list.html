@@ -1,7 +1,7 @@
 {{ $allBlogs:= where .ctx.Site.Pages "Section" "blog"   }}
 {{ $blogPosts:=(where $allBlogs ".IsPage" true).ByDate.Reverse}}
 {{ $listPage:=(first 1 (where $allBlogs ".IsNode" true)) }}
-{{ $paginator:= .ctx.Paginate $blogPosts 6}}
+{{ $paginator:= .ctx.Paginate $blogPosts 20}}
 {{ $numOfItems:=5 }}
 {{if .onHome}}
 {{if gt (len $blogPosts) 0}}

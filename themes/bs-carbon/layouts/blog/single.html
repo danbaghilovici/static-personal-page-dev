@@ -1,65 +1,58 @@
 {{define "main"}}
-<section class="container pt-5 ">
+<section class="container pt-5 blog-post">
     <div class="row">
-        <div class="col-md-3 d-none d-lg-block">
+        <aside class="col-md-4 d-none d-lg-block">
             <div class="sticky-top " style="top: 3rem">
                 {{.TableOfContents}}
             </div>
-
-        </div>
-        <div class="col-sm-12 col-lg-7">
+        </aside>
+        <article class="col-18 col-md-18 col-lg-14 col-xl-10">
+            <h1 class="display-5">{{.Title}}</h1>
+            <p class="lead">{{.Summary}}</p>
             {{.Content}}
-        </div>
+        </article>
+        <aside class="offset-lg-4 offset-0 col-18 col-lg-14 col-xl-4 offset-xl-0">
+            <h6>References</h6>
+            <ol>
+                {{range $k,$v := .Params.references}}
+                    <li><a href="{{ $v }}" class="small text-break">{{ $v }}</a></li>
+                {{end}}
+            </ol>
+
+        </aside>
     </div>
     <div class="row">
         <div class="col-md-3 d-none d-lg-block"></div>
-        <div class="col-sm-12 col-lg-7 pb-3">
-            <h6><strong>Enjoyed the article?</strong><br> Share it with your colleagues</h6>
-            <button type="button" class="btn btn-primary btn-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
-                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
-                </svg>
-            </button>
-            <button type="button" class="btn btn-secondary btn-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
-                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
-                </svg>
-            </button>
-            <button type="button" class="btn btn-secondary btn-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
-                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
-                </svg>
-            </button>
-            <button type="button" class="btn btn-secondary btn-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
-                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
-                </svg>
-            </button>
+        <div class="col-14 offset-4 pb-3">
+            <p class="">Enjoyed the article?<br> <span class="small">Share it with your colleagues</span></p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary btn-icon-only">
+                    <i class="bi bi-twitter"></i>
+                </button>
+                <button type="button" class="btn btn-outline-dark btn-icon-only">
+                    <i class="bi bi-linkedin"></i>
+                </button>
+                <button type="button" class="btn btn-primary btn-icon-only">
+                    <i class="bi bi-link-45deg"></i>
+                </button>
+            </div>
+
         </div>
     </div>
-
-
-
 </section>
-<div class="container-fluid p-0 mt-1 bg-secondary">
+<div class="container-fluid p-0 mt-1 bg-body-secondary">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-3 d-none d-lg-block "></div>
-            <div class="col-3">
-                <a href="#" class="btn btn-secondary btn-lg w-100 h-100">
-                    <h6>Previous article:</h6>
-                    <h4>Some article name</h4>
-                </a>
-            </div>
-            <div class="col-4">
-                <a href="#" class="btn btn-primary btn-lg w-100 h-100">
-                    <h6>Next article:</h6>
-                    <h4>Some other article with a longer text that maybe just wraps</h4>
-                </a>
+            <div class="col-md-4 d-none d-lg-block "></div>
+            <div class="col-18 col-md-18 col-lg-14 col-xl-10">
+                <div class="btn-group w-100" role="group" aria-label="Basic example">
+                    <a href="#" class="btn btn-outline-dark btn-lg w-100">
+                        <span class="display-6">Previous post</span>
+                    </a>
+                    <a href="#" class="btn btn-info btn-lg w-100">
+                        <span class="display-6">Next post</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -2,6 +2,7 @@
 title: First blog title
 slug: first-blog-post-en
 description: Phasellus luctus urna id purus bibendum, ut tempor odio pulvinar. Aenean venenatis nisi justo, at vestibulum nisl lacinia vitae. Etiam at urna urna.
+summary: Lorem ipsum dolor sit amet, **consectetur adipiscing elit**. Vivamus mattis justo id quam pulvinar, et cursus urna sagittis. In lobortis velit libero, id aliquet erat lobortis non. Nunc gravida ultricies dignissim.[Aliquam](https://www.example.com) ante eros, vehicula ac sapien a, auctor varius orci.
 keywords: [ceva, 2]
 media: https://media.giphy.com/media/BRLfVBVVPM3WIgg8E3/giphy.gif
 gitSourceCode: https://www.github.com
@@ -11,29 +12,16 @@ tags:
 - Vert.x
 - Firebase
 references:
-- Source code (GitHub) : https://github.com/dntzbgh/supreme-doodle
-- Firebase performances improvements : https://en.wikipedia.org/wiki/Group_(mathematics)
-- RxJava compatibility issues: https://en.wikipedia.org/wiki/Book_of_Kells
-- Sorting algorithms performance table: https://en.wikipedia.org/wiki/Bacteria 
+ Source code (GitHub) : https://github.com/dntzbgh/supreme-doodle
+ Firebase performances improvements : https://en.wikipedia.org/wiki/Group_(mathematics)
+ RxJava compatibility issues: https://en.wikipedia.org/wiki/Book_of_Kells
+ Sorting algorithms performance table: https://en.wikipedia.org/wiki/Bacteria 
 draft: true
 ---
 
-# Building Reactive Microservice Systems
----
-
-Lorem ipsum dolor sit amet, **consectetur adipiscing elit**. 
-Vivamus mattis justo id quam pulvinar, et cursus urna sagittis. 
-In lobortis velit libero, id aliquet erat lobortis non. 
-Nunc gravida ultricies dignissim. 
-[Aliquam](https://www.example.com) ante eros, vehicula ac sapien a, auctor varius orci. 
-In at enim ut erat egestas bibendum pellentesque sed enim.
-Vivamus consequat et lacus ut vehicula. 
-Vestibulum quis erat ut arcu interdum ultricies vel at lorem. 
-Nullam aliquam purus eget pretium fermentum. 
-Aliquam pharetra lacus et quam facilisis, vitae mollis dolor congue.       
 
 
-## Service Discovery
+### Service Discovery
 
 Sed maximus est pharetra magna bibendum tempus non id lacus. Pellentesque consequat ultricies nisl, sollicitudin suscipit dolor semper sed. Curabitur id euismod risus. Proin eu convallis justo. Pellentesque porttitor tortor ut ultrices volutpat. Donec mattis vitae neque at tincidunt. Mauris elementum urna vitae urna bibendum, vel ullamcorper urna congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean volutpat porta vestibulum. Proin eu nibh id est tincidunt maximus. Donec rhoncus sem in nisl scelerisque convallis. Integer sit amet tortor semper, placerat lectus ut, commodo tellus.
 
