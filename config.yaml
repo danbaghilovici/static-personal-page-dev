@@ -31,16 +31,16 @@ languages:
 #        - url: portfolio-en/
 #          name: headerPortfolioSectionTr
 #          weight: 2
-        - url: /blog-en
-          name: headerBlogSectionTr
-          weight: 3
-      more:
-        - url: /resume
-          name: headerResumeSectionTr
-          weight: 1
-        - url: /dev-log
-          name: headerDevLogsSectionTr
-          weight: 2
+#        - url: /blog-en
+#          name: headerBlogSectionTr
+#          weight: 3
+#      more:
+#        - url: /resume
+#          name: headerResumeSectionTr
+#          weight: 1
+#        - url: /dev-log
+#          name: headerDevLogsSectionTr
+#          weight: 2
       contact:
         - url: /contact
           name: headerContactSectionTr

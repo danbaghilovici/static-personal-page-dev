@@ -1,72 +1,51 @@
 {{define "main"}}
-<section class="container py-5 min-vh-no-navbar" >
-    <div class="row">
-        <div class="section-header-full">
-            <h5 class="section-header-text-full">Contact</h5>
+<section class="container pt-5 min-vh-no-navbar" >
+    <div class="row pt-5">
+        <div class="section-header">
+            <p  class="section-header-text">Contact</p>
+            <p class="small text-body-secondary">Let's Connect: Reach Out for Collaborations, Inquiries, and Exciting Opportunities</p>
         </div>
         <div class="section-content">
-            <p class="pt-0 pb-0 lead">You can contact me through:</p>
-            <div class="row g-0">
-                {{range first 2 .Site.Params.ownerSocialLinks}}
-                <div class="col-sm-6 col-lg-5">
-                    {{- partial "components/bs-link-card.html"
-                    ( dict
-                    "ctx" $
-                    "cardTitle" (title .name)
-                    "cardDescription" (i18n .tooltip)
-                    "cardLink" .link
-                    "cardCTAText" "asd"
-                    "cardSm" true
-                    )
-                    -}}
-                </div>
-                {{end}}
-
-                <div class="col-18">
-                    <form >
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="small mb-1">Alternatively you can fill and submit the form below and I will get reach you</p>
-                                <h5 >Contact Information</h5>
-                                <div class="row ">
-                                    <div class="col-18 col-lg-9">
-                                        <div class="mb-2">
-                                            <label for="userName" class="form-label">Name <a data-bs-toggle="tooltip" data-bs-title="Default tooltip"><i class="bi bi-exclamation-circle"></i></a> (required)</label>
-                                            <input type="text" class="form-control" id="userName" aria-describedby="userNameHelp" required minlength="3" placeholder="Ex. Dan">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-18  col-lg-9">
-                                        <div class="mb-3">
-                                            <label for="companyName" class="form-label">Company Name</label>
-                                            <input type="text" class="form-control" id="companyName" aria-describedby="companyName" placeholder="Ex. NCD">
-                                        </div>
-                                    </div>
+            <form method="post">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 >Contact Information</h5>
+                        <div class="row ">
+                            <div class="col-18 col-lg-9">
+                                <div class="mb-2">
+                                    <label for="userName" class="form-label">Name (required)</label>
+                                    <input type="text" class="form-control" id="userName" aria-describedby="userNameHelp" required minlength="3" placeholder="Ex. Dan">
                                 </div>
-
-
-                                <div class="mb-3">
-                                    <label for="userEmail" class="form-label">Email (required)</label>
-                                    <input type="email" class="form-control" id="userEmail" required placeholder="username@example.com">
-                                </div>
-                                <div class="mb-1">
-                                    <label for="userMsg" class="form-label ">Inquiry (required)</label>
-                                    <textarea class="form-control" id="userMsg" rows="3" required placeholder="Consultancy, Developement , Integration, Testing ..."></textarea>
-                                </div>
-
-                                <div class="form-text small">Expect a response in 2-3 business days.</div>
                             </div>
-                            <div class="card-footer bg-transparent p-0">
-                                <div class="btn-group btn-group-lg w-100" role="group" aria-label="Button submit group">
-                                    <button type="submit" class="btn btn-primary">Submit Form</button>
-                                    <button type="button" class="btn btn-danger">Reset Form</button>
+
+                            <div class="col-18  col-lg-9">
+                                <div class="mb-3">
+                                    <label for="companyName" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="companyName" aria-describedby="companyName" placeholder="Ex. NCD">
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
 
-            </div>
+
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email (required)</label>
+                            <input type="email" class="form-control" id="userEmail" required placeholder="username@example.com">
+                        </div>
+                        <div class="mb-1">
+                            <label for="userMsg" class="form-label ">Inquiry (required)</label>
+                            <textarea class="form-control" id="userMsg" rows="3" required placeholder="Consultancy, Developement , Integration, Testing ..."></textarea>
+                        </div>
+
+                        <div class="form-text small">Expect a response in 2-3 business days.</div>
+                    </div>
+                    <div class="card-footer bg-transparent p-0 m-0">
+                        <div class="d-grid gap-0 d-sm-flex justify-content-md-start w-100 p-0">
+                            <button type="submit" class="btn btn-primary btn-lg w-100  ">Submit Form</button>
+                            <button type="reset" class="btn btn-danger btn-lg w-100 ">Reset Form</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>

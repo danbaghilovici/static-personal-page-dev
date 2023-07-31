@@ -9,6 +9,7 @@
         </div>
         {{- partial "footer.html" . -}}
     </body>
+    <script src="{{ .Site.BaseURL | absLangURL}}js/scripts.js"></script>
     <script defer>
         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))

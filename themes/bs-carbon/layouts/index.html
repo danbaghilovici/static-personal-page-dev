@@ -8,8 +8,7 @@
             <h1 class="display-5 fw-bold text-body-emphasis lh-sm-1 mb-3">Software Developer Shaping the Digital Landscape with Scalable Solutions</h1>
             <p class="lead lh-sm">Unleashing the Potential of Code: Driving Innovation and Transforming Realities through Proficient Software Development</p>
             <div class="hero-cta d-grid gap-0 d-sm-flex justify-content-md-start">
-                <a href="#" class="btn btn-dark btn-lg w-100">Get in touch</a>
-                <a href="#" class="btn btn-outline-primary btn-lg w-100">Check my portfolio</a>
+                <a href="{{(index .Site.Menus.contact 0).URL | relLangURL}}" class="btn btn-dark btn-lg w-100">Get in touch</a>
             </div>
         </div>
     </div>
@@ -22,17 +21,11 @@
         </div>
         <div class="section-content">
             <p>
-                I am a passionate software developer who makes use of the best programming practices a priority.
-                Knowing technologies at a deeper level allows me to optimize for the best performance available,
-                whether it's on the front-end, back-end or areas in between.
-                Having worked in the field made me discover the value of shipping a
-                product on time and with consistent updates, thus always meeting client satisfaction.
+                I am a passionate software developer who makes use of the best programming practices a priority. Knowing technologies at a deeper level allows me to optimize for the best performance available, whether it's on the front-end, back-end or areas in between. Having worked in the field made me discover the value of shipping a product on time and with consistent updates, thus always meeting customer satisfaction. I am always interested in learning new technologies and discovering new areas of software in this industry.
             </p>
-            <p> I write about it and more on <a href="#">my blog</a>. Besides contributing to Open Source projects,
-                I also help people bring their software projects to the market.</p>
             <p>Having an undestanding of multiple technologies always helped me better choose the right tools I will need
                 for a project.
-                <br><b>Below is a quick overview of the technical skill sets and technologies I'm most familiar with:</b>
+                <br>Below is a quick overview of the technical skill sets and technologies I'm most familiar with:
             </p>
 
             <div class="row">
@@ -59,10 +52,5 @@
 </section>
 <section class="container pb-5">
     {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
-</section>
-<section class="container pb-5">
-    <div class="row">
-        <div class="col"></div>
-    </div>
 </section>
 {{end}}
