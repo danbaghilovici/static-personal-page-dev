@@ -263,7 +263,7 @@ markup:
   tableOfContents:
     endLevel: 6
     ordered: false
-    startLevel: 1
+    startLevel: 3
   blackFriday:
     angledQuotes: false
     extensions: [
