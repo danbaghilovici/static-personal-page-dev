@@ -1,4 +1,8 @@
 # GLOBALS
+siteMetaTitleTR:
+  other: Site title in english
+siteMetaDescriptionTR:
+  other: Site Description in english
 alertOne:
   other: The website is currently under construction to improve the browsing experience for visitors.
 navbarMenuOpenedTr:
