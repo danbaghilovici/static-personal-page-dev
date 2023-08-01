@@ -1,1 +1,5 @@
 <script src="{{ .Site.BaseURL | absLangURL}}js/scripts.min.js"></script>
+<script defer >
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>

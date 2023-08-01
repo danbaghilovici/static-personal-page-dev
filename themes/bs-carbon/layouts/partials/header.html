@@ -36,6 +36,18 @@
                 </li>
                 {{end}}
             </ul>
+            <ul class="list-unstyled d-flex m-0">
+                {{range .Site.Params.ownerSocialLinks}}
+                <li class="ms-2 me-2">
+                    <a class="link-body-emphasis"
+                       data-bs-toggle="tooltip"
+                       data-bs-title="{{i18n .tooltip}}"
+                       data-bs-placement="bottom"
+                       data-bs-custom-class="bg-dark-tooltip"
+                       href="{{.link}}"
+                    ><i class="{{.bsicon}}"></i></a></li>
+                {{end}}
+            </ul>
         </div>
     </div>
 

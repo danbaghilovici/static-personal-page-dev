@@ -17,7 +17,17 @@
             <p>&copy; {{ now.Format "2006" }} {{.Site.Params.ownerFirstName}} {{.Site.Params.ownerLastName}}.</p>
             <ul class="list-unstyled d-flex">
                 {{range .Site.Params.ownerSocialLinks}}
-                    <li class="ms-2 me-2"><a class="link-body-emphasis" href="{{.link}}"><i class="{{.bsicon}}"></i></a></li>
+                    <li class="ms-2 me-2">
+                        <a class="link-body-emphasis"
+                           data-bs-toggle="tooltip"
+                           data-bs-title="{{i18n .tooltip}}"
+                           data-bs-placement="top"
+                           type="string"
+                           href="{{.link}}"
+                           data-bs-custom-class="bg-dark-tooltip">
+                        <i class="{{.bsicon}}"></i>
+                        </a>
+                    </li>
                 {{end}}
             </ul>
         </div>

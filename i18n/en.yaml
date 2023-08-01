@@ -186,7 +186,12 @@ contactFormMessageFieldTextTranslation:
   other: your message
 contactFormSendButtonTextTranslation:
   other: send
-
-
+# SOCIALS
+socialLinkTwitterTooltipTR:
+  other: Let's connect and build a better tomorrow together! #SoftwareDeveloper #TechJourney
+socialLinkLinkedinTooltipTR:
+  other: Follow my journey as I craft innovative solutions and collaborate with like-minded tech enthusiasts.
+socialLinkGithubTooltipTranslation:
+  other: Discover my innovative projects, contributions, and a passion for open-source development.
 
 

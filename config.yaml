@@ -81,12 +81,12 @@ params:
     - "+34 123 321 123"
     - "+40 123 321 123"
   ownerSocialLinks:
-    - tooltip: socialLinkLinkedinTooltipTranslation
+    - tooltip: socialLinkTwitterTooltipTR
       name: Twitter
       link: https://linkedin.com/in/danbaghilovici
       id: twitter
       bsicon: "bi bi-twitter"
-    - tooltip: socialLinkLinkedinTooltipTranslation
+    - tooltip: socialLinkLinkedinTooltipTR
       name: Linkedin
       link: https://linkedin.com/in/danbaghilovici
       id: linkedin
