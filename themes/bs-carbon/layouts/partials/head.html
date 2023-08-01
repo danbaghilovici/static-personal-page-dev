@@ -1,4 +1,4 @@
-<head>
+<head itemscope itemtype="{{ .Site.BaseURL }}">
     <link href="{{ .Site.BaseURL | absLangURL}}css/styles.css" rel="stylesheet">
 <!--    <link href="{{ .Site.BaseURL | absLangURL}}css/bootstrap-lux.min.css" rel="stylesheet">-->
 
@@ -7,7 +7,71 @@
 <!--    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>-->
 <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>-->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title itemprop="name">{{ i18n .Site.Params.Title }}</title>
+    <meta property="og:title" content="{{ i18n .Site.Params.Title }}" />
+    <meta name="twitter:title" content="{{ i18n .Site.Params.Title }}" />
+    <meta itemprop="name" content="{{ i18n .Site.Params.Title }}" />
+    <meta name="application-name" content="{{ i18n .Site.Params.Title }}" />
+    <meta property="og:site_name" content="{{ i18n .Site.Params.Title }}" />
 
+
+    <meta name="description" content="{{i18n .Site.Params.Description }}" />
+    <meta itemprop="description" content="{{i18n .Site.Params.Description }}" />
+    <meta property="og:description" content="{{ i18n .Site.Params.Description }}" />
+    <meta name="twitter:description" content="{{ i18n .Site.Params.Description }}" />
+
+    <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+    <meta name="url" content="{{ .Permalink }}" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+
+    <meta property="og:locale" content="{{ .Language.Lang }}" />
+    <meta name="language" content="{{ .Language.LanguageName }}" />
+    {{ range .AllTranslations }}
+    <link
+            rel="alternate"
+            hreflang="{{ .Language.Lang }}"
+            href="{{ .Permalink }}"
+            title="{{ .Language.LanguageName }}"
+    />
+    {{ end }}
+
+    {{ with .Params.image }}
+    <meta itemprop="image" content="{{ . | absURL }}" />
+    <meta property="og:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image:src" content="{{ . | absURL }}" />
+    {{ else }}
+    <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+    {{ end }}
+
+    <meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+    <link
+            rel="sitemap"
+            type="application/xml"
+            title="Sitemap"
+            href="{{ .Site.BaseURL }}sitemap.xml"
+    />
+
+    {{ with .OutputFormats.Get "RSS" }}
+    <link
+            href="{{ .Permalink }}"
+            rel="alternate"
+            type="application/rss+xml"
+            title="{{ $.Site.Title }}"
+    />
+    <link
+            href="{{ .Permalink }}"
+            rel="feed"
+            type="application/rss+xml"
+            title="{{ $.Site.Title }}"
+    />
+    {{ end }}
 
 </head>

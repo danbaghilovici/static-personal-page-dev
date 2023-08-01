@@ -14,8 +14,6 @@ canonifyURLs: true
 uglyurls: false
 languages:
   en:
-    title: Dan's Site in En
-    description: Homepage description in En
     contentDir: content/en
     languageName: English
     languageCode: en-US
@@ -68,6 +66,8 @@ languages:
           name: headerContactSectionTr
           weight: 5
 params:
+  description: "siteMetaDescriptionTR"
+  title: "siteMetaTitleTR"
   alerts:
   useDarkMode: true
   ownerFirstName: Dan
