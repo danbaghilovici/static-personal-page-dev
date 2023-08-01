@@ -1,0 +1,39 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta charset="utf-8" />
+
+
+<meta property="og:title" content="{{ i18n .Site.Params.Title }}" />
+<meta name="twitter:title" content="{{ i18n .Site.Params.Title }}" />
+<meta itemprop="name" content="{{ i18n .Site.Params.Title }}" />
+<meta name="application-name" content="{{ i18n .Site.Params.Title }}" />
+<meta property="og:site_name" content="{{ i18n .Site.Params.Title }}" />
+
+
+<meta name="description" content="{{i18n .Site.Params.Description }}" />
+<meta itemprop="description" content="{{i18n .Site.Params.Description }}" />
+<meta property="og:description" content="{{ i18n .Site.Params.Description }}" />
+<meta name="twitter:description" content="{{ i18n .Site.Params.Description }}" />
+
+
+<meta name="url" content="{{ .Permalink }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+<meta property="og:locale" content="{{ .Language.Lang }}" />
+<meta name="language" content="{{ .Language.LanguageName }}" />
+
+
+{{ with .Params.image }}
+<meta itemprop="image" content="{{ . | absURL }}" />
+<meta property="og:image" content="{{ . | absURL }}" />
+<meta name="twitter:image" content="{{ . | absURL }}" />
+<meta name="twitter:image:src" content="{{ . | absURL }}" />
+{{ else }}
+<meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+<meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+<meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+<meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+{{ end }}
+
+<meta property="og:updated_time" content={{ .Page.Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />

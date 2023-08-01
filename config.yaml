@@ -8,10 +8,11 @@ defaultContentLanguageInSubdir: true
 relativeURLs: true
 #assetDir: static
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 0.5
 canonifyURLs: true
 uglyurls: false
+enableGitInfo: true
 languages:
   en:
     contentDir: content/en
@@ -68,6 +69,7 @@ languages:
 params:
   description: "siteMetaDescriptionTR"
   title: "siteMetaTitleTR"
+  ogimage: "/img/bgs/me3_cropped.jpeg"
   alerts:
   useDarkMode: true
   ownerFirstName: Dan
