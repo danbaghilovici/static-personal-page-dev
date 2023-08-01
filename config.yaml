@@ -82,13 +82,20 @@ params:
     - "+40 123 321 123"
   ownerSocialLinks:
     - tooltip: socialLinkLinkedinTooltipTranslation
+      name: Twitter
+      link: https://linkedin.com/in/danbaghilovici
+      id: twitter
+      bsicon: "bi bi-twitter"
+    - tooltip: socialLinkLinkedinTooltipTranslation
       name: Linkedin
       link: https://linkedin.com/in/danbaghilovici
       id: linkedin
+      bsicon: "bi bi-linkedin"
     - tooltip: socialLinkGithubTooltipTranslation
       name: GitHub
       link: https://github.com/danbaghilovici
       id: git
+      bsicon: "bi bi-github"
   ownerSkillsSet:
     - title: Java
       description: ''

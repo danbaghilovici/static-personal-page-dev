@@ -3,6 +3,11 @@ siteMetaTitleTR:
   other: Dan B. | Transforming Ideas into Digital Realities
 siteMetaDescriptionTR:
   other: Software Developer, turning ideas into reality. Expertise in Web, Mobile, and Cloud Technologies. Let's collaborate and create cutting-edge solutions.
+# NAVBAR
+navbarToggleNavigationTR:
+  other: Toggle navigation
+navbarMoreTR:
+  other: Toggle navigation
 alertOne:
   other: The website is currently under construction to improve the browsing experience for visitors.
 navbarMenuOpenedTr:
@@ -44,6 +49,8 @@ moreSectionSocialsHeaderTr:
 moreSectionLanguagesHeaderTr:
   other: site language
 # FOOTER
+footerSectionTR:
+  other: Sections
 allSectionsHeaderTr:
   other: site links
 footerPrintTr:
