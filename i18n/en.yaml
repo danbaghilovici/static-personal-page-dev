@@ -3,6 +3,8 @@ siteMetaTitleTR:
   other: Dan B. | Transforming Ideas into Digital Realities
 siteMetaDescriptionTR:
   other: Software Developer, turning ideas into reality. Expertise in Web, Mobile, and Cloud Technologies. Let's collaborate and create cutting-edge solutions.
+siteMetaOwnerTitleTR:
+  other: software developer
 # NAVBAR
 navbarToggleNavigationTR:
   other: Toggle navigation
@@ -55,22 +57,6 @@ allSectionsHeaderTr:
   other: site links
 footerPrintTr:
   other: Site made with <a target="_blank" class="external-link-dark" href="https://gohugo.io/">Hugo </a> using <a target="_blank" class="external-link-dark" href="https://github.com/mozilla/protocol">Mozilla's Protocol</a> theme and some <a target="_blank" class="external-link-dark" href="https://www.highlights.design/">Highlights illustrations</a>.
-# LEADSPACE
-lpHeaderCarrerTitleTr:
-  other: software developer
-lpHeaderTr:
-  other: that loves building quality software products
-lpSubtitleTr:
-  other: Bringing your software ideas to the market
-lpPreCtaTextTr:
-  other: want to know how I may help with your product?
-lpCtaTextTr:
-  other: Contact me
-# ABOUT SECTION
-aboutSectionHeaderTr:
-  other: more about me
-aboutSectionIntroTr:
-  other: more about me
 # PROJECTS
 googleplaystoredownloadlinktr:
   other: play store
@@ -172,20 +158,34 @@ resumeEducationBachTitleTranslation:
   other: Bachelor of Science
 # /RESUME
 # CONTACT
-contactPageHeaderTextTranslation:
+contactContactSectionHeaderTextTR:
   other: contact
-contactPageSubheaderTextTranslation:
-  other: Need help for your project or just want to say hi?
-contactPageSubheaderMailToTextTranslation:
-  other: Fill the form or just send me an email at
-contactFormNameFieldTextTranslation:
+contactContactSectionSubHeaderTextTR:
+  other: 'let''s connect: reach out for collaborations, inquiries, and exciting opportunities'
+contactFormHeaderTextTR:
+  other: contact information
+contactFormNameLabelTextTR:
   other: name
-contactFormEmailFieldTextTranslation:
+contactFormNamePlaceholderTextTR:
+  other: Ex. Dan
+contactFormCompanyNameLabelTextTR:
+  other: company name
+contactFormCompanyNamePlaceholderTextTR:
+  other: Ex. NCD
+contactFormEmailLabelTextTR:
   other: email
-contactFormMessageFieldTextTranslation:
-  other: your message
-contactFormSendButtonTextTranslation:
-  other: send
+contactFormEmailPlaceholderTextTR:
+  other: username@example.com
+contactFormMsgLabelTextTR:
+  other: Inquiry
+contactFormMsgPlaceholderTextTR:
+  other: Consultancy, Developement , Integration, Testing ...
+contactFormInfoMsgTextTR:
+  other: Expect a response in 2-3 business days.
+contactFormSubmitBtnTextTR:
+  other: Submit Form
+contactFormResetBtnTextTR:
+  other: Reset Form
 # SOCIALS
 socialLinkTwitterTooltipTR:
   other: Let's connect and build a better tomorrow together! #SoftwareDeveloper #TechJourney
@@ -193,5 +193,42 @@ socialLinkLinkedinTooltipTR:
   other: Follow my journey as I craft innovative solutions and collaborate with like-minded tech enthusiasts.
 socialLinkGithubTooltipTranslation:
   other: Discover my innovative projects, contributions, and a passion for open-source development.
-
-
+# ABOUT
+# HERO
+aboutHeroHeaderTextTR:
+  other: software developer shaping the digital landscape with scalable solutions
+aboutHeroSubHeaderTextTR:
+  other: 'unleashing the potential of code: driving innovation and transforming realities through proficient software development'
+aboutHeroCTAContactTextTR:
+  other: get in touch
+aboutHeroAltImageTextTR:
+  other: A photo of me
+aboutAboutSectionHeaderTextTR:
+  other: about
+aboutAboutSectionSubHeaderTextTR:
+  other: 'beyond the surface: a candid glimpse into my background and motivations'
+aboutAboutSectionSummaryOneTextTR:
+  other: 'Welcome to my digital realm, I''m <span class="fw-medium text-body-emphasis ">Dan</span>, a passionate and dedicated <span class="text-body-emphasis fw-medium">Software Developer</span>, on a mission to craft remarkable digital experiences and solutions.'
+aboutAboutSectionSummaryTwoTextTR:
+  other: 'My expertise spans across diverse domains, from <span class="text-body-emphasis fw-medium">web and mobile development</span> to <span class="text-body-emphasis fw-medium">cloud computing</span> and beyond. I thrive on tackling complex challenges and relish the opportunity to collaborate with visionary minds, turning ambitious concepts into reality. By harnessing the power of code, I aspire to <span class="text-body-emphasis fw-medium">empower businesses</span>, <span class="text-body-emphasis fw-medium">elevate user experiences</span>, and <span class="text-body-emphasis fw-medium">contribute</span> to the ever-evolving digital landscape.'
+aboutAboutSectionSummaryThreeTextTR:
+  other: 'With a proven history of seamlessly fusing <span class="text-body-emphasis fw-medium">Java</span>''s backend capabilities and <span class="text-body-emphasis fw-medium">Angular</span>''s dynamic frontend features, I specialize in designing and implementing holistic solutions that bridge the gap between these technologies. Beyond the lines of code, I value <span class="text-body-emphasis fw-medium">effective communication and collaboration</span>, understanding that successful projects stem from <span class="text-body-emphasis fw-medium">strong partnerships</span > and <span class="text-body-emphasis fw-medium">shared visions</span>.'
+aboutAboutSectionSummaryFourTextTR:
+  other: 'Let''s embark on this transformative journey together – whether you seek a <span class="text-body-emphasis fw-medium">reliable development partner</span>, <span class="text-body-emphasis fw-medium">need technical consultations</span>, or wish to explore groundbreaking ideas.'
+# RESUME
+resumeResumeHeaderTextTR:
+  other: resume
+resumeResumeSubHeaderTextTR:
+  other: access my detailed resume for a comprehensive overview of my capabilities and accomplishments.
+resumeResumeCTATextTR:
+  other: download resume
+resumeResumeRawWorkExperienceHeaderTextTR:
+  other: work experience
+resumeResumeRawSkillsHeaderTextTR:
+  other: skills
+resumeResumeRawSkillsProgrammingLanguagesTextTR:
+  other: programming languages
+resumeResumeRawSkillsLibrariesTextTR:
+  other: libraries & frameworks
+resumeResumeRawToolsTextTR:
+  other: tools & platforms

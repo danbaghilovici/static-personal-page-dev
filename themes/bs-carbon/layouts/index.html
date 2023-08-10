@@ -1,19 +1,21 @@
 {{define "main"}}
-<section id="hero" class="container p-0"  >
+<section id="hero" class="container p-0" xmlns="http://www.w3.org/1999/html">
     <div class="row h-100 flex-md-row-reverse align-items-center m-0 justify-content-end">
         <div class="col-sm-18 col-md-9 pb-3 d-none d-xl-flex">
             <picture>
                 <source srcset="/img/bgs/me3_cropped.webp" type="image/webp">
                 <source srcset="/img/bgs/me3_cropped.jpeg" type="image/jpeg">
-                <img src="/img/bgs/me3_cropped.jpeg" class="d-block mx-lg-auto img-fluid " alt="A photo of me"  loading="lazy">
+                <img src="/img/bgs/me3_cropped.jpeg" class="d-block mx-lg-auto img-fluid "
+                     loading="lazy"
+                     alt="{{i18n "aboutHeroAltImageTextTR"}}">
             </picture>
 
         </div>
         <div class="col-18 col-xl-8">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-sm-1 mb-3">Software Developer Shaping the Digital Landscape with Scalable Solutions</h1>
-            <p class="lead lh-sm">Unleashing the Potential of Code: Driving Innovation and Transforming Realities through Proficient Software Development</p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-sm-1 mb-3">{{ i18n "aboutHeroHeaderTextTR" | title}}</h1>
+            <p class="lead lh-sm">{{i18n "aboutHeroSubHeaderTextTR" | title }}</p>
             <div class="hero-cta d-grid gap-0 d-sm-flex justify-content-md-start">
-                <a href="{{(index .Site.Menus.contact 0).URL | relLangURL}}" class="btn btn-dark btn-lg w-100">Get in touch</a>
+                <a href="{{(index .Site.Menus.contact 0).URL | relLangURL}}" class="btn btn-dark btn-lg w-100">{{i18n "aboutHeroCTAContactTextTR" | title}}</a>
             </div>
         </div>
     </div>
@@ -21,37 +23,19 @@
 <section class="container pb-5 ">
     <div class="row">
         <div class="section-header">
-            <p class="section-header-text">About</p>
-            <p class="small text-body-secondary">Beyond the Surface: A Candid Glimpse into My Background and Motivations</p>
+            <p class="section-header-text">{{i18n "aboutAboutSectionHeaderTextTR" | title }}</p>
+            <p class="small text-body-secondary">{{i18n "aboutAboutSectionSubHeaderTextTR" | title }}</p>
         </div>
         <div class="section-content">
-            <p>
-                I am a passionate software developer who makes use of the best programming practices a priority. Knowing technologies at a deeper level allows me to optimize for the best performance available, whether it's on the front-end, back-end or areas in between. Having worked in the field made me discover the value of shipping a product on time and with consistent updates, thus always meeting customer satisfaction. I am always interested in learning new technologies and discovering new areas of software in this industry.
-            </p>
-            <p>Having an undestanding of multiple technologies always helped me better choose the right tools I will need
-                for a project.<br>Below is a quick overview of the technical skill sets and technologies I'm most familiar with:
-            </p>
-
             <div class="row">
-                <div class="col">
-                    <table class="table table-striped table-secondary">
-                        <tr>
-                            <th>Core technologies</th>
-                            <th>Frameworks / Libraries / Tool kits / Utilities</th>
-                        </tr>
-                        <tr>
-                            <td>Java</td>
-                            <td>Spring, Vertx</td>
-                        </tr>
-                        <tr>
-                            <td>Javascript</td>
-                            <td>NodeJS, Angular</td>
-                        </tr>
-                    </table>
+                <div class="col-18">
+                    <p>{{i18n "aboutAboutSectionSummaryOneTextTR" | safeHTML }}</p>
+                    <p>{{ i18n "aboutAboutSectionSummaryTwoTextTR" | safeHTML }}</p>
+                    <p>{{ i18n "aboutAboutSectionSummaryThreeTextTR" | safeHTML }}</p>
+                    <p>{{ i18n "aboutAboutSectionSummaryFourTextTR" | safeHTML }}</p>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 <section class="container pb-5">

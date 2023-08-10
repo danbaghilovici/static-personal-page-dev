@@ -1,6 +1,7 @@
 <html>
 <head>
-  <link href="{{ .Site.BaseURL | absLangURL}}css/styles.css" rel="stylesheet">
+  {{ partial "meta" . }}
+  {{ partial "links" . }}
   <base href="{{ .Site.BaseURL }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -13,7 +14,7 @@
 
     }
     i{
-      font-size: 18px !important;
+      font-size: 16px !important;
       vertical-align: text-bottom !important;
       /*padding-right: 10px;*/
       margin-right: 0.2rem;
@@ -40,7 +41,7 @@
   <div class="row g-0">
     <div class="col-7">
       <h2 class="fw-medium mb-1">{{ .Site.Params.ownerFirstName | upper }} {{  .Site.Params.ownerLastName | upper}}</h2>
-      <h5 class="fw-normal">Software Developer</h5>
+      <h5 class="fw-normal">{{i18n .Site.Params.ownerTitle | title}}</h5>
     </div>
     <div class="col">
       <div class="row g-0">
@@ -75,7 +76,7 @@
           <div class="row pb-1">
             <div class="col p-0">
               {{ range where .Site.Params.ownerSocialLinks "id" "git"}}
-              <a class="p-0 m-0 text-decoration-none" href="{{.link}}"><i class="bi bi-github"></i> {{substr .link 8}}</a>
+                <a class="p-0 m-0 text-decoration-none" href="{{.link}}"><i class="bi bi-github"></i> {{substr .link 8}}</a>
               {{end}}
             </div>
           </div>
@@ -90,7 +91,13 @@
   </div>
   <div class="row">
     <div class="col-3">
-      <img src="/img/bgs/me-face.jfif" class="img-thumbnail" alt="">
+      <picture >
+        <source srcset="/img/bgs/me3_cropped.webp" type="image/webp">
+        <source srcset="/img/bgs/me3_cropped.jpeg" type="image/jpeg">
+        <img src="/img/bgs/me3_cropped.jpeg" class="d-block mx-lg-auto img-fluid " class="img-thumbnail"
+             loading="lazy"
+             alt="{{i18n "aboutHeroAltImageTextTR"}}">
+      </picture>
     </div>
     <div class="col">
       <p>
@@ -111,7 +118,7 @@
   </div>
   <div class="row">
     <div class="col-13">
-      <h4 class="fw-normal">Work Experience</h4>
+      <h4 class="fw-normal">{{i18n "resumeResumeRawWorkExperienceHeaderTextTR" | title}}</h4>
       {{range sort .Site.Params.OwnerWorkExperience "period.from" "desc"}}
         <h5 class="fw-medium">{{title (i18n .jobTitle)}} <span class="fw-normal">at {{.company.name}}</span></h5>
         <p class="mb-1">{{i18n .description}}</p>
@@ -131,28 +138,17 @@
           <div class="card border-0">
             <div class="card-body">
               <div class="">
-                <h4 class="card-title fw-normal">Skills</h4>
+                <h4 class="card-title fw-normal">{{i18n "resumeResumeRawSkillsHeaderTextTR" | title}}</h4>
                 <div >
                   <ul class="list-group border-0">
-                    <li class="list-group-item d-flex justify-content-between align-items-start border-0 pt-1 px-0">
-                      <div class=" me-auto">
-                        <span >Programming Languages</span><br>
-                        <span class="fw-light ">Java, Javascript, Python</span>
-                      </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start border-0 pt-1 px-0">
-                      <div class=" me-auto">
-                        <span >Libraries & Frameworks</span><br>
-                        <span class="fw-light">Angular, Ionic, Spring, Vertx</span>
-                      </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start border-0 p-0">
-                      <div class="me-auto">
-                        <span >Tools & Platforms</span>
-                        <br>
-                        <span class="fw-light ">Firebase, Docker, Kubernetes, Jenkins</span>
-                      </div>
-                    </li>
+                    {{range .Site.Params.ownerSkillsSet}}
+                      <li class="list-group-item d-flex justify-content-between align-items-start border-0 pt-1 px-0">
+                        <div class=" me-auto">
+                          <span >{{.title | title}}</span><br>
+                          <span class="fw-light small">{{range .libs}}{{ .title }},{{end}}</span>
+                        </div>
+                      </li>
+                    {{end}}
                   </ul>
                 </div>
               </div>

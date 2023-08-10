@@ -33,10 +33,10 @@ languages:
 #        - url: /blog-en
 #          name: headerBlogSectionTr
 #          weight: 3
-#      more:
-#        - url: /resume
-#          name: headerResumeSectionTr
-#          weight: 1
+      more:
+        - url: /resume
+          name: headerResumeSectionTr
+          weight: 1
 #        - url: /dev-log
 #          name: headerDevLogsSectionTr
 #          weight: 2
@@ -75,6 +75,7 @@ params:
   ownerFirstName: Dan
   ownerLastName: Baghilovici
   ownerEmail: dan@danbaghilovici.dev
+  ownerTitle: siteMetaOwnerTitleTR
   ownerLocation: Romania
   ownerWebsite: https://www.danbaghilovici.dev
   ownerPhoneNumbers:
@@ -99,10 +100,10 @@ params:
   ownerSkillsSet:
     - title: Java
       description: ''
-      iconClass: ''
+      iconClass: https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png
       weight: 1
       libs:
-        - title: SpringBoot
+        - title: Spring
           description: a
           iconClass: 'a'
           weight: 1
@@ -112,13 +113,13 @@ params:
           weight: 2
     - title: Javascript
       description: ownerSkillsJavascript
-      iconClass: /img/brands/js.svg
+      iconClass: https://img.icons8.com/color/48/javascript--v1.png
       weight: 1
       libs:
-        - title: Typescript
-          description: aa
-          iconClass: /img/brands/typescript.svg
-          weight: 2
+#        - title: Typescript
+#          description: aa
+#          iconClass: /img/brands/typescript.svg
+#          weight: 2
         - title: Angular
           description: ownerSkillsAngular
           iconClass: /img/brands/angular.svg
@@ -131,35 +132,17 @@ params:
           description: ownerSkillNode
           iconClass: /img/brands/nodejs.svg
           weight: 1
-        - title: Express.js
-          description: ownerSkillNode
-          iconClass: /img/brands/expressjs.svg
-          weight: 1.1
-        - title: NestJS
-          description: ownerSkillIonic
-          iconClass: /img/brands/nestjs.svg
-          weight: 1.2
-
-    - title: Python
+#        - title: Express.js
+#          description: ownerSkillNode
+#          iconClass: /img/brands/expressjs.svg
+#          weight: 1.1
+#        - title: NestJS
+#          description: ownerSkillIonic
+#          iconClass: /img/brands/nestjs.svg
+#          weight: 1.2
+    - title: DBMS
       description: ownerSkillsPython
-      iconClass: /img/brands/python.svg
-      weight: 2
-      libs:
-        - title: Django
-          description: ownerSkillsDjango
-          iconClass: /img/brands/django.svg
-          weight: 1
-        - title: Flask
-          description: ownerSkillsDjango
-          iconClass: /img/brands/flask.svg
-          weight: 1
-        - title: Numpy
-          description: ownerSkillsDjango
-          iconClass: /img/brands/numpy.svg
-          weight: 1
-    - title: Databases
-      description: ownerSkillsPython
-      iconClass: /img/brands/database.svg
+      iconClass: https://img.icons8.com/fluency/48/database.png
       weight: 3
       libs:
         - title: MongoDB
@@ -170,13 +153,9 @@ params:
           description: ownerSkillsDjango
           iconClass: /img/brands/postqresql.svg
           weight: 1
-        - title: Firebase
-          description: ownerSkillsDjango
-          iconClass: /img/brands/firebase.svg
-          weight: 1
-    - title: Markup & Stylesheet
+    - title: Markup & Styles
       description: ownerSkillsPython
-      iconClass: /img/brands/document.svg
+      iconClass: https://img.icons8.com/color/48/hashtag-activity-grid.png
       weight: 4
       libs:
         - title: HTML
@@ -190,27 +169,6 @@ params:
         - title: CSS
           description: ownerSkillsDjango
           iconClass: /img/brands/css3.svg
-          weight: 1
-        - title: Sass
-          description: ownerSkillsDjango
-          iconClass: /img/brands/sass.svg
-          weight: 1
-        - title: Bootstrap
-          description: ownerSkillsDjango
-          iconClass: /img/brands/bootstrap.svg
-          weight: 1
-    - title: Others
-      description: ownerSkillsPython
-      iconClass: /img/brands/random.svg
-      weight: 5
-      libs:
-        - title: Git
-          description: ownerSkillsDjango
-          iconClass: /img/brands/git.svg
-          weight: 1
-        - title: Selenium
-          description: ownerSkillsDjango
-          iconClass: /img/brands/selenium.svg
           weight: 1
   ownerWorkExperience:
     - jobTitle: resumeJobTitleVlinde

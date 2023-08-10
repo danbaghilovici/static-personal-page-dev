@@ -9,7 +9,7 @@
                 aria-label="{{ i18n "navbarToggleNavigationTR" }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="{{ .Permalink }}">{{.Site.Params.ownerFirstName}} {{.Site.Params.ownerLastName}}</a>
+        <span class="navbar-brand" >{{.Site.Params.ownerFirstName}} {{.Site.Params.ownerLastName}}</span>
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 {{ range $i,$item:=.Site.Menus.main }}
@@ -17,24 +17,24 @@
                     <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
                 </li>
                 {{end}}
-                {{if gt 0 (.Site.Menus.more.len )}}
+
+                {{ range $i,$item:=.Site.Menus.contact }}
+                    <li>
+                        <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
+                    </li>
+                {{end}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        More
+                        {{i18n "headerMoreSectionsTr" | title }}
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark p-0" data-bs-theme="dark">
-                        <li><h6 class="dropdown-header">Additional Links</h6></li>
+                    <ul class="dropdown-menu p-0" data-bs-theme="dark">
+                        <li>
+                            <p class="dropdown-header">{{i18n "moreSectionAdditionalLinksHeaderTr" | title}}</p></li>
                         {{ range $i,$item:=.Site.Menus.more }}
-                            <li><a class="dropdown-item" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a></li>
+                        <li><a class="dropdown-item small" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a></li>
                         {{end}}
                     </ul>
                 </li>
-                {{end}}
-                {{ range $i,$item:=.Site.Menus.contact }}
-                <li>
-                    <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
-                </li>
-                {{end}}
             </ul>
             <ul class="list-unstyled d-flex m-0">
                 {{range .Site.Params.ownerSocialLinks}}
