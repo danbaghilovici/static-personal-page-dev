@@ -6,7 +6,7 @@
             <p class="small text-body-secondary">{{i18n "contactContactSectionSubHeaderTextTR" | title}}</p>
         </div>
         <div class="section-content">
-            <form method="post" data-netlify="true" id="contact-form">
+            <form method="post" data-netlify="true" id="contact-form" class="">
                 <div class="card mb-5 mb-sm-0">
                     <div class="card-body">
                         <h5 >{{ i18n "contactFormHeaderTextTR" | title }}</h5>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="mb-1">
                             <label for="userMsg" class="form-label ">{{i18n "contactFormMsgLabelTextTR" | title}}</label>
-                            <textarea class="form-control" id="userMsg" rows="3" required placeholder="{{i18n "contactFormMsgPlaceholderTextTR" | title}}"></textarea>
+                            <textarea class="form-control" id="userMsg" rows="3" required minlength="5" placeholder="{{i18n "contactFormMsgPlaceholderTextTR" | title}}"></textarea>
                         </div>
 
                         <div class="form-text small">*{{i18n "contactFormInfoMsgTextTR" | title }}</div>
