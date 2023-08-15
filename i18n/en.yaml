@@ -114,18 +114,18 @@ resumeWorkSectionInterestsText:
 resumeJobTitleVlinde:
   other: software developer
 resumeJobDescriptionVlinde:
-  other: 'Vlinde is a German based web design agency that pays special attention to the customer experience with their offered services . Below are some of the key tasks I am involved in:'
+  other: 'Rooted in Germany, Vlinde operates as a prominent web design agency that prioritizes elevating the customer experience within its service offerings. Highlighted below are several pivotal responsibilities in which I actively engaged:'
 resumeJobBulletVlinde1:
-  other: 'Develop, maintain and improve existing PHP / Laravel applications and services by reducing dependencies and refactoring the code base, resulting in lighter, more secure and faster applications.'
+  other: 'Engage in the development, maintenance, and enhancement of current PHP / Laravel applications and services resulting in the creation of applications that are not only lighter, but also fortified in security and optimized for increased speed.'
 resumeJobBulletVlinde2:
-  other: 'Design and develop scalable mobile applications using Angular, the Ionic framework and Firebase Services, resulting in a fast MVP tailored to customer needs and ready to go to market.'
+  other: 'Architect and engineer scalable mobile applications utilizing Angular, the Ionic framework, and Firebase Services. This concerted effort yields a swift MVP meticulously aligned with customer requisites and poised for market deployment.'
 resumeJobBulletVlinde3:
   other: 'Build microservices and automation tools using Python and Docker.'
 
 resumeProject0Description:
   other: Nam tristique, risus et pulvinar aliquam, diam erat fermentum turpis, quis vestibulum purus risus a orci. Nunc tincidunt sapien ut ligula hendrerit, ac bibendum metus vestibulum. Mauris aliquam diam tempor, pharetra justo non, fermentum est. Etiam consequat mi eu molestie pulvinar. In molestie vitae ante et euismod. Quisque vehicula risus id varius sollicitudin.
 resumeJobDescriptionBerg:
-  other: 'Berg Software is an outsorcing company that provides dedicated developement teams and team extension solutions to major software companies. My main responsabilities are:'
+  other: 'Berg Software operates as a distinguished outsourcing establishment, offering specialized development teams and comprehensive team extension solutions to prominent software enterprises. Within this framework, my principal duties encompass:'
 resumeJobBulletBerg1:
   other: 'Develop, maintain, test and improve existing Java / Spring REST API services by reducing dependencies, refactoring with the usage of TDD making the application more robust and reliable.'
 resumeJobBulletBerg2:
@@ -141,21 +141,7 @@ resumeInterestFitnessTextTranslation:
   other: fitness
 resumeInterest3dmodelingTextTranslation:
   other: 3D modeling
-# LANGUAGES
-resumeLangEnglishTranslation:
-  other: English
-resumeLangRomanianTranslation:
-  other: Romanian
-resumeLangSpanishTranslation:
-  other: Spanish
-resumeLangNativeTranslation:
-  other: native
 
-# EDUCATION
-resumeEducationUniTitleTranslation:
-  other: Degree in Computational Mathematics
-resumeEducationBachTitleTranslation:
-  other: Bachelor of Science
 # /RESUME
 # CONTACT
 contactContactSectionHeaderTextTR:
@@ -216,6 +202,8 @@ aboutAboutSectionSummaryThreeTextTR:
 aboutAboutSectionSummaryFourTextTR:
   other: 'Let''s embark on this transformative journey together – whether you seek a <span class="text-body-emphasis fw-medium">reliable development partner</span>, <span class="text-body-emphasis fw-medium">need technical consultations</span>, or wish to explore groundbreaking ideas.'
 # RESUME
+resumeResumeRawAtTextTR:
+  other: at
 resumeResumeHeaderTextTR:
   other: resume
 resumeResumeSubHeaderTextTR:
@@ -225,10 +213,28 @@ resumeResumeCTATextTR:
 resumeResumeRawWorkExperienceHeaderTextTR:
   other: work experience
 resumeResumeRawSkillsHeaderTextTR:
-  other: skills
+  other: technical skills
+resumeResumeRawEducationHeaderTextTR:
+  other: education
 resumeResumeRawSkillsProgrammingLanguagesTextTR:
   other: programming languages
 resumeResumeRawSkillsLibrariesTextTR:
   other: libraries & frameworks
 resumeResumeRawToolsTextTR:
   other: tools & platforms
+# EDUCATION
+resumeResumeRawEducationUniversityTR:
+  other: Degree in Computational Mathematics
+resumeEducationBachTitleTranslation:
+  other: Bachelor of Science
+# LANGUAGES
+resumeResumeRawLangsHeaderTextTR:
+  other: education
+resumeResumeRawLangEnTR:
+  other: english
+resumeResumeRawLangRoTR:
+  other: romanian
+resumeResumeRawLangEsTR:
+  other: spanish
+resumeLangNativeTranslation:
+  other: native

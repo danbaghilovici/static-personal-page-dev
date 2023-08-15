@@ -12,6 +12,18 @@
                     {{end}}
                 </ul>
             </div>
+            <div class="col">
+                <div class="dropdown dropup ">
+                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Language: {{.Site.Language.LanguageName}}
+                    </button>
+                    <ul class="dropdown-menu">
+                        {{range .Translations}}
+                            <li><a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }} </a></li>
+                        {{end}}
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
             <p>&copy; {{ now.Format "2006" }} {{.Site.Params.ownerFirstName}} {{.Site.Params.ownerLastName}}.</p>

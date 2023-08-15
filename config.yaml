@@ -128,7 +128,7 @@ params:
           description: ownerSkillIonic
           iconClass: /img/brands/ionic.svg
           weight: 2.3
-        - title: Node.js
+        - title: NodeJS
           description: ownerSkillNode
           iconClass: /img/brands/nodejs.svg
           weight: 1
@@ -152,23 +152,6 @@ params:
         - title: MySQL
           description: ownerSkillsDjango
           iconClass: /img/brands/postqresql.svg
-          weight: 1
-    - title: Markup & Styles
-      description: ownerSkillsPython
-      iconClass: https://img.icons8.com/color/48/hashtag-activity-grid.png
-      weight: 4
-      libs:
-        - title: HTML
-          description: ownerSkillsDjango
-          iconClass: /img/brands/html.svg
-          weight: 1
-        - title: Markdown
-          description: ownerSkillsDjango
-          iconClass: /img/brands/markdown.svg
-          weight: 1
-        - title: CSS
-          description: ownerSkillsDjango
-          iconClass: /img/brands/css3.svg
           weight: 1
   ownerWorkExperience:
     - jobTitle: resumeJobTitleVlinde
@@ -197,14 +180,8 @@ params:
       list:
         - resumeJobBulletBerg1
         - resumeJobBulletBerg2
-  ownerProjects:
-    - name: Mauris
-      motto: resumeProjectMotto0
-      description: resumeProject0Description
-      link: ''
-      open: true
   ownerEducation:
-    - title: resumeEducationUniTitleTranslation
+    - title: resumeResumeRawEducationUniversityTR
       institution: Universidad JAUME I
       location: Castellón
       country: spainCountryTextTranslation
@@ -214,17 +191,12 @@ params:
       location: Benicarló
       country: spainCountryTextTranslation
       period: 2011 - 2013
-  ownerInterests:
-    - resumeInterestMathematicsTextTranslation
-    - resumeInterestFinancesTextTranslation
-    - resumeInterestFitnessTextTranslation
-    - resumeInterest3dmodelingTextTranslation
   ownerLanguages:
-    - language: resumeLangRomanianTranslation
+    - language: resumeResumeRawLangEnTR
       info: resumeLangNativeTranslation
-    - language: resumeLangEnglishTranslation
+    - language: resumeResumeRawLangRoTR
       info:
-    - language: resumeLangSpanishTranslation
+    - language: resumeResumeRawLangEsTR
       info:
 markup:
   tableOfContents:
