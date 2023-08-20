@@ -1,8 +1,8 @@
 <div class="container-fluid bg-dark text-bg-dark" data-bs-theme="dark">
     <footer class="py-5 container">
-        <div class="row">
-            <div class="col-6 col-md-3 mb-3">
-                <h5 class="text-bg-dark">Main sections</h5>
+        <div class="row g-0">
+            <div class="col-lg-3 col-md-4 col-sm-9 p-0 mb-3">
+                <h5 class="text-bg-dark fw-normal">{{i18n "footerMainSectionTR" | title}}</h5>
                 <ul class="nav flex-column">
                     {{ range $i,$item:=.Site.Menus.main }}
                         <li class="nav-item mb-2"><a href="{{.URL | relLangURL}}" class="nav-link p-0 text-body-secondary">{{title (i18n .Name)}}</a></li>
@@ -12,16 +12,16 @@
                     {{end}}
                 </ul>
             </div>
-            <div class="col-6 col-md-3 mb-3">
-                <h5 class="text-bg-dark">Additional links</h5>
+            <div class="col-lg-3 col-md-4 col-sm-9 p-0 mb-3">
+                <h5 class="text-bg-dark fw-normal">{{i18n "footerAdditionalSectionTR" | title}}</h5>
                 <ul class="nav flex-column">
                     {{ range $i,$item:=.Site.Menus.more }}
                     <li class="nav-item mb-2"><a href="{{.URL | relLangURL}}" class="nav-link p-0 text-body-secondary" >{{title (i18n .Name)}}</a></li>
                     {{end}}
                 </ul>
             </div>
-            <div class="col-6 col-md-3 mb-3">
-                <h5 class="text-bg-dark">Socials</h5>
+            <div class="col-lg-3 col-md-4 col-sm-9 p-0 mb-3">
+                <h5 class="text-bg-dark fw-normal">{{i18n "footerSocialsSectionTR" | title}}</h5>
                 <ul class="nav flex-column">
                     {{range .Site.Params.ownerSocialLinks}}
                         <li class="nav-item mb-2"><a href="{{.link}}" class="nav-link p-0 text-body-secondary" >{{.name}} <i class="bi bi-box-arrow-up-right"></i></a></li>

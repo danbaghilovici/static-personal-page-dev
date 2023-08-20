@@ -53,6 +53,12 @@ moreSectionLanguagesHeaderTr:
 # FOOTER
 footerSectionTR:
   other: Sections
+footerMainSectionTR:
+  other: main
+footerAdditionalSectionTR:
+  other: additional
+footerSocialsSectionTR:
+  other: socials
 allSectionsHeaderTr:
   other: site links
 footerPrintTr:
@@ -196,9 +202,9 @@ aboutAboutSectionSubHeaderTextTR:
 aboutAboutSectionSummaryOneTextTR:
   other: 'Welcome to my digital realm, I''m <span class="fw-medium text-body-emphasis ">Dan</span>, a passionate and dedicated <span class="text-body-emphasis fw-medium">Software Developer</span>, on a mission to craft remarkable digital experiences and solutions.'
 aboutAboutSectionSummaryTwoTextTR:
-  other: 'My expertise spans across diverse domains, from <span class="text-body-emphasis fw-medium">web and mobile development</span> to <span class="text-body-emphasis fw-medium">cloud computing</span> and beyond. I thrive on tackling complex challenges and relish the opportunity to collaborate with visionary minds, turning ambitious concepts into reality. By harnessing the power of code, I aspire to <span class="text-body-emphasis fw-medium">empower businesses</span>, <span class="text-body-emphasis fw-medium">elevate user experiences</span>, and <span class="text-body-emphasis fw-medium">contribute</span> to the ever-evolving digital landscape.'
+  other: 'My expertise spans across diverse domains, from <span class="text-body-emphasis fw-medium">web and mobile development</span> to <span class="text-body-emphasis fw-medium">cloud computing</span> and beyond. I thrive on tackling complex challenges and relish the opportunity to collaborate with visionary minds, turning ambitious concepts into reality. By harnessing the power of code, I aspire to empower businesses, elevate user experiences, and contribute to the ever-evolving digital landscape.'
 aboutAboutSectionSummaryThreeTextTR:
-  other: 'With a proven history of seamlessly fusing <span class="text-body-emphasis fw-medium">Java</span>''s backend capabilities and <span class="text-body-emphasis fw-medium">Angular</span>''s dynamic frontend features, I specialize in designing and implementing holistic solutions that bridge the gap between these technologies. Beyond the lines of code, I value <span class="text-body-emphasis fw-medium">effective communication and collaboration</span>, understanding that successful projects stem from <span class="text-body-emphasis fw-medium">strong partnerships</span > and <span class="text-body-emphasis fw-medium">shared visions</span>.'
+  other: 'With a proven history of seamlessly fusing <span class="text-body-emphasis fw-medium">Java</span>''s backend capabilities and <span class="text-body-emphasis fw-medium">Angular</span>''s dynamic frontend features, I specialize in designing and implementing holistic solutions that bridge the gap between these technologies. Beyond the lines of code, I value <span class="text-body-emphasis fw-medium">effective communication and collaboration</span>, understanding that successful projects stem from strong partnerships and shared visions.'
 aboutAboutSectionSummaryFourTextTR:
   other: 'Let''s embark on this transformative journey together – whether you seek a <span class="text-body-emphasis fw-medium">reliable development partner</span>, <span class="text-body-emphasis fw-medium">need technical consultations</span>, or wish to explore groundbreaking ideas.'
 # RESUME
