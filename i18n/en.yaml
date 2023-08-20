@@ -186,7 +186,7 @@ aboutHeroHeaderTextTR:
 aboutHeroSubHeaderTextTR:
   other: 'unleashing the potential of code: driving innovation and transforming realities through proficient software development'
 aboutHeroCTAContactTextTR:
-  other: get in touch
+  other: reach out
 aboutHeroAltImageTextTR:
   other: A photo of me
 aboutAboutSectionHeaderTextTR:
@@ -202,6 +202,8 @@ aboutAboutSectionSummaryThreeTextTR:
 aboutAboutSectionSummaryFourTextTR:
   other: 'Let''s embark on this transformative journey together – whether you seek a <span class="text-body-emphasis fw-medium">reliable development partner</span>, <span class="text-body-emphasis fw-medium">need technical consultations</span>, or wish to explore groundbreaking ideas.'
 # RESUME
+resumeResumeRawDescriptionTextTR:
+  other: 'Experienced software developer with a specialized emphasis on <b>web and mobile development</b>, adeptly using <b>Angular and Java</b> technologies to architect exceptional solutions. With strong problem-solving skills and proactive approach I integrate frontend and backend components to create seamless user experiences. This combined with effective communication and collaboration abilities, positions me as a versatile developer who thrives in team-oriented environments.'
 resumeResumeRawAtTextTR:
   other: at
 resumeResumeHeaderTextTR:
@@ -238,3 +240,10 @@ resumeResumeRawLangEsTR:
   other: spanish
 resumeLangNativeTranslation:
   other: native
+# 404 temp
+notFoundCTATextTR:
+  other: navigate to the main page
+notFoundSubheaderTextTR:
+  other: please check the URL for errors and try again or use the navigation menu to find what you need.
+notFoundHeaderTextTR:
+  other: the page you requested could not be found.

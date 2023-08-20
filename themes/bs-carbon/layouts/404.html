@@ -1,7 +1,7 @@
 {{define "main"}}
     {{- partial "components/newsletter"
     (dict "ctx" .
-    "header" "The page you requested could not be found. Please check the URL for errors and try again."
-    "description" "Please use the navigation menu to find what you need, or contact us if you require further assistance."
+    "header" (i18n "notFoundHeaderTextTR" | title)
+    "description" (i18n "notFoundSubheaderTextTR" | strings.FirstUpper)
     ) -}}
 {{end}}

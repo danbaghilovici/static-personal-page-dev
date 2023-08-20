@@ -1,15 +1,14 @@
-<section class="leadspace " >
-  <div class="lead-body bg-secondary text-bg-secondary">
-    <div class="container h-100" >
-      <div class="row align-content-center h-100" >
-        <div class="col-md-8 col-sm-12">
-          <h1 class="display-4">{{.header}}</h1>
-          <p>{{.description}}</p>
-          <div class="btn-group-vertical">
-            <button class="btn btn-primary" type="button">Navigate to the main page</button>
-          </div>
+<section class="container pt-5" >
+    <div class="row">
+        <div class="col-lg-14 col-sm-18 pt-5">
+            <h1 class="text-body-emphasis display-5">{{.header}}</h1>
+            <p class="col-lg-14 col-sm-18  fs-5 text-muted">
+                {{.description}}
+            </p>
+            <div class=" d-grid gap-0 d-sm-flex justify-content-md-start">
+                <a href="{{absLangURL "/"}}" class="btn btn-dark btn-lg ">{{i18n "notFoundCTATextTR" | title}}</a>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
 </section>

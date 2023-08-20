@@ -40,8 +40,9 @@ Sed maximus est pharetra magna bibendum tempus non id lacus. Pellentesque conseq
 
 
 > In laoreet lacus velit, a sodales dolor mollis nec. Phasellus quis mauris a nunc rutrum dignissim a non leo. Vivamus vel ultrices turpis, quis posuere eros. Aliquam vehicula ipsum velit, et iaculis dui dictum a. Fusce pharetra luctus libero eu bibendum. Morbi non libero lacus. Mauris accumsan feugiat nunc vel dignissim. Nam nibh ex, tincidunt et varius in, hendrerit vitae est. Mauris consequat felis turpis, id dignissim ipsum suscipit eu. In hac habitasse platea dictumst. Sed accumsan eget tellus sit amet ultricies.
-— Benjamin Franklin
+> -- <cite>[Albert Einstein][1]</cite>
 
+[1]: http://www.quotedb.com/quotes/2112
 
 
 Donec feugiat in sapien ac volutpat. Vivamus fermentum justo lorem, vel molestie libero vestibulum vitae. Donec venenatis nulla metus, nec fermentum diam pretium convallis. Nullam viverra viverra suscipit. Ut euismod id ex vitae imperdiet. Curabitur eu nisl arcu. Praesent hendrerit sollicitudin est ac interdum. Nam et leo cursus, dignissim elit in, scelerisque lectus.

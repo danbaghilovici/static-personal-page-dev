@@ -28,8 +28,11 @@
       border: 1px solid black;
       padding:31px;
     }
+    #resume-contact a{
+      text-decoration: none;
+    }
     @media print{
-      a{
+      #resume-contact a {
         text-decoration: none;
       }
     }
@@ -37,50 +40,36 @@
 </head>
 
 <body class="p-0 m-0">
-<div class="container-fluid  m-0" id="resume">
+<div class="container-fluid text-dark m-0" id="resume">
   <div class="row g-0">
     <div class="col-7">
       <h2 class="fw-medium mb-1">{{ .Site.Params.ownerFirstName | upper }} {{  .Site.Params.ownerLastName | upper}}</h2>
       <h5 class="fw-normal">{{i18n .Site.Params.ownerTitle | title}}</h5>
     </div>
-    <div class="col">
-      <div class="row g-0">
-        <div class="col">
-          <div class="row pb-1">
-            <div class="col p-0">
-              {{ range .Site.Params.ownerPhoneNumbers }}
-              <a href="tel:{{.}}" class="p-0 m-0"><i class="bi bi-telephone"></i> {{.}}</a>
-              <br>
-              {{end}}
-            </div>
-          </div>
-          <div class="row pb-1">
-            <div class="col p-0">
-              <a class="p-0 m-0 text-decoration-none" href="mailto:{{.Site.Params.ownerEmail}}"><i class="bi bi-envelope"></i> {{.Site.Params.ownerEmail}}</a>
-            </div>
-          </div>
+    <div class="col p-0">
+      <div id="resume-contact" class="row g-0">
+        {{ range .Site.Params.ownerPhoneNumbers }}
+        <div class="col-9 ">
+          <a href="tel:{{.}}" class="p-0 m-0 "><i class="bi bi-telephone"></i> {{.}}</a><br>
         </div>
-        <div class="col">
-          <div class="row pb-1">
-            <div class="col p-0">
-              <a href="{{.Site.Params.ownerWebsite}}" class="text-decoration-none"><i class="bi bi-globe"></i> {{substr .Site.Params.ownerWebsite 8}}</a>
-            </div>
-          </div>
-          <div class="row pb-1">
-            <div class="col p-0">
-              {{ range where .Site.Params.ownerSocialLinks "id" "linkedin"}}
-              <a class="p-0 m-0 text-decoration-none" href="{{.link}}"><i class="bi bi-linkedin"></i> {{substr .link 8}}</a>
-              {{end}}
-            </div>
-          </div>
-          <div class="row pb-1">
-            <div class="col p-0">
-              {{ range where .Site.Params.ownerSocialLinks "id" "git"}}
-                <a class="p-0 m-0 text-decoration-none" href="{{.link}}"><i class="bi bi-github"></i> {{substr .link 8}}</a>
-              {{end}}
-            </div>
-          </div>
+        {{end}}
+        <div class="col-9 ">
+          <a class="p-0 m-0 " href="mailto:{{.Site.Params.ownerEmail}}"><i class="bi bi-envelope"></i> {{.Site.Params.ownerEmail}}</a>
         </div>
+        <div class="col p-0 ">
+          {{ range where .Site.Params.ownerSocialLinks "id" "linkedin"}}
+            <a class="p-0 m-0 " href="{{.link}}"><i class="bi bi-linkedin"></i> {{substr .link 8}}</a>
+          {{end}}
+        </div>
+        <div class="col-9 p-0">
+          <a href="{{.Site.Params.ownerWebsite}}" class=""><i class="bi bi-globe"></i> {{substr .Site.Params.ownerWebsite 8}}</a>
+        </div>
+        <div class="col-9 p-0">
+          {{ range where .Site.Params.ownerSocialLinks "id" "git"}}
+            <a class="p-0 m-0 " href="{{.link}}"><i class="bi bi-github"></i> {{substr .link 8}}</a>
+          {{end}}
+        </div>
+
       </div>
     </div>
   </div>
@@ -94,20 +83,15 @@
       <picture >
         <source srcset="/img/bgs/me3_cropped.webp" type="image/webp">
         <source srcset="/img/bgs/me3_cropped.jpeg" type="image/jpeg">
-        <img src="/img/bgs/me3_cropped.jpeg" class="d-block mx-lg-auto img-fluid img-thumbnail"
+        <img src="/img/bgs/me3_cropped.jpeg"
+             class="d-block mx-lg-auto img-fluid img-thumbnail"
              loading="lazy"
              alt="{{i18n "aboutHeroAltImageTextTR"}}">
       </picture>
     </div>
     <div class="col">
-      <p>
-        Highly skilled and experienced <b>Software Developer</b> with a passion for creating
-        innovative and effective solutions for clients in a range of industries.
-        Proficient in a variety of programming languages, including <b>Java, Javascript, and Python</b>
-        and experienced in agile development methodologies. Strong problem-solving abilities
-        and a team player with a track record of delivering high-quality projects on time and
-        within budget. Committed to ongoing learning and professional development to stay
-        up-to-date with the latest technologies and best practices.
+      <p >
+        {{i18n "resumeResumeRawDescriptionTextTR" | safeHTML}}
       </p>
     </div>
   </div>
@@ -118,10 +102,10 @@
   </div>
   <div class="row">
     <div class="col-13">
-      <h4 class="fw-normal">{{i18n "resumeResumeRawWorkExperienceHeaderTextTR" | title}}</h4>
+      <h4 class="fw-normal mb-1">{{i18n "resumeResumeRawWorkExperienceHeaderTextTR" | title}}</h4>
       {{range sort .Site.Params.OwnerWorkExperience "period.from" "desc"}}
       <h5 class="fw-medium">{{title (i18n .jobTitle)}} <span class="fw-normal">{{i18n "resumeResumeRawAtTextTR"}}</span>
-          <a href="{{.company.website}}" class="link"> {{.company.name}}</a>
+          <a href="{{.company.website}}" class=""> {{.company.name}}</a>
         </h5>
         <p class="mb-1">{{i18n .description}}</p>
         <ul>
@@ -138,40 +122,38 @@
       <div class="row g-0">
         <div class="col">
           <div class="card border-0">
-            <div class="card-body">
+            <div class="card-body pt-0 ">
               <div class="">
-                <h4 class="card-title fw-normal">{{i18n "resumeResumeRawSkillsHeaderTextTR" | title}}</h4>
+                <h4 class="card-title fw-normal text-dark mb-1">{{i18n "resumeResumeRawSkillsHeaderTextTR" | title}}</h4>
                 <div >
                   <ul class="list-group border-0">
                     {{range .Site.Params.ownerSkillsSet}}
-                      <li class="list-group-item d-flex justify-content-between align-items-start border-0 px-0 pt-0 pb-2">
+                      <li class="list-group-item d-flex justify-content-between align-items-start border-0 px-0 pt-0 pb-1">
                         <div class="">
-                          <b >{{.title | title}}</b><br>
-                          <span class="fw-light">{{range .libs}}{{ .title }}, {{end}}</span>
+                          <b class="text-dark">{{.title | title}}</b><br>
+                          <span class="fw-light text-dark">{{range .libs}}{{ .title }}, {{end}}</span>
                         </div>
                       </li>
                     {{end}}
                   </ul>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
 
         <div class="col">
           <div class="card border-0">
-            <div class="card-body">
+            <div class="card-body pt-0">
               <div class="">
-                <h4 class="card-title fw-normal">{{i18n "resumeResumeRawEducationHeaderTextTR" | title}}</h4>
+                <h4 class="card-title fw-normal text-dark mb-1">{{i18n "resumeResumeRawEducationHeaderTextTR" | title}}</h4>
                 <ul class="list-group border-0">
                   {{ range .Site.Params.ownerEducation}}
-                    <li class="list-group-item d-flex justify-content-between align-items-start border-0 pt-1 px-0">
+                    <li class="list-group-item d-flex justify-content-between align-items-start border-0 pt-0 px-0 pb-1">
                       <div class=" me-auto">
-                        <b>{{i18n .title | title}}</b>
+                        <b class="text-dark">{{i18n .title | title}}</b>
                         <br>
-                        <span class="fw-light">{{.institution}}
+                        <span class="fw-light text-dark">{{.institution}}
                           <br>{{.period}}
                         </span>
                       </div>
@@ -185,12 +167,12 @@
         </div>
         <div class="col">
           <div class="card border-0">
-            <div class="card-body">
+            <div class="card-body pt-0">
               <div class="">
-                <h4 class="card-title fw-normal">{{i18n "resumeResumeRawLangsHeaderTextTR" | title }}</h4>
-                <ul>
+                <h4 class="card-title fw-normal text-dark mb-2">{{i18n "resumeResumeRawLangsHeaderTextTR" | title }}</h4>
+                <ul class="ps-3">
                   {{range .Site.Params.OwnerLanguages}}
-                    <li>{{i18n .language | title}}</li>
+                    <li class="text-dark">{{i18n .language | title}}</li>
                   {{end}}
                 </ul>
               </div>
