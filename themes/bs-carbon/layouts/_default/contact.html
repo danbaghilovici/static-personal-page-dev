@@ -6,7 +6,7 @@
             <p class="small text-body-secondary">{{i18n "contactContactSectionSubHeaderTextTR" | title}}</p>
         </div>
         <div class="section-content">
-            <form method="POST" data-netlify="true" id="contactForm" class="" action="/pages/success">
+            <form method="POST" data-netlify="true" id="contactForm" data-netlify-recaptcha="true" action="/pages/success">
                 <div class="card mb-5 mb-sm-0">
                     <div class="card-body">
                         <h5 >{{ i18n "contactFormHeaderTextTR" | title }}</h5>
@@ -36,6 +36,7 @@
                             <textarea class="form-control" id="userMsg" rows="3" required minlength="5" placeholder="{{i18n "contactFormMsgPlaceholderTextTR" | title}}"></textarea>
                         </div>
 
+                        <div data-netlify-recaptcha="true"></div>
                         <div class="form-text small">*{{i18n "contactFormInfoMsgTextTR" | title }}</div>
                     </div>
                     <div class="card-footer bg-transparent p-0 m-0">
