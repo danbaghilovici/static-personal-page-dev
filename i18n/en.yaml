@@ -269,3 +269,28 @@ refuseCookiesBtnTextTR:
   other: refuse cookies
 allowCookiesBtnTextTR:
   other: allow cookies
+# INFO
+infoPageTitleTextTR:
+  other: website information
+infoPageCookiesSectionHeaderTextTR:
+  other: third party cookies
+infoPageCookiesSectionSubHeaderTextTR:
+  other: The following section details the use of trusted third party cookies which contribute to improved user experiences and traffic analysis.
+infoPageCookiesSectionDefTextTR:
+  other: 'A web cookie, commonly referred to as a "cookie", is a small piece of data that a website stores on a user''s device, typically within their web browser. Cookies are designed to carry information related to the user''s interactions and activities on the website. These pieces of data serve various purposes, such as tracking user preferences, remembering login credentials, recording user behaviors, and facilitating personalized experiences.'
+infoPageCookiesSectionFollowingTextTR:
+  other: 'This site integrates the following third party cookies from'
+infoPageCookiesSectionGoogleAnalyticsTextTR:
+  other: '<b>Google Analytics</b>: to glean valuable insights into user engagement and site performance. This integration involves the use of third-party cookies to collect anonymized data on visitor interactions. These cookies are employed solely for analytical purposes, aiding in refining content and user experience.'
+infoPageCookiesSectionGoogleFontsTextTR:
+  other: '<b>Google Web Fonts</b>: to enhance typography and visual presentation. It''s important to note that this integration may involve the use of third-party cookies from Google''s domains. These cookies are primarily designed to optimize font delivery and ensure consistent display across devices.'
+infoPageStackSectionHeaderTextTR:
+  other: technological stack
+infoPageStackSectionSubHeaderTextTR:
+  other: unveiling the technology behind the website
+infoPageStackSectionHugoTextTR:
+  other: '<b>Hugo</b> is a dynamic static site generator powered by the Go programming language. With its single executable design, Hugo produces rapid, server-independent HTML pages for exceptional speed and performance. This tool''s focus on simplicity, extensibility, and content organization empowers developers to effortlessly create elegant, high-performing websites.'
+infoPageStackSectionBootstrapTextTR:
+  other: '<b>Bootstrap</b> framework plays a pivotal role in shaping the visual aesthetics of my software developer website. By harnessing its versatile components and responsive grid system, I can effortlessly create a polished and consistent user experience across diverse devices. This framework''s robust toolkit not only expedites development but also adheres to modern design principles, allowing me to showcase my work in an elegant and accessible manner.'
+infoPageStackSectionNetlifyTextTR:
+  other: '<b>Netlify</b> platform, an embodiment of cutting-edge hosting services that prioritize performance, security, and seamless deployment. Netlify''s modern architecture enables rapid loading speeds, automatic scaling, and continuous integration, ensuring an optimal user experience. By leveraging Netlify''s advanced features, I can focus on presenting my portfolio and expertise while trusting in the platform''s robust infrastructure to provide a secure and dependable hosting solution.'
