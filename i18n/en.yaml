@@ -253,3 +253,15 @@ notFoundSubheaderTextTR:
   other: please check the URL for errors and try again or use the navigation menu to find what you need.
 notFoundHeaderTextTR:
   other: the page you requested could not be found.
+
+# cookies
+infoTextTR:
+  other: This website employs cookies and other tracking technologies to enhance your browsing experience. Additionally, these tools assist in analyzing website traffic and gaining insights into our visitors' origins.
+agreeNavigationTextTR:
+  other: By accessing and navigating this website, you acknowledge and consent to the utilization of cookies and other tracking technologies.
+learnMoreLinkTextTR:
+  other: lear more
+refuseCookiesBtnTextTR:
+  other: refuse cookies
+allowCookiesBtnTextTR:
+  other: allow cookies

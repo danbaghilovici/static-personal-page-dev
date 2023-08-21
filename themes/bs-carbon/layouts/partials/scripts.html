@@ -71,8 +71,5 @@
         }
     }
     const status = getCookie(cookieName);
-    if (status === "") {
-        console.debug("No cookie approval found. Showing banner");
-        cookieBanner.classList.toggle("d-none");
-    }
+    if (status === "") {cookieBanner.classList.toggle("d-none");}
 </script>
