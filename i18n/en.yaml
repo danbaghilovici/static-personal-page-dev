@@ -178,6 +178,10 @@ contactFormSubmitBtnTextTR:
   other: Submit Form
 contactFormResetBtnTextTR:
   other: Reset Form
+successContactSubmissionHeaderTextTR:
+  other: 'Your message has been received successfully. Thank you for reaching out.'
+successContactSubmissionSubHeaderTextTR:
+  other: 'I will review your inquiry and respond as soon as possible. Your interest is appreciated, and I am eager to connect and discuss potential opportunities or address any queries you may have.'
 # SOCIALS
 socialLinkTwitterTooltipTR:
   other: Let's connect and build a better tomorrow together! #SoftwareDeveloper #TechJourney

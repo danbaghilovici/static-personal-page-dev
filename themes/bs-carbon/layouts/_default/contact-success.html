@@ -1,3 +1,7 @@
 {{define "main"}}
-OK
+    {{- partial "components/newsletter"
+        (dict "ctx" .
+        "header" (i18n "successContactSubmissionHeaderTextTR")
+        "description" (i18n "successContactSubmissionSubHeaderTextTR")
+    ) -}}
 {{end}}

@@ -3,30 +3,6 @@
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 </script>
-
-<!--<script defer>-->
-<!--    const handleSubmit = (event) => {-->
-<!--        event.preventDefault();-->
-
-<!--        const myForm = event.target;-->
-<!--        const formData = new FormData(myForm);-->
-
-<!--        fetch("/", {-->
-<!--            method: "POST",-->
-<!--            headers: { "Content-Type": "application/x-www-form-urlencoded" },-->
-<!--            body: new URLSearchParams(formData).toString(),-->
-<!--        })-->
-<!--            .then(() => console.log("Form successfully submitted"))-->
-<!--            .catch((error) => alert(error));-->
-<!--    };-->
-
-<!--    let element = document.querySelector("form#contactForm");-->
-<!--    if (element){-->
-<!--        element.addEventListener("submit", handleSubmit);-->
-<!--    }-->
-
-<!--</script>-->
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CW42EYKVC"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
