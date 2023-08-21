@@ -19,6 +19,6 @@ to = "/404.html"
 status = 404
 
 [[redirects]]
-from = "/en/contact-success"
+from = "/en/*"
 to = "/en/contact-success"
-status = 200
+status = 302
