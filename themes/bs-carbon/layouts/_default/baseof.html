@@ -2,6 +2,7 @@
 <html lang="{{ .Language }}" data-bs-theme="light">
     {{- partial "head.html" . -}}
     <body>
+        {{- partial "components/cookies-banner.html" . -}}
         {{- partial "header.html" . -}}
         <div id="main-wrapper" class="min-vh-no-navbar" >
             {{- block "main" . }} {{- end }}

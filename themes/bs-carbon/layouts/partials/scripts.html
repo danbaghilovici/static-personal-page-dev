@@ -35,3 +35,44 @@
 
     gtag('config', 'G-6CW42EYKVC');
 </script>
+
+<script defer >
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    const cookieName="cookie-status-2108";
+    const cookieBanner=document.getElementById("cookiesBanner");
+    if(cookieBanner){
+        const approveButton=cookieBanner.querySelector("button#cookieApproveBtn");
+        if (approveButton){
+            approveButton.addEventListener("click",ev=>{
+                setCookie(cookieName,true,365);
+                cookieBanner.classList.add("d-none");
+            });
+        }
+    }
+    const status = getCookie(cookieName);
+    if (status === "") {
+        console.debug("No cookie approval found. Showing banner");
+        cookieBanner.classList.toggle("d-none");
+    }
+</script>
