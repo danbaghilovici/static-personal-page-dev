@@ -14,14 +14,14 @@
                             <div class="col-18 col-lg-9">
                                 <div class="mb-2">
                                     <label for="userName" class="form-label">{{i18n "contactFormNameLabelTextTR" | title }}</label>
-                                    <input type="text" class="form-control" id="userName" aria-describedby="userNameHelp" required minlength="3" placeholder="{{i18n "contactFormNamePlaceholderTextTR" | title }}">
+                                    <input type="text" class="form-control" id="userName" name="userName" aria-describedby="userNameHelp" required minlength="3" placeholder="{{i18n "contactFormNamePlaceholderTextTR" | title }}">
                                 </div>
                             </div>
 
                             <div class="col-18  col-lg-9">
                                 <div class="mb-3">
                                     <label for="companyName" class="form-label">{{i18n "contactFormCompanyNameLabelTextTR" | title }}</label>
-                                    <input type="text" class="form-control" id="companyName" aria-describedby="companyName" placeholder="{{i18n "contactFormCompanyNamePlaceholderTextTR" | title}}">
+                                    <input type="text" class="form-control" id="companyName" name="companyName" aria-describedby="companyName" placeholder="{{i18n "contactFormCompanyNamePlaceholderTextTR" | title}}">
                                 </div>
                             </div>
                         </div>
@@ -29,11 +29,11 @@
 
                         <div class="mb-3">
                             <label for="userEmail" class="form-label">{{i18n "contactFormEmailLabelTextTR" | title}}</label>
-                            <input type="email" class="form-control" id="userEmail" required placeholder="{{i18n "contactFormEmailPlaceholderTextTR" | title}}">
+                            <input type="email" class="form-control" id="userEmail" name="email" required placeholder="{{i18n "contactFormEmailPlaceholderTextTR" | title}}">
                         </div>
                         <div class="mb-1">
                             <label for="userMsg" class="form-label ">{{i18n "contactFormMsgLabelTextTR" | title}}</label>
-                            <textarea class="form-control" id="userMsg" rows="3" required minlength="5" placeholder="{{i18n "contactFormMsgPlaceholderTextTR" | title}}"></textarea>
+                            <textarea class="form-control" id="userMsg" rows="3" required minlength="5" name="msg" placeholder="{{i18n "contactFormMsgPlaceholderTextTR" | title}}"></textarea>
                         </div>
 
                         <div data-netlify-recaptcha="true"></div>
