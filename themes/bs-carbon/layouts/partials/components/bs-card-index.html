@@ -1,8 +1,16 @@
-<div class="card h-100 bg-dark text-bg-dark card-index" >
-  <div class="card-body h-100">
-    {{with .cardTopic}}<p class="card-subtitle mb-1 text-muted">{{.}}</p>{{end}}
-    {{with .cardTitle}}<h5 class="card-title" >{{ .  }}</h5>{{end}}
-    {{with .cardDescription}}<p class="card-text display-4 lead">{{ . | truncate 110}}</p>{{end}}
+
+<div class="card h-100 w-100 text-bg-dark" >
+  <div class="card-body">
+    <p class="h3 text-clamped-2">{{with .cardDescription}}{{ . | truncate 110}}{{end}}</p>
   </div>
-  <a href="{{with .cardLink}}{{.}}{{else}}#{{end}}" class="card-link"></a>
+    <div class="card-footer bg-transparent border-0">
+    <a href="{{with .cardLink}}{{.}}{{else}}#{{end}}" class="card-link stretched-link"></a>
+      {{with .cardCTAText}}{{.}}{{end}}
+      {{if strings.Contains .cardLink .ctx.Site.BaseURL }}
+        <i class="bi bi-arrow-right float-end"></i>
+      {{else}}
+        <i class="bi bi-box-arrow-up-right float-end"></i>
+      {{end}}
+    </a>
+  </div>
 </div>

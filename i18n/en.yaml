@@ -50,6 +50,8 @@ moreSectionSocialsHeaderTr:
   other: socials
 moreSectionLanguagesHeaderTr:
   other: site language
+debugSectionDemoHeaderTr:
+  other: demo
 # FOOTER
 footerSectionTR:
   other: Sections

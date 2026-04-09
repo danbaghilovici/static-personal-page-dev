@@ -6,14 +6,14 @@
 {{if .onHome}}
 {{if gt (len $blogPosts) 0}}
 <div class="row">
-    <div class="section-header">
-        <p class="section-header-text ">Blog posts</p>
+    <div class="col-sm-18 col-lg-4 col-xxl-4">
+        <h2 class="display-6">Blog posts</h2>
         <p class="small text-body-secondary">Exploring the Frontiers: Thought-Provoking Insights and In-Depth Analysis.</p>
     </div>
-    <div class="section-content">
-        <div class="row g-0">
+    <div class="col-sm-18 col-lg-14 col-xxl-14 ">
+        <div class="card-group">
             {{range first $numOfItems $blogPosts}}
-            <div class="col-18 col-md-9 col-lg-6">
+            <div class="col-sm-18 col-md-9 col-lg-6">
                 {{- partial "components/bs-card.html"
                 ( dict
                 "ctx" .
@@ -29,7 +29,7 @@
             {{end}}
             {{if gt (len $blogPosts) $numOfItems}}
             {{range $listPage}}
-            <div class="col-18 col-sm-9 col-lg-6">
+            <div class="col-sm-18 col-md-9 col-lg-6">
                 {{- partial "components/bs-card-index.html"
                 ( dict
                 "ctx" .
@@ -51,11 +51,11 @@
 {{if gt (len $blogPosts) 0}}
 <section class="container pt-5 min-vh-no-navbar">
     <div class="row">
-        <div class="section-header-full ">
-            <p class="section-header-text-full ">A collection of my blog posts</p>
-            <p>Dive into the Realm of Knowledge: Engaging Perspectives, Thought-Provoking Ideas, and In-Depth Analyses for the Curious Mind</p>
+        <div class="col-sm-18">
+            <h2 class="display-6">A collection of my blog posts</h2>
+            <p class="small text-body-secondary">Dive into the Realm of Knowledge: Engaging Perspectives, Thought-Provoking Ideas, and In-Depth Analyses for the Curious Mind</p>
         </div>
-        <div class="section-content">
+        <div class="col-sm-18">
             <div class="row g-0">
                 {{range $paginator.Pages}}
                 <div class="col-18 col-md-9 col-lg-5">

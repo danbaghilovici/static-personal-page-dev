@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
     <div class="container">
         <button class="navbar-toggler"
                 type="button"
@@ -10,11 +10,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <span class="navbar-brand" >{{.Site.Params.ownerFirstName}} {{.Site.Params.ownerLastName}}</span>
-        <div class="collapse navbar-collapse" id="navbarToggler">
+        <div class="collapse navbar-collapse" id="navbarToggler" data-bs-theme="dark">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 {{ range $i,$item:=.Site.Menus.main }}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
+                    <a class="nav-link active" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
                 </li>
                 {{end}}
 
@@ -35,21 +35,38 @@
                         {{end}}
                     </ul>
                 </li>
+                {{ if not hugo.IsProduction }}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Debug
+                    </a>
+                    <ul class="dropdown-menu p-0" data-bs-theme="dark">
+                        {{ range $i,$item:=.Site.Menus.debug }}
+                        <li><a class="dropdown-item" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a></li>
+                        {{end}}
+                    </ul>
+                </li>
+                {{ end }}
+
             </ul>
             <ul class="list-unstyled d-flex m-0">
                 {{range .Site.Params.ownerSocialLinks}}
-                <li class="ms-2 me-2">
-                    <a class="link-body-emphasis"
-                       data-bs-toggle="tooltip"
-                       data-bs-title="{{i18n .tooltip}}"
-                       data-bs-placement="bottom"
-                       data-bs-custom-class="bg-dark-tooltip"
-                       href="{{.link}}"
-                    ><i class="{{.bsicon}}"></i></a></li>
+                <li >
+                    <a type="button"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="{{i18n .tooltip}}"
+                        data-bs-placement="bottom"
+                        data-bs-custom-class="bg-dark-tooltip"
+                        class="btn btn-dark btn-lg"
+                        role="button"
+                        href="{{.link}}">
+                        <i class="{{.bsicon}}"></i>
+                    </a>
+
+            </li>
                 {{end}}
             </ul>
         </div>
     </div>
 
 </nav>
-

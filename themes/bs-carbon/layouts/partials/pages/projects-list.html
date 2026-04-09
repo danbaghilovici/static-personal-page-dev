@@ -5,24 +5,32 @@
 {{if .onHome}}
 {{if gt (len $projects) 0}}
 <div class="row">
-    <div class="section-header">
-        <p class="section-header-text ">Projects</p>
+    <div class="col-sm-18 col-lg-4 col-xxl-4">
+        <h2 class="display-6">Projects</h2>
         <p class="small text-body-secondary">Elevating Ingenuity: A Showcase of Accomplishments and Passion-Driven Projects</p>
     </div>
-    <div class="section-content">
-        <div class="row g-0">
-            <div class="col-6">
-                <div class="card w-100 bg-dark text-bg-dark">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+    <div class="col-sm-18 col-lg-14 col-xxl-14">
+        <div class="card-group">
+            {{range first 10 $projects}}
+                <div class="col-sm-18 col-md-9 col-lg-6">
+                    <div class="card w-100">
+                        <div class="card-header p-0 m-0">
+                            <div class="">
+                                <img src="{{.Params.Media}}" class="p-0 m-0 w-100 h-100 responsive-img" alt="...">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {{end}}
+            
         </div>
 
 
@@ -33,9 +41,9 @@
 {{if gt (len $projects) 0}}
 <section class="container pt-5">
     <div class="row">
-        <div class="col-4">
-            <h5><strong>Recent projects</strong></h5>
-            <p>Exploring the Tapestry of Creations: A Gallery of Passionate Projects and Meaningful Endeavors That Reflect Dedication and Vision</p>
+        <div class="col-sm-18 col-lg-4 col-xxl-4">
+            <h2 class="display-6">Recent projects</h2>
+            <p class="small text-body-secondary" >Exploring the Tapestry of Creations: A Gallery of Passionate Projects and Meaningful Endeavors That Reflect Dedication and Vision</p>
         </div>
         <div class="col">
             <div class="row g-0">

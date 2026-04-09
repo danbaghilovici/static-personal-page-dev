@@ -27,12 +27,12 @@ languages:
         - url: /
           name: headerAboutSectionTr
           weight: 1
-#        - url: portfolio-en/
-#          name: headerPortfolioSectionTr
-#          weight: 2
-#        - url: /blog-en
-#          name: headerBlogSectionTr
-#          weight: 3
+        - url: portfolio-en/
+          name: headerPortfolioSectionTr
+          weight: 2
+        - url: /blog-en
+          name: headerBlogSectionTr
+          weight: 3
       more:
         - url: /resume
           name: headerResumeSectionTr
@@ -44,6 +44,10 @@ languages:
         - url: /contact
           name: headerContactSectionTr
           weight: 5
+      debug:
+        - url: /demo
+          name: debugSectionDemoHeaderTr
+          weight: 1
   es:
     contentDir: content/es
     languageName: Español
@@ -199,9 +203,9 @@ params:
       info:
 markup:
   tableOfContents:
-    endLevel: 6
+    endLevel: 2
     ordered: false
-    startLevel: 3
+    startLevel: 2
   blackFriday:
     angledQuotes: false
     extensions: [
