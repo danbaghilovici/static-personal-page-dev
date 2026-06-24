@@ -1,88 +1,40 @@
-{{ $allBlogs:= where .ctx.Site.Pages "Section" "blog"   }}
-{{ $blogPosts:=(where $allBlogs ".IsPage" true).ByDate.Reverse}}
-{{ $listPage:=(first 1 (where $allBlogs ".IsNode" true)) }}
-{{ $paginator:= .ctx.Paginate $blogPosts 20}}
-{{ $numOfItems:=5 }}
-{{if .onHome}}
-{{if gt (len $blogPosts) 0}}
-<div class="row">
-    <div class="col-sm-18 col-lg-4 col-xxl-4">
-        <h2 class="display-6">Blog posts</h2>
-        <p class="small text-body-secondary">Exploring the Frontiers: Thought-Provoking Insights and In-Depth Analysis.</p>
-    </div>
-    <div class="col-sm-18 col-lg-14 col-xxl-14 ">
-        <div class="card-group">
-            {{range first $numOfItems $blogPosts}}
-            <div class="col-sm-18 col-md-9 col-lg-6">
-                {{- partial "components/bs-card.html"
-                ( dict
-                "ctx" .
-                "cardTopic" "Automation"
-                "cardTitle" .Params.Title
-                "cardDescription" .Params.Description
-                "cardCTAText" "Read more"
-                "cardLink" .Permalink
-                "cardMeta" "*Not applicable"
-                )
-                -}}
-            </div>
-            {{end}}
-            {{if gt (len $blogPosts) $numOfItems}}
-            {{range $listPage}}
-            <div class="col-sm-18 col-md-9 col-lg-6">
-                {{- partial "components/bs-card-index.html"
-                ( dict
-                "ctx" .
-                "cardDescription" "Discover more"
-                "cardCTAText" ""
-                "cardLink" .Permalink
-                )
-                -}}
-            </div>
-            {{end}}
-            {{range $listPage}}
-            {{end}}
-            {{end}}
-        </div>
-    </div>
+{{ $allBlogs := where .ctx.Site.Pages "Section" "blog" }}
+{{ $blogPosts := (where $allBlogs ".IsPage" true).ByDate.Reverse }}
+{{ if .onHome }}
+{{ if gt (len $blogPosts) 0 }}
+<div class="mb-5">
+  <p class="cds-eyebrow">{{ i18n "homeBlogMiniHeader" | default "Writing" | title }}</p>
+  <h2 class="h1 fw-light mb-0">{{ i18n "homeBlogHeaderTextTranslation" | default "Latest posts" | title }}</h2>
 </div>
-{{end}}
-{{else}}
-{{if gt (len $blogPosts) 0}}
-<section class="container pt-5 min-vh-no-navbar">
-    <div class="row">
-        <div class="col-sm-18">
-            <h2 class="display-6">A collection of my blog posts</h2>
-            <p class="small text-body-secondary">Dive into the Realm of Knowledge: Engaging Perspectives, Thought-Provoking Ideas, and In-Depth Analyses for the Curious Mind</p>
-        </div>
-        <div class="col-sm-18">
-            <div class="row g-0">
-                {{range $paginator.Pages}}
-                <div class="col-18 col-md-9 col-lg-5">
-                    {{- partial "components/bs-card.html"
-                    ( dict
-                    "ctx" .
-                    "cardTag" "Java"
-                    "cardTitle" .Params.Title
-                    "cardDescription" .Params.Description
-                    "cardCTAText" "Read more"
-                    "cardLink" .Permalink
-                    "cardMeta" "*Not applicable"
-                    )
-                    -}}
-                </div>
-                {{end}}
-            </div>
-        </div>
-    </div>
+<div class="row g-0">
+  {{ range first 5 $blogPosts }}
+  <div class="col-12 col-md-6 col-lg-4">{{ partial "components/post-card.html" . }}</div>
+  {{ end }}
+  {{ with .ctx.Site.GetPage "/blog" }}
+  <div class="col-12 col-md-6 col-lg-4">{{ partial "components/view-all-card.html" (dict "url" .RelPermalink "label" (i18n "viewAllTR" | default "View all posts")) }}</div>
+  {{ end }}
+</div>
+{{ end }}
+{{ else }}
+{{ if gt (len $blogPosts) 0 }}
+{{ $paginator := .ctx.Paginate $blogPosts 20 }}
+<section class="container-xl cds-section min-vh-no-navbar">
+  <div class="mb-5">
+    <p class="cds-eyebrow">{{ i18n "homeBlogMiniHeader" | default "Writing" | title }}</p>
+    <h2 class="display-3 fw-light mb-0">{{ i18n "blogListHeaderTextTR" | default "Notes & long-form" | title }}</h2>
+  </div>
+  <div class="row g-0">
+    {{ range $paginator.Pages }}
+    <div class="col-12 col-md-6 col-lg-4">{{ partial "components/post-card.html" . }}</div>
+    {{ end }}
+  </div>
+  {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
 </section>
-{{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
-{{else}}
+{{ else }}
 {{- partial "components/newsletter"
 (dict "ctx" .
 "header" "There is no data available for the selected category."
 "description" "There are no available blog posts imported."
 ) -}}
-{{end}}
-
-{{end}}
+{{ end }}
+{{ end }}

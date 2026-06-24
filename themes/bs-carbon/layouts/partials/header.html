@@ -1,72 +1,38 @@
-<nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
-    <div class="container">
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarToggler"
-                aria-controls="navbarToggler"
-                aria-expanded="false"
-                aria-label="{{ i18n "navbarToggleNavigationTR" }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <span class="navbar-brand" >{{.Site.Params.ownerFirstName}} {{.Site.Params.ownerLastName}}</span>
-        <div class="collapse navbar-collapse" id="navbarToggler" data-bs-theme="dark">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                {{ range $i,$item:=.Site.Menus.main }}
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
-                </li>
-                {{end}}
+{{- $page := . -}}
+<nav class="navbar navbar-expand-md sticky-top" data-bs-theme="dark">
+  <div class="container-xl">
+    <a class="navbar-brand" href="{{ "/" | relLangURL }}">{{ .Site.Params.ownerFirstName | upper }}<b>.</b>{{ .Site.Params.ownerLastName | upper }}</a>
 
-                {{ range $i,$item:=.Site.Menus.contact }}
-                    <li>
-                        <a class="nav-link" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a>
-                    </li>
-                {{end}}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{i18n "headerMoreSectionsTr" | title }}
-                    </a>
-                    <ul class="dropdown-menu p-0" data-bs-theme="dark">
-                        <li>
-                            <p class="dropdown-header">{{i18n "moreSectionAdditionalLinksHeaderTr" | title}}</p></li>
-                        {{ range $i,$item:=.Site.Menus.more }}
-                        <li><a class="dropdown-item small" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a></li>
-                        {{end}}
-                    </ul>
-                </li>
-                {{ if not hugo.IsProduction }}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Debug
-                    </a>
-                    <ul class="dropdown-menu p-0" data-bs-theme="dark">
-                        {{ range $i,$item:=.Site.Menus.debug }}
-                        <li><a class="dropdown-item" href="{{.URL | relLangURL}}">{{title (i18n .Name)}}</a></li>
-                        {{end}}
-                    </ul>
-                </li>
-                {{ end }}
-
-            </ul>
-            <ul class="list-unstyled d-flex m-0">
-                {{range .Site.Params.ownerSocialLinks}}
-                <li >
-                    <a type="button"
-                        data-bs-toggle="tooltip"
-                        data-bs-title="{{i18n .tooltip}}"
-                        data-bs-placement="bottom"
-                        data-bs-custom-class="bg-dark-tooltip"
-                        class="btn btn-dark btn-lg"
-                        role="button"
-                        href="{{.link}}">
-                        <i class="{{.bsicon}}"></i>
-                    </a>
-
-            </li>
-                {{end}}
-            </ul>
-        </div>
+    <div class="d-flex align-items-center order-md-3">
+      {{ partial "components/theme-switcher.html" . }}
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav"
+              aria-controls="primaryNav" aria-expanded="false" aria-label="{{ i18n "navbarToggleNavigationTR" }}">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </div>
 
+    <div class="collapse navbar-collapse order-md-2" id="primaryNav">
+      <ul class="navbar-nav ms-md-4">
+        {{ range .Site.Menus.main }}
+        <li class="nav-item"><a class="nav-link{{ if $page.IsMenuCurrent "main" . }} active{{ end }}"{{ if $page.IsMenuCurrent "main" . }} aria-current="page"{{ end }} href="{{ .URL | relLangURL }}">{{ title (i18n .Name) }}</a></li>
+        {{ end }}
+        {{ range .Site.Menus.contact }}
+        <li class="nav-item"><a class="nav-link{{ if $page.IsMenuCurrent "contact" . }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ title (i18n .Name) }}</a></li>
+        {{ end }}
+        {{ range .Site.Menus.more }}
+        <li class="nav-item"><a class="nav-link{{ if $page.IsMenuCurrent "more" . }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ title (i18n .Name) }}</a></li>
+        {{ end }}
+        {{ if not hugo.IsProduction }}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Debug</a>
+          <ul class="dropdown-menu cds-theme-menu">
+            {{ range .Site.Menus.debug }}
+            <li><a class="dropdown-item" href="{{ .URL | relLangURL }}">{{ title (i18n .Name) }}</a></li>
+            {{ end }}
+          </ul>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
 </nav>

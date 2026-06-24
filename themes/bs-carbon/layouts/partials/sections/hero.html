@@ -1,0 +1,32 @@
+{{- /* Carbon hero — text + portrait. Content from site params + i18n. */ -}}
+<section class="cds-hero">
+  <div class="container-xl">
+    <div class="row g-5 align-items-center">
+      <div class="col-12 col-lg-7">
+        <p class="cds-eyebrow cds-reveal cds-reveal-1">{{ i18n .Site.Params.ownerTitle }}</p>
+        <h1 class="display-3 fw-light cds-reveal cds-reveal-2" style="max-width: 18ch">{{ i18n "aboutHeroHeaderTextTR" | title }}</h1>
+        <p class="lead text-body-secondary cds-reveal cds-reveal-3" style="max-width: 54ch">{{ i18n "aboutHeroSubHeaderTextTR" }}</p>
+        <div class="d-flex flex-wrap gap-3 mt-4 cds-reveal cds-reveal-4">
+          <a class="btn btn-primary" href="mailto:{{ .Site.Params.ownerEmail }}">
+            {{ i18n "aboutHeroCTAContactTextTR" | title }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          {{ with .Site.GetPage "/portfolio" }}
+          <a class="btn btn-outline-secondary" href="{{ .RelPermalink }}">
+            {{ i18n "aboutHeroCTAWorkTextTR" | default "Explore my work" }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="col-12 col-lg-5 cds-reveal cds-reveal-3 d-none d-lg-block">
+        <picture>
+          <source srcset="{{ "/img/bgs/me3_cropped.webp" | relURL }}" type="image/webp">
+          <img src="{{ "/img/bgs/me3_cropped.jpeg" | relURL }}" class="img-fluid w-100 border"
+               style="aspect-ratio: 4/5; object-fit: cover; border-color: var(--bs-border-color)!important"
+               alt="{{ i18n "aboutHeroAltImageTextTR" }}" width="700" height="875" loading="eager">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

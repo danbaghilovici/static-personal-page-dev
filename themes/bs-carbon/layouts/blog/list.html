@@ -1,5 +1,3 @@
 {{ define "main" }}
-<div class="mzp-l-content">
-    {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" false) -}}
-</div>
-{{end}}
+{{- partial "pages/blog-list.html" (dict "ctx" . "onHome" false) -}}
+{{ end }}

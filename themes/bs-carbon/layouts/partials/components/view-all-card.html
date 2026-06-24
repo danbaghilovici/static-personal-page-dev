@@ -1,0 +1,10 @@
+{{- /* Carbon "view all" CTA tile — the last cell of a card grid.
+       Params: url, label. */ -}}
+<a class="card cds-tile-cta" href="{{ .url }}">
+  <div class="card-body d-flex flex-column">
+    <h3 class="card-title">{{ .label }}</h3>
+    <span class="cds-tile-cta__arrow mt-auto align-self-end">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </span>
+  </div>
+</a>

@@ -1,79 +1,40 @@
-{{ $allProjects:= where .ctx.Site.Pages "Section" "portfolio"   }}
-{{ $projects:=(where $allProjects ".IsPage" true).Reverse}}
-{{ $listPage:=(first 1 (where $allProjects ".IsNode" true)) }}
-{{ $paginator:=.ctx.Paginate $projects 4}}
-{{if .onHome}}
-{{if gt (len $projects) 0}}
-<div class="row">
-    <div class="col-sm-18 col-lg-4 col-xxl-4">
-        <h2 class="display-6">Projects</h2>
-        <p class="small text-body-secondary">Elevating Ingenuity: A Showcase of Accomplishments and Passion-Driven Projects</p>
-    </div>
-    <div class="col-sm-18 col-lg-14 col-xxl-14">
-        <div class="card-group">
-            {{range first 10 $projects}}
-                <div class="col-sm-18 col-md-9 col-lg-6">
-                    <div class="card w-100">
-                        <div class="card-header p-0 m-0">
-                            <div class="">
-                                <img src="{{.Params.Media}}" class="p-0 m-0 w-100 h-100 responsive-img" alt="...">
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-            {{end}}
-            
-        </div>
-
-
-    </div>
+{{ $allProjects := where .ctx.Site.Pages "Section" "portfolio" }}
+{{ $projects := (where $allProjects ".IsPage" true).ByDate.Reverse }}
+{{ if .onHome }}
+{{ if gt (len $projects) 0 }}
+<div class="mb-5">
+  <p class="cds-eyebrow">{{ i18n "headerPortfolioSectionTr" | default "Projects" | title }}</p>
+  <h2 class="h1 fw-light mb-0">{{ i18n "homePortfolioHeaderTextTranslation" | default "Recent projects" | title }}</h2>
 </div>
-{{end}}
-{{else}}
-{{if gt (len $projects) 0}}
-<section class="container pt-5">
-    <div class="row">
-        <div class="col-sm-18 col-lg-4 col-xxl-4">
-            <h2 class="display-6">Recent projects</h2>
-            <p class="small text-body-secondary" >Exploring the Tapestry of Creations: A Gallery of Passionate Projects and Meaningful Endeavors That Reflect Dedication and Vision</p>
-        </div>
-        <div class="col">
-            <div class="row g-0">
-                {{range $i,$project:=$paginator.Pages}}
-                <div class="col">
-                    {{- partial "components/card.html"
-                    ( dict
-                    "ctx" .
-                    "cardTitle" .Params.Title
-                    "cardDescription" .Params.Description
-                    "cardCTAText" "Find out more"
-                    "cardLink" .Permalink
-                    "cardMedia" $project.Params.Media
-                    )
-                    -}}
-                </div>
-                {{end}}
-            </div>
-        </div>
-    </div>
-
-    {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
+<div class="row g-0">
+  {{ range first 5 $projects }}
+  <div class="col-12 col-md-6 col-lg-4">{{ partial "components/project-card.html" . }}</div>
+  {{ end }}
+  {{ with .ctx.Site.GetPage "/portfolio" }}
+  <div class="col-12 col-md-6 col-lg-4">{{ partial "components/view-all-card.html" (dict "url" .RelPermalink "label" (i18n "viewAllProjectsTR" | default "View all projects")) }}</div>
+  {{ end }}
+</div>
+{{ end }}
+{{ else }}
+{{ if gt (len $projects) 0 }}
+{{ $paginator := .ctx.Paginate $projects 9 }}
+<section class="container-xl cds-section min-vh-no-navbar">
+  <div class="mb-5">
+    <p class="cds-eyebrow">{{ i18n "headerPortfolioSectionTr" | default "Projects" | title }}</p>
+    <h2 class="display-3 fw-light mb-0">{{ i18n "portfolioListHeaderTextTR" | default "Projects & case studies" | title }}</h2>
+  </div>
+  <div class="row g-0">
+    {{ range $paginator.Pages }}
+    <div class="col-12 col-md-6 col-lg-4">{{ partial "components/project-card.html" . }}</div>
+    {{ end }}
+  </div>
+  {{- partial "components/pagination" (dict "ctx" . "paginator" $paginator) -}}
 </section>
-
-{{else}}
+{{ else }}
 {{- partial "components/newsletter"
 (dict "ctx" .
 "header" "Projects case studies have not been imported yet"
 "description" "There are no available case studies imported."
 ) -}}
-{{end}}
-
-{{end}}
+{{ end }}
+{{ end }}

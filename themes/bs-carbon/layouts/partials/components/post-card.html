@@ -1,0 +1,15 @@
+{{- /* Carbon blog card (no image) — mirrors project-card for consistency.
+       Context (.) = a blog page. */ -}}
+<a class="card" href="{{ .RelPermalink }}">
+  <div class="card-body d-flex flex-column">
+    {{ if not .Date.IsZero }}<div class="cds-mono text-body-secondary small mb-2">{{ .Date.Format "2006 · 01 · 02" }}</div>{{ end }}
+    <h3 class="card-title">{{ .Title }}</h3>
+    <p class="card-text">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}</p>
+    {{ with .Params.tags }}
+    <div class="d-flex flex-wrap gap-2 mt-2">{{ range first 3 . }}<span class="badge">{{ . }}</span>{{ end }}</div>
+    {{ end }}
+    <span class="cds-card-link">{{ i18n "readMoreTR" | default "Read more" }}
+      <svg class="cds-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </span>
+  </div>
+</a>

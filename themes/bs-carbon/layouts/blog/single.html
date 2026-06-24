@@ -1,63 +1,56 @@
-
-{{define "main"}}
-<section class="container-fluid p-0">
-    <div class="bg-dark text-white m-0 p-0">
-        <div class="container py-5">
-            <p class="text-body-secondary">Blog Post</p>
-            <h1 class=" text-white">{{.Title}}</h1>
-            <p class="col-auto mx-auto lead">{{.Summary}}</p>
-        </div>
+{{ define "main" }}
+<main>
+  {{- /* ===== Article header ===== */ -}}
+  <header class="cds-hero" style="padding-block: clamp(2.5rem, 6vw, 4.5rem)">
+    <div class="container-xl">
+      {{ with .Site.GetPage "/blog" }}
+      <a class="btn btn-link cds-reveal cds-reveal-1" href="{{ .RelPermalink }}" style="min-width:auto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform:rotate(180deg)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        {{ i18n "viewAllTR" | default "All writing" }}
+      </a>
+      {{ end }}
+      <p class="cds-eyebrow mt-3 cds-reveal cds-reveal-2">{{ i18n "headerBlogSectionTr" | default "Blog" | title }}</p>
+      <h1 class="display-4 fw-light cds-reveal cds-reveal-2" style="max-width: 22ch">{{ .Title }}</h1>
+      <div class="cds-byline mt-4 cds-reveal cds-reveal-3">
+        <span>{{ .Date.Format "2 January 2006" }}</span>
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
     </div>
+  </header>
 
-</section>
-<nav class="navbar  bg-dark py-0  sticky-top" style="top:3rem">
-    <div class="container-fluid p-0 m-0 w-100">
-        {{.TableOfContents}}
-    </div>
-</nav>
+  {{ with .Params.media }}
+  <div class="container-xl mt-4 mt-lg-5">
+    <div class="cds-feature"><img src="{{ . }}" alt="{{ $.Title }}" loading="eager"></div>
+  </div>
+  {{ end }}
 
-<section class="container blog-post mt-5" data-bs-spy="scroll" data-bs-target="nav.navbar#TableOfContents" data-bs-root-margin="0px 0px 0%" data-bs-smooth-scroll="true">
-    <div class="row h-100">
-        <aside class="col-md-4">
-            <nav class="navbar p-0 m-0 d-none">
-                <div class="container-fluid p-0 m-0 w-100">
-                    {{.TableOfContents}}
-                </div>
-            </nav>
-        </aside>
-        <article class="col-18 col-md-18 col-lg-14 col-xl-10" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-threshold="0.1" data-bs-smooth-scroll="true">
-            {{.Content}}
-        </article>
-        <aside class="offset-lg-4 offset-0 col-18 col-lg-14 col-xl-4 offset-xl-0">
-            <div class="sticky-top" style="top: 3rem">
-                <h6>References</h6>
-                <ol>
-                    {{range $k,$v := .Params.references}}
-                        <li><a href="{{ $v }}" class="small text-break">{{ $v }}</a></li>
-                    {{end}}
-                </ol>
-
-                <div class="pb-3">
-            <h6 class="">Enjoyed the article?<br> <span class="small">Share it with your colleagues</span></p>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary btn-icon-only">
-                    <i class="bi bi-twitter"></i>
-                </button>
-                <button type="button" class="btn btn-outline-dark btn-icon-only">
-                    <i class="bi bi-linkedin"></i>
-                </button>
-                <button type="button" class="btn btn-primary btn-icon-only">
-                    <i class="bi bi-link-45deg"></i>
-                </button>
+  {{- /* ===== Body + sidebar ===== */ -}}
+  <section class="container-xl cds-section">
+    <div class="row g-5">
+      <div class="col-12 col-lg-8">
+        <article class="cds-prose">{{ .Content }}</article>
+      </div>
+      <aside class="col-12 col-lg-4">
+        <div class="cds-article-sidebar">
+          {{ if .TableOfContents }}
+          <p class="cds-eyebrow">{{ i18n "onThisPageTR" | default "On this page" }}</p>
+          <nav id="blogToc" class="cds-toc mb-5">{{ .TableOfContents }}</nav>
+          {{ end }}
+          {{ with .Params.references }}
+          <dl class="cds-metalist">
+            <div>
+              <dt>{{ i18n "referencesTR" | default "References" }}</dt>
+              <dd>
+                <ul class="list-unstyled m-0 mt-1">
+                  {{ range . }}<li class="mb-2"><a class="small text-break" href="{{ . }}">{{ . }}</a></li>{{ end }}
+                </ul>
+              </dd>
             </div>
-
+          </dl>
+          {{ end }}
         </div>
-            </div>
-            <div class="row">
-        <div class="col-md-3 d-none d-lg-block"></div>
-
+      </aside>
     </div>
-        </aside>
-    </div>
-</section>
-{{end}}
+  </section>
+</main>
+{{ end }}

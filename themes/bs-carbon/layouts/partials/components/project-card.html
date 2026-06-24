@@ -1,0 +1,16 @@
+{{- /* Carbon project tile. Context (.) = a portfolio page. */ -}}
+<a class="card" href="{{ .RelPermalink }}">
+  {{ with .Params.media }}
+  <img class="card-img-top" src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+  {{ end }}
+  <div class="card-body d-flex flex-column">
+    <h3 class="card-title">{{ .Title }}</h3>
+    <p class="card-text">{{ .Description | truncate 130 }}</p>
+    {{ with (.Params.tags | default .Params.keywords) }}
+    <div class="d-flex flex-wrap gap-2 mt-2">{{ range first 3 . }}<span class="badge">{{ . }}</span>{{ end }}</div>
+    {{ end }}
+    <span class="cds-card-link">{{ i18n "projectViewCaseStudyTR" | default "View case study" }}
+      <svg class="cds-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </span>
+  </div>
+</a>

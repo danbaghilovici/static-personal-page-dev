@@ -1,39 +1,46 @@
-{{define "main"}}
-<div class="container vh-100" id="hero-cta"> 
-    <div class="row flex-lg-row-reverse align-items-center h-100"> 
-        <div class="col-sm-18 col-md-9">
-            <source srcset="/img/bgs/me3_cropped.webp" type="image/webp">
-            <source srcset="/img/bgs/me3_cropped.jpeg" type="image/jpeg">
-            <img src="/img/bgs/me3_cropped.jpeg" class="d-block  img-fluid" loading="lazy" alt="{{i18n "aboutHeroAltImageTextTR"}}" width="700" height="500" loading="lazy"> 
-        </div> 
-        <div class="col-sm-18 col-md-9"> 
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{ i18n "aboutHeroHeaderTextTR" | title}}</h1> 
-            <p class="lead">{{i18n "aboutHeroSubHeaderTextTR" | title }}</p>
-            <div class="d-grid gap-2 d-lg-flex justify-content-lg-start w-100 p-0">
-                <button type="button" class="btn btn-primary btn-xxl w-100 "><span class="display-10">{{i18n "aboutHeroCTAContactTextTR" | title}}</span></button>
-                <button type="button" class="btn btn-secondary btn-xxl w-100 "><span class="display-10">Explore my work</span></button>
-            </div>
-        </div> 
-    </div> 
-</div>
-<section class="container pb-5">
-    <div class="row">
-        <div class="col-sm-18 col-lg-4 col-xxl-4">
-            <h2 class="display-6">{{i18n "aboutAboutSectionHeaderTextTR" | title }}</h2>
-            <p class="small text-body-secondary">{{i18n "aboutAboutSectionSubHeaderTextTR" | title }}</p>
-        </div>
-        <div class="col-sm-18 col-lg-14 col-xxl-14">
-                    <p>{{i18n "aboutAboutSectionSummaryOneTextTR" | safeHTML }}</p>
-                    <p>{{ i18n "aboutAboutSectionSummaryTwoTextTR" | safeHTML }}</p>
-                    <p>{{ i18n "aboutAboutSectionSummaryThreeTextTR" | safeHTML }}</p>
-                    <p>{{ i18n "aboutAboutSectionSummaryFourTextTR" | safeHTML }}</p>
-        </div>
+{{ define "main" }}
+{{ partial "sections/hero.html" . }}
+
+{{ $skills := .Site.Params.ownerSkillsSet }}
+<section id="about" class="container-xl cds-section" style="scroll-margin-top: var(--cds-header-height)">
+  {{- /* One row: each column keeps its own title + content so it stacks
+         correctly on mobile; the two titles line up on desktop. */ -}}
+  <div class="row g-5">
+    <div class="col-12 col-lg-9">
+      <div class="mb-5">
+        <p class="cds-eyebrow">{{ i18n "aboutAboutSectionSubHeaderTextTR" | title }}</p>
+        <h2 class="h1 fw-light mb-0" style="max-width: 24ch">{{ i18n "aboutAboutSectionHeaderTextTR" | title }}</h2>
+      </div>
+      <p class="lead text-body-secondary">{{ i18n "aboutAboutSectionSummaryOneTextTR" | safeHTML }}</p>
+      <p class="text-body-secondary">{{ i18n "aboutAboutSectionSummaryTwoTextTR" | safeHTML }}</p>
+      <p class="text-body-secondary">{{ i18n "aboutAboutSectionSummaryThreeTextTR" | safeHTML }}</p>
+      <p class="text-body-secondary">{{ i18n "aboutAboutSectionSummaryFourTextTR" | safeHTML }}</p>
     </div>
+    {{ with $skills }}
+    <div class="col-12 col-lg-3">
+      <div class="mb-5">
+        <p class="cds-eyebrow">{{ i18n "aboutSkillsEyebrowTR" | default "Capabilities" }}</p>
+        <h2 class="h1 fw-light mb-0">{{ i18n "resumeWorkSectionSkillsText" | default "Skills" | title }}</h2>
+      </div>
+      {{ range . }}
+      <div class="mb-4">
+        <div class="cds-mono text-body-secondary small text-uppercase mb-2" style="letter-spacing:.1em">{{ .title }}</div>
+        {{ with .libs }}
+        <div class="d-flex flex-wrap gap-2">
+          {{ range . }}{{ with .title }}<span class="badge">{{ . }}</span>{{ end }}{{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
 </section>
-<section class="container pb-5">
-    {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
+
+<section class="container-xl cds-section pt-0">
+  {{- partial "pages/blog-list.html" (dict "ctx" . "onHome" true) -}}
 </section>
-<section class="container pb-5">
-    {{- partial "pages/projects-list.html" (dict "ctx" . "onHome" true) -}}
+<section class="container-xl cds-section pt-0">
+  {{- partial "pages/projects-list.html" (dict "ctx" . "onHome" true) -}}
 </section>
-{{end}}
+{{ end }}

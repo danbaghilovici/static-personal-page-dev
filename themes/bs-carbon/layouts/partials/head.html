@@ -1,5 +1,20 @@
 <head itemscope itemtype="{{ .Site.BaseURL }}">
 
+    {{- /* Apply the saved Carbon theme before first paint (avoids a flash). */ -}}
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("carbon-portfolio-theme");
+          if (t === "light") t = "white";
+          else if (t === "dark") t = "g100";
+          if (["white", "g10", "g90", "g100"].indexOf(t) === -1) {
+            t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "g100" : "white";
+          }
+          document.documentElement.setAttribute("data-bs-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+
     <title itemprop="name">{{ i18n .Site.Params.Title }}</title>
     {{ partial "meta" . }}
     {{ partial "links" . }}

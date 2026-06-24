@@ -1,0 +1,13 @@
+{{- /* Carbon theme switcher: White / Gray 10 / Gray 90 / Gray 100.
+       Renders inside the navbar; driven by static/js/theme-switcher.js. */ -}}
+<div class="dropdown">
+  <button class="cds-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ i18n "themeSwitcherLabelTR" | default "Choose color theme" }}">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end cds-theme-menu">
+    <li><button class="dropdown-item" type="button" data-theme-value="white"><span class="cds-swatch" style="--sw:#ffffff"></span>White</button></li>
+    <li><button class="dropdown-item" type="button" data-theme-value="g10"><span class="cds-swatch" style="--sw:#f4f4f4"></span>Gray 10</button></li>
+    <li><button class="dropdown-item" type="button" data-theme-value="g90"><span class="cds-swatch" style="--sw:#262626"></span>Gray 90</button></li>
+    <li><button class="dropdown-item" type="button" data-theme-value="g100"><span class="cds-swatch" style="--sw:#161616"></span>Gray 100</button></li>
+  </ul>
+</div>
